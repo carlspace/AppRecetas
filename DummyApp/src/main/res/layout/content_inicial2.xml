@@ -62,7 +62,7 @@
         tools:layout_editor_absoluteY="326dp">
 
         <ImageView
-            android:id="@+id/iconoBtCarne"
+            android:id="@+id/iconoBtnCarne"
             android:layout_width="155dp"
             android:layout_height="136dp"
             app:srcCompat="@mipmap/ic_launcher"

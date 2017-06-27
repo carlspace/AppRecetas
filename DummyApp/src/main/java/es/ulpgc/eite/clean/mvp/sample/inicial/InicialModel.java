@@ -22,8 +22,7 @@ public class InicialModel extends GenericModel<Inicial.ModelToPresenter>
     public void onCreate(Inicial.ModelToPresenter presenter) {
         super.onCreate(presenter);
 
-        dummyLabel = "Click Me!";
-        dummyText = "Hello World!";
+
     }
 
     /**

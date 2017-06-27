@@ -6,6 +6,7 @@ import es.ulpgc.eite.clean.mvp.ContextView;
 import es.ulpgc.eite.clean.mvp.GenericPresenter;
 import es.ulpgc.eite.clean.mvp.GenericActivity;
 import es.ulpgc.eite.clean.mvp.sample.app.Mediator;
+import es.ulpgc.eite.clean.mvp.sample.app.Navigator;
 
 
 public class InicialPresenter extends GenericPresenter
@@ -16,7 +17,8 @@ public class InicialPresenter extends GenericPresenter
 
     private boolean toolbarVisible;
     private boolean buttonClicked;
-    private boolean textVisible;
+    private int numeroBotonPresionado;
+
 
     /**
      * Operation called during VIEW creation in {@link GenericActivity#onResume(Class, Object)}
@@ -32,9 +34,9 @@ public class InicialPresenter extends GenericPresenter
         setView(view);
         Log.d(TAG, "calling onCreate()");
 
-        Log.d(TAG, "calling startingDummyScreen()");
+        Log.d(TAG, "calling startingInicialScreen()");
         Mediator app = (Mediator) getView().getApplication();
-        app.startingDummyScreen(this);
+        app.startingInicialScreen(this);
     }
 
     /**
@@ -53,7 +55,7 @@ public class InicialPresenter extends GenericPresenter
             getView().setLabel(getModel().getLabel());
 
             checkToolbarVisibility();
-            checkTextVisibility();
+
 
             if (buttonClicked) {
                 getView().setText(getModel().getText());
@@ -89,15 +91,26 @@ public class InicialPresenter extends GenericPresenter
     // View To Presenter /////////////////////////////////////////////////////////////
 
     @Override
-    public void onButtonClicked() {
-        Log.d(TAG, "calling onButtonClicked()");
-        if(isViewRunning()) {
-            getModel().onChangeMsgByBtnClicked();
-            getView().setText(getModel().getText());
-            textVisible = true;
-            buttonClicked = true;
-        }
-        checkTextVisibility();
+    public void onButtonClicked1() {
+        Log.d(TAG, "calling onButtonClicked1()");
+        numeroBotonPresionado=1;
+        Navigator app = (Navigator) getView().getApplication();
+
+    }
+    @Override
+    public void onButtonClicked2() {
+        Log.d(TAG, "calling onButtonClicked2()");
+        numeroBotonPresionado=2;
+        Navigator app = (Navigator) getView().getApplication();
+
+    }
+
+    @Override
+    public void onButtonClicked3() {
+        Log.d(TAG, "calling onButtonClicked3()");
+        numeroBotonPresionado=3;
+        Navigator app = (Navigator) getView().getApplication();
+
     }
 
 

@@ -37,7 +37,9 @@ public interface Inicial {
      * Methods offered to VIEW to communicate with PRESENTER
      */
     interface ViewToPresenter extends Presenter<Inicial.PresenterToView> {
-        void onButtonClicked();
+        void onButtonClicked1();
+        void onButtonClicked2();
+        void onButtonClicked3();
     }
 
     /**

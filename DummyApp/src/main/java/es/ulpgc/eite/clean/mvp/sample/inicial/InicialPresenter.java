@@ -52,14 +52,10 @@ public class InicialPresenter extends GenericPresenter
         Log.d(TAG, "calling onResume()");
 
         if(configurationChangeOccurred()) {
-            getView().setLabel(getModel().getLabel());
+
 
             checkToolbarVisibility();
 
-
-            if (buttonClicked) {
-                getView().setText(getModel().getText());
-            }
         }
     }
 
@@ -183,6 +179,7 @@ public class InicialPresenter extends GenericPresenter
         }
     }
 
+
     private void checkTextVisibility(){
         Log.d(TAG, "calling checkTextVisibility()");
         if(isViewRunning()) {
@@ -192,5 +189,11 @@ public class InicialPresenter extends GenericPresenter
                 getView().showText();
             }
         }
+    }
+    private void inicializarVista() {
+        getView().setLabel1(getModel().getTextBtn1());
+        getView().setLabel2(getModel().getTextBtn2());
+        getView().setLabel3(getModel().getTextBtn3());
+        getView().setLabel4(getModel().getTextBtn3());
     }
 }

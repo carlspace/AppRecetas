@@ -52,7 +52,10 @@ public interface Inicial {
         void hideText();
         void showText();
         void setText(String txt);
-        void setLabel(String txt);
+        void setLabel1(String txt);
+        void setLabel2(String txt);
+        void setLabel3(String txt);
+        void setLabel4(String txt);
     }
 
     /**

@@ -150,9 +150,21 @@ public class InicialView extends GenericActivity<Inicial.PresenterToView, Inicia
             text.setText(txt);
         }
 
-        @Override
-        public void setLabel(String txt) {
-            button.setText(txt);
+    @Override
+    public void setLabel1(String txt) {
+        text1.setText(txt);
+    }
+    @Override
+    public void setLabel2(String txt) {
+        text2.setText(txt);
+    }
+    @Override
+    public void setLabel3(String txt) { text3.setText(txt);
+    }
+    @Override
+    public void setLabel4(String txt) {
+        text4.setText(txt);
+    }
         }
     }
 

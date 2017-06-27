@@ -14,6 +14,12 @@
         tools:layout_editor_absoluteX="5dp"
         tools:layout_editor_absoluteY="260dp">
 
+        <ImageView
+            android:id="@+id/iconoBtnCarne"
+            android:layout_width="wrap_content"
+            android:layout_height="123dp"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/ic_launcher" />
     </LinearLayout>
 
     <LinearLayout
@@ -22,7 +28,15 @@
         android:layout_height="223dp"
         android:orientation="horizontal"
         tools:layout_editor_absoluteX="202dp"
-        tools:layout_editor_absoluteY="260dp"></LinearLayout>
+        tools:layout_editor_absoluteY="260dp">
+
+        <ImageView
+            android:id="@+id/iconoBtnPescado"
+            android:layout_width="wrap_content"
+            android:layout_height="129dp"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/ic_launcher" />
+    </LinearLayout>
 
     <Space
         android:layout_width="wrap_content"
@@ -36,7 +50,15 @@
         android:layout_height="223dp"
         android:orientation="horizontal"
         tools:layout_editor_absoluteX="202dp"
-        tools:layout_editor_absoluteY="16dp"></LinearLayout>
+        tools:layout_editor_absoluteY="16dp">
+
+        <ImageView
+            android:id="@+id/iconoBtnSopa"
+            android:layout_width="wrap_content"
+            android:layout_height="158dp"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/ic_launcher" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/btnEnsalada"
@@ -44,13 +66,14 @@
         android:layout_height="223dp"
         android:orientation="horizontal"
         tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="16dp">
+        tools:layout_editor_absoluteY="16dp"
+        android:weightSum="1">
 
         <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="153dp"
-            android:layout_weight="1"
+            android:id="@+id/iconoBtnEnsalada"
+            android:layout_width="match_parent"
+            android:layout_height="146dp"
             app:srcCompat="@mipmap/ic_launcher" />
+
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

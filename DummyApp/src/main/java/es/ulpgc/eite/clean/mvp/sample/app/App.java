@@ -55,7 +55,6 @@ public class App extends Application implements Mediator, Navigator {
   }
   @Override
   public int getNumeroBotonPresionado(){
-
     return inicialToState.numeroBotonPresionado;
   }
 

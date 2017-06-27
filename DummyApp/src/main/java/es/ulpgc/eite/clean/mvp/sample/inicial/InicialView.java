@@ -1,9 +1,11 @@
 package es.ulpgc.eite.clean.mvp.sample.inicial;
 
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import es.ulpgc.eite.clean.mvp.GenericActivity;
@@ -19,25 +21,71 @@ public class InicialView extends GenericActivity<Inicial.PresenterToView, Inicia
 //ASasASS
         private Toolbar toolbar;
         private Button button;
-        private TextView text;
+
+        private ConstraintLayout layout1;
+        private ConstraintLayout layout2;
+        private ConstraintLayout layout3;
+        private ConstraintLayout layout4;
+        private TextView text1;
+        private TextView text2;
+        private TextView text3;
+        private TextView text4;
+        private ImageView icono1;
+        private ImageView icono2;
+        private ImageView icono3;
+        private ImageView icono4;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_inicial);
 
-            text = (TextView) findViewById(R.id.text);
+            text1 = (TextView) findViewById(R.id.textoBtnEnsalada);
+            text2 = (TextView) findViewById(R.id.textoBtnSopa);
+            text3 = (TextView) findViewById(R.id.textoBtnCarne);
+            text4 = (TextView) findViewById(R.id.textoBtnPescado);
+
+            icono1 = (ImageView)  findViewById(R.id.iconoBtnEnsalada);
+            icono2 = (ImageView)  findViewById(R.id.iconoBtnSopa);
+            icono3 = (ImageView)  findViewById(R.id.iconoBtnCarne);
+            icono4 =( ImageView)  findViewById(R.id.iconoBtnPescado);
+
+            layout1 = (ConstraintLayout) findViewById(R.id.btnEnsalada);
+            layout1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    getPresenter().onButtonClicked1();
+                }
+            });
+
+            layout2 = (ConstraintLayout) findViewById(R.id.btnSopa);
+            layout2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    getPresenter().onButtonClicked2();
+                }
+            });
+
+            layout3 = (ConstraintLayout) findViewById(R.id.btnCarne);
+            layout3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    getPresenter().onButtonClicked3();
+                }
+            });
+
+            layout4 = (ConstraintLayout) findViewById(R.id.btnPescado);
+            layout4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    getPresenter().onButtonClicked4();
+                }
+            });
 
             toolbar = (Toolbar) findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
 
-            button = (Button) findViewById(R.id.button);
-            button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    getPresenter().onButtonClicked();
-                }
-            });
+
         }
 
         /**

@@ -113,6 +113,14 @@ public class InicialPresenter extends GenericPresenter
 
     }
 
+    @Override
+    public void onButtonClicked4() {
+        Log.d(TAG, "calling onButtonClicked3()");
+        numeroBotonPresionado=3;
+        Navigator app = (Navigator) getView().getApplication();
+
+    }
+
 
     ///////////////////////////////////////////////////////////////////////////////////
     // To Dummy //////////////////////////////////////////////////////////////////////

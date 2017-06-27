@@ -40,6 +40,7 @@ public interface Inicial {
         void onButtonClicked1();
         void onButtonClicked2();
         void onButtonClicked3();
+        void onButtonClicked4();
     }
 
     /**

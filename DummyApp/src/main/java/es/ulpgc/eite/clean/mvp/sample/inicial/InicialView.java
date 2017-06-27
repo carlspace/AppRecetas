@@ -137,7 +137,7 @@ public class InicialView extends GenericActivity<Inicial.PresenterToView, Inicia
 
         @Override
         public void hideText() {
-            text.setVisibility(View.GONE);
+            text    .setVisibility(View.GONE);
         }
 
         @Override

@@ -1,8 +1,7 @@
 package es.ulpgc.eite.clean.mvp.sample.app;
 
-
-import es.ulpgc.eite.clean.mvp.sample.inicial.Inicial;
+import es.ulpgc.eite.clean.mvp.sample.dummy.Dummy;
 
 public interface Mediator {
-  void startingInicialScreen(Inicial.ToInicial presenter);
+  void startingDummyScreen(Dummy.ToDummy presenter);
 }

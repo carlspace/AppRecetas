@@ -16,7 +16,7 @@ import es.ulpgc.eite.clean.mvp.sample.R;
 
 public class InicialView extends GenericActivity<Inicial.PresenterToView, Inicial.ViewToPresenter, InicialPresenter>
     implements Inicial.PresenterToView {
-
+//ASasASS
         private Toolbar toolbar;
         private Button button;
         private TextView text;

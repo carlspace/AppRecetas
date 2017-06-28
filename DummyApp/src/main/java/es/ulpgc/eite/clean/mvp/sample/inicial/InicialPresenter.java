@@ -175,5 +175,6 @@ public class InicialPresenter extends GenericPresenter
         getView().setLabel2(getModel().getNombreComidaBtn2());
         getView().setLabel3(getModel().getNombreComidaBtn3());
         getView().setLabel4(getModel().getNombreComidaBtn4());
+
     }
 }

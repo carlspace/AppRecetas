@@ -12,7 +12,7 @@ import es.ulpgc.eite.clean.mvp.sample.app.Navigator;
 
 public class PlatosPresenter extends GenericPresenter
     <Platos.PresenterToView, Platos.PresenterToModel, Platos.ModelToPresenter, PlatosModel>
-    implements Platos.ViewToPresenter, Platos.ModelToPresenter, Platos.platosTo, Platos.ToPlatos {
+    implements Platos.ViewToPresenter, Platos.ModelToPresenter, Platos.PlatosTo, Platos.ToPlatos {
 
 
   private boolean toolbarVisible;
@@ -112,21 +112,23 @@ public class PlatosPresenter extends GenericPresenter
     // Platos To //////////////////////////////////////////////////////////////////////
 
 
-    @Override
-    public Context getManagedContext(){
-      return getActivityContext();
-    }
 
-    @Override
-    public void destroyView(){
-      if (isViewRunning()) {
-        getView().finishScreen();
-      }
-    }
 
 
     ///////////////////////////////////////////////////////////////////////////////////
 
 
   }
+
+    @Override
+    public Context getManagedContext() {
+        return getActivityContext();
+    }
+
+    @Override
+    public void destroyView() {
+        if(isViewRunning()) {
+            getView().finishScreen();
+        }
+    }
 }

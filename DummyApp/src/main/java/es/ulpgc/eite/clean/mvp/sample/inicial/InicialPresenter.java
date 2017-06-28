@@ -14,7 +14,6 @@ public class InicialPresenter extends GenericPresenter
         implements Inicial.ViewToPresenter, Inicial.ModelToPresenter, Inicial.InicialTo, Inicial.ToInicial{
 
     private boolean toolbarVisible;
-    private boolean buttonClicked;
     private int numeroBotonPresionado;
 
 
@@ -172,9 +171,9 @@ public class InicialPresenter extends GenericPresenter
 
 
     private void inicializarVista() {
-        getView().setLabel1(getModel().getTextBtn1());
-        getView().setLabel2(getModel().getTextBtn2());
-        getView().setLabel3(getModel().getTextBtn3());
-        getView().setLabel4(getModel().getTextBtn3());
+        getView().setLabel1(getModel().getNombreComidaBtn1());
+        getView().setLabel2(getModel().getNombreComidaBtn2());
+        getView().setLabel3(getModel().getNombreComidaBtn3());
+        getView().setLabel4(getModel().getNombreComidaBtn4());
     }
 }

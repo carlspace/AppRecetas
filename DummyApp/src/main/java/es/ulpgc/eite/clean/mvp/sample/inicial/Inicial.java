@@ -62,6 +62,14 @@ public interface Inicial {
         void onChangeMsgByBtnClicked();
         String getText();
         String getLabel();
+
+        String getNombreComidaBtn4();
+
+        String getNombreComidaBtn3();
+
+        String getNombreComidaBtn2();
+
+        String getNombreComidaBtn1();
     }
 
     /**

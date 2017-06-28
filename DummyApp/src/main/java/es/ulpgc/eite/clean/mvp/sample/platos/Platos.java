@@ -36,6 +36,8 @@ public interface Platos {
   interface ViewToPresenter extends Presenter<PresenterToView> {
     void onItemClickSelected(int pos);
     void inicializarVista();
+
+    void onButtonClicked();
   }
 
   /**

@@ -90,7 +90,12 @@ public class PlatosPresenter extends GenericPresenter
 
   }
 
-  @Override
+    @Override
+    public void onButtonClicked() {
+
+    }
+
+    @Override
   public void onItemClickSelected(int pos) {
     Log.d(TAG, "posicion pulsada" + pos);
     Mediator mediator = (Mediator) getApplication();
@@ -111,11 +116,6 @@ public class PlatosPresenter extends GenericPresenter
     ///////////////////////////////////////////////////////////////////////////////////
     // Platos To //////////////////////////////////////////////////////////////////////
 
-
-
-
-
-    ///////////////////////////////////////////////////////////////////////////////////
 
 
   }

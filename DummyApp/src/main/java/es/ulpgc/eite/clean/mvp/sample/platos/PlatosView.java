@@ -78,28 +78,5 @@ public class PlatosView
     finish();
   }
 
-  @Override
-  public void hideToolbar() {
-    toolbar.setVisibility(View.GONE);
-  }
 
-  @Override
-  public void hideText() {
-    text.setVisibility(View.GONE);
-  }
-
-  @Override
-  public void showText() {
-    text.setVisibility(View.VISIBLE);
-  }
-
-  @Override
-  public void setText(String txt) {
-    text.setText(txt);
-  }
-
-  @Override
-  public void setLabel(String txt) {
-    button.setText(txt);
-  }
 }

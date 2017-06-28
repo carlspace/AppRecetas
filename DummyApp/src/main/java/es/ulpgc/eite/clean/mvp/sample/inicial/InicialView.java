@@ -1,5 +1,6 @@
 package es.ulpgc.eite.clean.mvp.sample.inicial;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.Toolbar;
@@ -92,6 +93,7 @@ public class InicialView extends GenericActivity<Inicial.PresenterToView, Inicia
          * Method that initialized MVP objects
          * {@link super#onResume(Class, Object)} should always be called
          */
+        @SuppressLint("MissingSuperCall")
         @Override
         protected void onResume() {
             super.onResume(InicialPresenter.class, this);

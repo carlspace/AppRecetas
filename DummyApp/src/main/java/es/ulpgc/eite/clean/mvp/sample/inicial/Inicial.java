@@ -20,7 +20,7 @@ public interface Inicial {
     interface ToInicial {
         void onScreenStarted();
         void setToolbarVisibility(boolean visible);
-        void setTextVisibility(boolean visible);
+
     }
 
     interface InicialTo {

@@ -52,7 +52,7 @@ public class InicialPresenter extends GenericPresenter
         Log.d(TAG, "calling onResume()");
 
         if(configurationChangeOccurred()) {
-
+            inicializarVista();
 
             checkToolbarVisibility();
 
@@ -125,10 +125,10 @@ public class InicialPresenter extends GenericPresenter
     public void onScreenStarted() {
         Log.d(TAG, "calling onScreenStarted()");
         if(isViewRunning()) {
-            getView().setLabel(getModel().getLabel());
+           inicializarVista();
         }
         checkToolbarVisibility();
-        checkTextVisibility();
+
     }
 
     @Override
@@ -136,10 +136,7 @@ public class InicialPresenter extends GenericPresenter
         toolbarVisible = visible;
     }
 
-    @Override
-    public void setTextVisibility(boolean visible) {
-        textVisible = visible;
-    }
+
 
 
     ///////////////////////////////////////////////////////////////////////////////////

@@ -50,7 +50,7 @@ public class PlatosPresenter extends GenericPresenter
     setView(view);
     Log.d(TAG, "calling onResume()");
     inicializarVista();
-    if(configurationChangeOccurred()) {
+    if (configurationChangeOccurred()) {
       inicializarVista();
 
     }
@@ -92,7 +92,7 @@ public class PlatosPresenter extends GenericPresenter
 
   @Override
   public void onItemClickSelected(int pos) {
-    Log.d(TAG,"posicion pulsada" + pos);
+    Log.d(TAG, "posicion pulsada" + pos);
     Mediator mediator = (Mediator) getApplication();
 
   }
@@ -103,33 +103,30 @@ public class PlatosPresenter extends GenericPresenter
   @Override
   public void onScreenStarted() {
     Log.d(TAG, "calling onScreenStarted()");
-    if(isViewRunning()) {
+    if (isViewRunning()) {
       inicializarVista();
-  }
-
-
-
-  ///////////////////////////////////////////////////////////////////////////////////
-  // Platos To //////////////////////////////////////////////////////////////////////
-
-
-  @Override
-  public Context getManagedContext(){
-    return getActivityContext();
-  }
-
-  @Override
-  public void destroyView(){
-    if(isViewRunning()) {
-      getView().finishScreen();
     }
+
+
+    ///////////////////////////////////////////////////////////////////////////////////
+    // Platos To //////////////////////////////////////////////////////////////////////
+
+
+    @Override
+    public Context getManagedContext(){
+      return getActivityContext();
+    }
+
+    @Override
+    public void destroyView(){
+      if (isViewRunning()) {
+        getView().finishScreen();
+      }
+    }
+
+
+    ///////////////////////////////////////////////////////////////////////////////////
+
+
   }
-
-
-  ///////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
 }

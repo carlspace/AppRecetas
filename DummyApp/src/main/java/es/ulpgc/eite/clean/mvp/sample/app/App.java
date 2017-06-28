@@ -7,6 +7,7 @@ import android.util.Log;
 
 import es.ulpgc.eite.clean.mvp.sample.inicial.Inicial;
 import es.ulpgc.eite.clean.mvp.sample.inicial.InicialView;
+import es.ulpgc.eite.clean.mvp.sample.platos.PlatosPresenter;
 import es.ulpgc.eite.clean.mvp.sample.platos.PlatosView;
 
 
@@ -74,6 +75,11 @@ public class App extends Application implements Mediator, Navigator {
   @Override
   public int getNumeroBotonPresionado(){
     return inicialToState.numeroBotonPresionado;
+  }
+
+  @Override
+  public void startingPlatosScreen(PlatosPresenter platosPresenter) {
+
   }
 
 

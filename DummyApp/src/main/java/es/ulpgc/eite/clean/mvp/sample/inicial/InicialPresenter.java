@@ -137,8 +137,6 @@ public class InicialPresenter extends GenericPresenter
     }
 
 
-
-
     ///////////////////////////////////////////////////////////////////////////////////
     // Platos To //////////////////////////////////////////////////////////////////////
 
@@ -160,11 +158,6 @@ public class InicialPresenter extends GenericPresenter
     }
 
     @Override
-    public boolean isTextVisible() {
-        return textVisible;
-    }
-
-    @Override
     public int getNumeroBotonPresionado(){
         return numeroBotonPresionado;
     }
@@ -180,16 +173,6 @@ public class InicialPresenter extends GenericPresenter
     }
 
 
-    private void checkTextVisibility(){
-        Log.d(TAG, "calling checkTextVisibility()");
-        if(isViewRunning()) {
-            if(!textVisible) {
-                getView().hideText();
-            } else {
-                getView().showText();
-            }
-        }
-    }
     private void inicializarVista() {
         getView().setLabel1(getModel().getTextBtn1());
         getView().setLabel2(getModel().getTextBtn2());

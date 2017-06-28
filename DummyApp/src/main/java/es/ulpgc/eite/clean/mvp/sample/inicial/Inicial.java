@@ -27,7 +27,7 @@ public interface Inicial {
         Context getManagedContext();
         void destroyView();
         boolean isToolbarVisible();
-        boolean isTextVisible();
+        int getNumeroBotonPresionado();
     }
 
     ///////////////////////////////////////////////////////////////////////////////////

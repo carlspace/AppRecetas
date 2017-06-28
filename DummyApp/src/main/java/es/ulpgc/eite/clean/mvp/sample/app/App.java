@@ -82,7 +82,7 @@ public class App extends Application implements Mediator, Navigator {
 
   private class PlatosState{
     int posicionDeListaPlatosClicked;
-    int idPlatoSelecionado;
+    int idPlatoSeleccionado;
 
   }
 

@@ -10,8 +10,8 @@ import es.ulpgc.eite.clean.mvp.GenericActivity;
 import es.ulpgc.eite.clean.mvp.sample.R;
 
 public class DummyView
-    extends GenericActivity<Dummy.PresenterToView, Dummy.ViewToPresenter, DummyPresenter>
-    implements Dummy.PresenterToView {
+    extends GenericActivity<Platos.PresenterToView, Platos.ViewToPresenter, DummyPresenter>
+    implements Platos.PresenterToView {
 
   private Toolbar toolbar;
   private Button button;

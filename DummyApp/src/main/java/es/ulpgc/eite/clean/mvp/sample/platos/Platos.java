@@ -10,19 +10,19 @@ import es.ulpgc.eite.clean.mvp.Presenter;
  * Created by Luis on 12/11/16.
  */
 
-public interface Dummy {
+public interface Platos {
 
 
   ///////////////////////////////////////////////////////////////////////////////////
   // State /////////////////////////////////////////////////////////////////////////
 
-  interface ToDummy {
+  interface ToPlatos {
     void onScreenStarted();
     void setToolbarVisibility(boolean visible);
     void setTextVisibility(boolean visible);
   }
 
-  interface DummyTo {
+  interface PlatosTo {
     Context getManagedContext();
     void destroyView();
     boolean isToolbarVisible();

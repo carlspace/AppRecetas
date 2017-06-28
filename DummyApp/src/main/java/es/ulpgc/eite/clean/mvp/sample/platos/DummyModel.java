@@ -3,8 +3,8 @@ package es.ulpgc.eite.clean.mvp.sample.platos;
 import es.ulpgc.eite.clean.mvp.GenericModel;
 
 
-public class DummyModel extends GenericModel<Dummy.ModelToPresenter>
-    implements Dummy.PresenterToModel {
+public class DummyModel extends GenericModel<Platos.ModelToPresenter>
+    implements Platos.PresenterToModel {
 
   private String dummyText;
   private String dummyLabel;
@@ -18,7 +18,7 @@ public class DummyModel extends GenericModel<Dummy.ModelToPresenter>
    * @param presenter Presenter interface
    */
   @Override
-  public void onCreate(Dummy.ModelToPresenter presenter) {
+  public void onCreate(Platos.ModelToPresenter presenter) {
     super.onCreate(presenter);
 
     dummyLabel = "Click Me!";

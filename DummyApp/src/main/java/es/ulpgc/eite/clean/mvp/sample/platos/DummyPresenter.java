@@ -10,8 +10,8 @@ import es.ulpgc.eite.clean.mvp.GenericPresenter;
 import es.ulpgc.eite.clean.mvp.sample.app.Mediator;
 
 public class DummyPresenter extends GenericPresenter
-    <Dummy.PresenterToView, Dummy.PresenterToModel, Dummy.ModelToPresenter, DummyModel>
-    implements Dummy.ViewToPresenter, Dummy.ModelToPresenter, Dummy.DummyTo, Dummy.ToDummy {
+    <Platos.PresenterToView, Platos.PresenterToModel, Platos.ModelToPresenter, DummyModel>
+    implements Platos.ViewToPresenter, Platos.ModelToPresenter, Platos.DummyTo, Platos.ToDummy {
 
 
   private boolean toolbarVisible;
@@ -27,7 +27,7 @@ public class DummyPresenter extends GenericPresenter
    * @param view The current VIEW instance
    */
   @Override
-  public void onCreate(Dummy.PresenterToView view) {
+  public void onCreate(Platos.PresenterToView view) {
     super.onCreate(DummyModel.class, this);
     setView(view);
     Log.d(TAG, "calling onCreate()");
@@ -45,7 +45,7 @@ public class DummyPresenter extends GenericPresenter
    * @param view The current VIEW instance
    */
   @Override
-  public void onResume(Dummy.PresenterToView view) {
+  public void onResume(Platos.PresenterToView view) {
     setView(view);
     Log.d(TAG, "calling onResume()");
 
@@ -102,7 +102,7 @@ public class DummyPresenter extends GenericPresenter
 
 
   ///////////////////////////////////////////////////////////////////////////////////
-  // To Dummy //////////////////////////////////////////////////////////////////////
+  // To Platos //////////////////////////////////////////////////////////////////////
 
   @Override
   public void onScreenStarted() {
@@ -126,7 +126,7 @@ public class DummyPresenter extends GenericPresenter
 
 
   ///////////////////////////////////////////////////////////////////////////////////
-  // Dummy To //////////////////////////////////////////////////////////////////////
+  // Platos To //////////////////////////////////////////////////////////////////////
 
 
   @Override

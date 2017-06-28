@@ -167,7 +167,10 @@ public class InicialPresenter extends GenericPresenter
         return textVisible;
     }
 
-
+    @Override
+    public int getNumeroBotonPresionado(){
+        return numeroBotonPresionado;
+    }
     ///////////////////////////////////////////////////////////////////////////////////
 
     private void checkToolbarVisibility(){

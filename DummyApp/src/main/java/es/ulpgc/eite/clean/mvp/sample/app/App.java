@@ -34,7 +34,22 @@ public class App extends Application implements Mediator, Navigator {
   ///////////////////////////////////////////////////////////////////////////////////
   // Navigator /////////////////////////////////////////////////////////////////////
 
+  @Override
+  public void goToPlatosScreen(Inicial.InicialTo presenter) {
+    Log.d("APP", "goToPlatosScreen() has pulsado el boton: "+ presenter. getNumeroBotonPresionado());
+    inicialToState = new InicialState();
+    inicialToState.idBoton= presenter.getIdBoton();
 
+    platosToState = new PlatosState();
+    platosToState.posicionListaAutoresPulsada = 0;
+    Context view = presenter.getManagedContext();
+
+    if (view != null) {
+      view.startActivity(new Intent(view, PlatosView.class));
+
+    }
+
+  }
   @Override
   public void goToNextScreen(Inicial.InicialTo presenter) {
     Log.d("APP", "goToPlatosScreen() has pulsado el boton: "+ presenter.getNumeroBotonPresionado());

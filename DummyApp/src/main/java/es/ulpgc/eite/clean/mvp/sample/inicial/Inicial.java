@@ -49,9 +49,6 @@ public interface Inicial {
     interface PresenterToView extends ContextView {
         void finishScreen();
         void hideToolbar();
-        void hideText();
-        void showText();
-        void setText(String txt);
         void setLabel1(String txt);
         void setLabel2(String txt);
         void setLabel3(String txt);

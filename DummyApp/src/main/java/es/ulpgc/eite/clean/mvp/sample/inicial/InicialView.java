@@ -135,21 +135,6 @@ public class InicialView extends GenericActivity<Inicial.PresenterToView, Inicia
             toolbar.setVisibility(View.GONE);
         }
 
-        @Override
-        public void hideText() {
-            text    .setVisibility(View.GONE);
-        }
-
-        @Override
-        public void showText() {
-            text.setVisibility(View.VISIBLE);
-        }
-
-        @Override
-        public void setText(String txt) {
-            text.setText(txt);
-        }
-
     @Override
     public void setLabel1(String txt) {
         text1.setText(txt);
@@ -166,6 +151,6 @@ public class InicialView extends GenericActivity<Inicial.PresenterToView, Inicia
         text4.setText(txt);
     }
         }
-    }
+
 
 

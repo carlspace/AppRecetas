@@ -9,9 +9,9 @@ import es.ulpgc.eite.clean.mvp.GenericActivity;
 import es.ulpgc.eite.clean.mvp.GenericPresenter;
 import es.ulpgc.eite.clean.mvp.sample.app.Mediator;
 
-public class DummyPresenter extends GenericPresenter
-    <Platos.PresenterToView, Platos.PresenterToModel, Platos.ModelToPresenter, DummyModel>
-    implements Platos.ViewToPresenter, Platos.ModelToPresenter, Platos.DummyTo, Platos.ToDummy {
+public class PlatosPresenter extends GenericPresenter
+    <Platos.PresenterToView, Platos.PresenterToModel, Platos.ModelToPresenter, PlatosModel>
+    implements Platos.ViewToPresenter, Platos.ModelToPresenter, Platos.platosTo, Platos.ToPlatos {
 
 
   private boolean toolbarVisible;
@@ -28,13 +28,13 @@ public class DummyPresenter extends GenericPresenter
    */
   @Override
   public void onCreate(Platos.PresenterToView view) {
-    super.onCreate(DummyModel.class, this);
+    super.onCreate(PlatosModel.class, this);
     setView(view);
     Log.d(TAG, "calling onCreate()");
 
     Log.d(TAG, "calling startingDummyScreen()");
     Mediator app = (Mediator) getView().getApplication();
-    app.startingDummyScreen(this);
+    app.startingPlatosScreen(this);
   }
 
   /**

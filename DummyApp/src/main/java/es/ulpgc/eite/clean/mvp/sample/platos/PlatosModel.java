@@ -3,11 +3,11 @@ package es.ulpgc.eite.clean.mvp.sample.platos;
 import es.ulpgc.eite.clean.mvp.GenericModel;
 
 
-public class DummyModel extends GenericModel<Platos.ModelToPresenter>
+public class PlatosModel extends GenericModel<Platos.ModelToPresenter>
     implements Platos.PresenterToModel {
 
-  private String dummyText;
-  private String dummyLabel;
+  private String platosText;
+  private String platosLabel;
   private int numOfTimes;
   private String msgText;
 
@@ -21,8 +21,8 @@ public class DummyModel extends GenericModel<Platos.ModelToPresenter>
   public void onCreate(Platos.ModelToPresenter presenter) {
     super.onCreate(presenter);
 
-    dummyLabel = "Click Me!";
-    dummyText = "Hello World!";
+    platosLabel = "Click Me!";
+    platosText = "Hello World!";
   }
 
   /**

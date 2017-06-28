@@ -9,8 +9,8 @@ import android.widget.TextView;
 import es.ulpgc.eite.clean.mvp.GenericActivity;
 import es.ulpgc.eite.clean.mvp.sample.R;
 
-public class DummyView
-    extends GenericActivity<Platos.PresenterToView, Platos.ViewToPresenter, DummyPresenter>
+public class PlatosView
+    extends GenericActivity<Platos.PresenterToView, Platos.ViewToPresenter, PlatosPresenter>
     implements Platos.PresenterToView {
 
   private Toolbar toolbar;
@@ -42,7 +42,7 @@ public class DummyView
    */
   @Override
   protected void onResume() {
-    super.onResume(DummyPresenter.class, this);
+    super.onResume(PlatosPresenter.class, this);
   }
 
   /*

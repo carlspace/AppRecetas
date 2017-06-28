@@ -54,20 +54,7 @@ public class App extends Application implements Mediator, Navigator {
     }
 
   }
-  @Override
-  public void goToNextScreen(Inicial.InicialTo presenter) {
-    Log.d("APP", "goToPlatosScreen() has pulsado el boton: "+ presenter.getNumeroBotonPresionado());
-    inicialToState = new InicialState();
-    inicialToState.toolbarVisibility = presenter.isToolbarVisible();
 
-
-    Context view = presenter.getManagedContext();
-    if (view != null) {
-      view.startActivity(new Intent(view, InicialView.class));
-      presenter.destroyView();
-    }
-
-  }
   private class InicialState{
     boolean toolbarVisibility;
     int numeroBotonPresionado;

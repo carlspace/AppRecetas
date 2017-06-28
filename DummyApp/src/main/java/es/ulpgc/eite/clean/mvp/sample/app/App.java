@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.util.Log;
 
 import es.ulpgc.eite.clean.mvp.sample.inicial.Inicial;
+import es.ulpgc.eite.clean.mvp.sample.inicial.InicialView;
+import es.ulpgc.eite.clean.mvp.sample.platos.PlatosView;
 
 
 public class App extends Application implements Mediator, Navigator {
@@ -42,7 +44,7 @@ public class App extends Application implements Mediator, Navigator {
     inicialToState.numeroBotonPresionado= presenter.getNumeroBotonPresionado();
 
     platosToState = new PlatosState();
-    platosToState.posicionListaAutoresPulsada = 0;
+    platosToState.posicionDeListaPlatosClicked = 0;
     Context view = presenter.getManagedContext();
 
     if (view != null) {

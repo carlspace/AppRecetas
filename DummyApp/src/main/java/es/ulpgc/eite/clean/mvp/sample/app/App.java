@@ -12,6 +12,7 @@ public class App extends Application implements Mediator, Navigator {
 
 
   private InicialState toInicialState, inicialToState;
+  private PlatosState toPlatosState, platosToState;
 
   @Override
   public void onCreate() {
@@ -38,7 +39,7 @@ public class App extends Application implements Mediator, Navigator {
   public void goToPlatosScreen(Inicial.InicialTo presenter) {
     Log.d("APP", "goToPlatosScreen() has pulsado el boton: "+ presenter. getNumeroBotonPresionado());
     inicialToState = new InicialState();
-    inicialToState.idBoton= presenter.getIdBoton();
+    inicialToState.numeroBotonPresionado= presenter.getNumeroBotonPresionado();
 
     platosToState = new PlatosState();
     platosToState.posicionListaAutoresPulsada = 0;
@@ -73,8 +74,14 @@ public class App extends Application implements Mediator, Navigator {
     return inicialToState.numeroBotonPresionado;
   }
 
+
   ///////////////////////////////////////////////////////////////////////////////////
   // State /////////////////////////////////////////////////////////////////////////
 
+  private class PlatosState{
+    int posicionDeListaPlatosClicked;
+    int idPlatoSelecionado;
+
+  }
 
 }

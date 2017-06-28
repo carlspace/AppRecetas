@@ -40,14 +40,6 @@ public class InicialModel extends GenericModel<Inicial.ModelToPresenter>
     // Presenter To Model ////////////////////////////////////////////////////////////
 
 
-    @Override
-    public void onChangeMsgByBtnClicked() {
-        msgText = dummyText;
-        if(numOfTimes > 0) {
-            msgText += ", " + numOfTimes + " times";
-        }
-        numOfTimes++;
-    }
 
     @Override
     public String getText() {

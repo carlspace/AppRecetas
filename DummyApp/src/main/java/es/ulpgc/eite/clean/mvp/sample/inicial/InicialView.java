@@ -152,7 +152,11 @@ public class InicialView extends GenericActivity<Inicial.PresenterToView, Inicia
     public void setLabel4(String txt) {
         text4.setText(txt);
     }
-        }
+
+
+
+
+}
 
 
 

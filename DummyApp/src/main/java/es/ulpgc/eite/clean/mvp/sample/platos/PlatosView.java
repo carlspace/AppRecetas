@@ -20,7 +20,7 @@ public class PlatosView
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_dummy);
+    setContentView(R.layout.activity_platos);
 
     text = (TextView) findViewById(R.id.text);
 

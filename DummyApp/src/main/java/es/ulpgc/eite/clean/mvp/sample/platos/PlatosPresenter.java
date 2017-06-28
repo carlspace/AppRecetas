@@ -8,6 +8,7 @@ import es.ulpgc.eite.clean.mvp.ContextView;
 import es.ulpgc.eite.clean.mvp.GenericActivity;
 import es.ulpgc.eite.clean.mvp.GenericPresenter;
 import es.ulpgc.eite.clean.mvp.sample.app.Mediator;
+import es.ulpgc.eite.clean.mvp.sample.app.Navigator;
 
 public class PlatosPresenter extends GenericPresenter
     <Platos.PresenterToView, Platos.PresenterToModel, Platos.ModelToPresenter, PlatosModel>
@@ -48,16 +49,10 @@ public class PlatosPresenter extends GenericPresenter
   public void onResume(Platos.PresenterToView view) {
     setView(view);
     Log.d(TAG, "calling onResume()");
-
+    inicializarVista();
     if(configurationChangeOccurred()) {
-      getView().setLabel(getModel().getLabel());
+      inicializarVista();
 
-      checkToolbarVisibility();
-      checkTextVisibility();
-
-      if (buttonClicked) {
-        getView().setText(getModel().getText());
-      }
     }
   }
 
@@ -89,17 +84,18 @@ public class PlatosPresenter extends GenericPresenter
   // View To Presenter /////////////////////////////////////////////////////////////
 
   @Override
-  public void onButtonClicked() {
-    Log.d(TAG, "calling onButtonClicked()");
-    if(isViewRunning()) {
-      getModel().onChangeMsgByBtnClicked();
-      getView().setText(getModel().getText());
-      textVisible = true;
-      buttonClicked = true;
-    }
-    checkTextVisibility();
+  public void inicializarVista() {
+    Mediator app = (Mediator) getApplication();
+
+
   }
 
+  @Override
+  public void onItemClickSelected(int pos) {
+    Log.d(TAG,"posicion pulsada" + pos);
+    Mediator mediator = (Mediator) getApplication();
+
+  }
 
   ///////////////////////////////////////////////////////////////////////////////////
   // To Platos //////////////////////////////////////////////////////////////////////
@@ -108,21 +104,9 @@ public class PlatosPresenter extends GenericPresenter
   public void onScreenStarted() {
     Log.d(TAG, "calling onScreenStarted()");
     if(isViewRunning()) {
-      getView().setLabel(getModel().getLabel());
-    }
-    checkToolbarVisibility();
-    checkTextVisibility();
+      inicializarVista();
   }
 
-  @Override
-  public void setToolbarVisibility(boolean visible) {
-    toolbarVisible = visible;
-  }
-
-  @Override
-  public void setTextVisibility(boolean visible) {
-    textVisible = visible;
-  }
 
 
   ///////////////////////////////////////////////////////////////////////////////////
@@ -140,37 +124,12 @@ public class PlatosPresenter extends GenericPresenter
       getView().finishScreen();
     }
   }
-  @Override
-  public boolean isToolbarVisible() {
-    return toolbarVisible;
-  }
-
-  @Override
-  public boolean isTextVisible() {
-    return textVisible;
-  }
 
 
   ///////////////////////////////////////////////////////////////////////////////////
 
-  private void checkToolbarVisibility(){
-    Log.d(TAG, "calling checkToolbarVisibility()");
-    if(isViewRunning()) {
-      if (!toolbarVisible) {
-        getView().hideToolbar();
-      }
-    }
-  }
 
-  private void checkTextVisibility(){
-    Log.d(TAG, "calling checkTextVisibility()");
-    if(isViewRunning()) {
-      if(!textVisible) {
-        getView().hideText();
-      } else {
-        getView().showText();
-      }
-    }
-  }
+
+
 
 }

@@ -18,15 +18,13 @@ public interface Platos {
 
   interface ToPlatos {
     void onScreenStarted();
-    void setToolbarVisibility(boolean visible);
-    void setTextVisibility(boolean visible);
+
   }
 
   interface PlatosTo {
     Context getManagedContext();
     void destroyView();
-    boolean isToolbarVisible();
-    boolean isTextVisible();
+
   }
 
   ///////////////////////////////////////////////////////////////////////////////////
@@ -36,7 +34,8 @@ public interface Platos {
    * Methods offered to VIEW to communicate with PRESENTER
    */
   interface ViewToPresenter extends Presenter<PresenterToView> {
-    void onButtonClicked();
+    void onItemClickSelected(int pos);
+    void inicializarVista();
   }
 
   /**
@@ -44,11 +43,7 @@ public interface Platos {
    */
   interface PresenterToView extends ContextView {
     void finishScreen();
-    void hideToolbar();
-    void hideText();
-    void showText();
-    void setText(String txt);
-    void setLabel(String txt);
+
   }
 
   /**

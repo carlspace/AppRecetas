@@ -13,8 +13,6 @@ public class InicialPresenter extends GenericPresenter
 <Inicial.PresenterToView, Inicial.PresenterToModel, Inicial.ModelToPresenter, InicialModel>
         implements Inicial.ViewToPresenter, Inicial.ModelToPresenter, Inicial.InicialTo, Inicial.ToInicial{
 
-
-
     private boolean toolbarVisible;
     private boolean buttonClicked;
     private int numeroBotonPresionado;
@@ -91,14 +89,14 @@ public class InicialPresenter extends GenericPresenter
         Log.d(TAG, "calling onButtonClicked1()");
         numeroBotonPresionado=1;
         Navigator app = (Navigator) getView().getApplication();
-
+        app.goToPlatosScreen(this);
     }
     @Override
     public void onButtonClicked2() {
         Log.d(TAG, "calling onButtonClicked2()");
         numeroBotonPresionado=2;
         Navigator app = (Navigator) getView().getApplication();
-
+        app.goToPlatosScreen(this);
     }
 
     @Override
@@ -106,7 +104,7 @@ public class InicialPresenter extends GenericPresenter
         Log.d(TAG, "calling onButtonClicked3()");
         numeroBotonPresionado=3;
         Navigator app = (Navigator) getView().getApplication();
-
+        app.goToPlatosScreen(this);
     }
 
     @Override
@@ -114,7 +112,7 @@ public class InicialPresenter extends GenericPresenter
         Log.d(TAG, "calling onButtonClicked3()");
         numeroBotonPresionado=3;
         Navigator app = (Navigator) getView().getApplication();
-
+        app.goToPlatosScreen(this);
     }
 
 

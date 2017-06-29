@@ -57,6 +57,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
         return null;
     }
 
+    //Datos que se inicializaran con la appp
 
     public void initBaseDeDatos(){
 

@@ -48,6 +48,7 @@ public interface Platos {
   interface PresenterToView extends ContextView {
     void finishScreen();
 
+      void setPosicionLista(int pos);
   }
 
   /**

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -44,15 +45,18 @@ public class PlatosView
                             }
                         });
                     }
+
+
+                /**
+                 * Method that initialized MVP objects
+                 * {@link super#onResume(Class, Object)} should always be called
+                 */
+
+                @SuppressLint("MissingSuperCall")
+                @Override
+                protected void onResume() {
+                    super.onResume(PlatosPresenter.class, this);
                 }
-                    /**
-                     * Method that initialized MVP objects
-                     * {@link super#onResume(Class, Object)} should always be called
-                     */
-                    @Override
-                    protected void onResume () {
-                        super.onResume(PlatosPresenter.class, this);
-                    }
 
   /*
   @Override
@@ -77,28 +81,23 @@ public class PlatosView
     return super.onOptionsItemSelected(item);
   }
   */
+            }
+
+            ///////////////////////////////////////////////////////////////////////////////////
+            /// // Presenter To View ////////////////////////////////////////////////////////////
 
 
-                    ///////////////////////////////////////////////////////////////////////////////////
-                    // Presenter To View /////////////////////////////////////////////////////////////
-
-                    @Override
-                    public void finishScreen () {
-                        finish();
-                    }
-
-
-                }
-
-                private void onItemClickSelected(int pos) {
-                    getPresenter().onItemClickSelected(pos);
-
-                }
 
     @Override
     public void finishScreen() {
 
     }
-}
 
+    @Override
+    public void setPosicionLista(int pos) {
 
+    }
+
+    private void onItemClickSelected(int pos) {
+        getPresenter().onItemClickSelected (pos);
+    }

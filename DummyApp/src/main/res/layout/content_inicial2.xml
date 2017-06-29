@@ -17,7 +17,7 @@
             android:id="@+id/iconoBtnSopa"
             android:layout_width="155dp"
             android:layout_height="136dp"
-            app:srcCompat="@mipmap/iconoInicialSopa"
+            app:srcCompat="@mipmap/icono_inicial_sopa"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="27dp" />
 
@@ -41,7 +41,7 @@
             android:id="@+id/iconoBtnCarne"
             android:layout_width="155dp"
             android:layout_height="136dp"
-            app:srcCompat="@mipmap/iconoInicialCarne"
+            app:srcCompat="@mipmap/icono_inicial_carne"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="27dp" />
 
@@ -66,7 +66,7 @@
             android:id="@+id/iconoBtnPescado"
             android:layout_width="155dp"
             android:layout_height="136dp"
-            app:srcCompat="@mipmap/iconoInicialPescado"
+            app:srcCompat="@mipmap/icono_inicial_pescado"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="27dp" />
 
@@ -91,7 +91,7 @@
             android:id="@+id/iconoBtnEnsalada"
             android:layout_width="155dp"
             android:layout_height="136dp"
-            app:srcCompat="@mipmap/iconoInicialEnsalada"
+            app:srcCompat="@mipmap/icono_inicial_ensalada"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="27dp" />
 

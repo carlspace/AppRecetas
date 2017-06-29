@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="123dp"
             android:layout_weight="1"
-            app:srcCompat="@mipmap/iconoInicialCarne" />
+            app:srcCompat="@mipmap/icono_inicial_carne" />
     </LinearLayout>
 
     <LinearLayout
@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="129dp"
             android:layout_weight="1"
-            app:srcCompat="@mipmap/iconoInicialPescado" />
+            app:srcCompat="@mipmap/icono_inicial_pescado" />
     </LinearLayout>
 
     <Space
@@ -57,7 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="158dp"
             android:layout_weight="1"
-            app:srcCompat="@mipmap/iconoInicialSopa" />
+            app:srcCompat="@mipmap/icono_inicial_sopa" />
     </LinearLayout>
 
     <LinearLayout
@@ -73,7 +73,7 @@
             android:id="@+id/iconoBtnEnsalada"
             android:layout_width="match_parent"
             android:layout_height="146dp"
-            app:srcCompat="@mipmap/iconoInicialEnsalada" />
+            app:srcCompat="@mipmap/icono_inicial_ensalada" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

@@ -50,6 +50,26 @@ public class InicialModel extends GenericModel<Inicial.ModelToPresenter>
     public String getLabel() {
         return dummyLabel;
     }
+
+    @Override
+    public String getNombreComidaBtn4() {
+        return null;
+    }
+
+    @Override
+    public String getNombreComidaBtn3() {
+        return null;
+    }
+
+    @Override
+    public String getNombreComidaBtn2() {
+        return null;
+    }
+
+    @Override
+    public String getNombreComidaBtn1() {
+        return null;
+    }
 }
 
 

@@ -14,11 +14,13 @@ public class PlatosPresenter extends GenericPresenter
     implements Platos.ViewToPresenter, Platos.ModelToPresenter, Platos.PlatosTo, Platos.ToPlatos {
 
 
-  private boolean toolbarVisible;
-  private boolean buttonClicked;
-  private boolean textVisible;
+    private boolean toolbarVisible;
+    private boolean buttonClicked;
+    private boolean textVisible;
+    private int idPlatoSeleccionado;
+    private int posicionDeListaPlatosClicked;
 
-  /**
+      /**
    * Operation called during VIEW creation in {@link GenericActivity#onResume(Class, Object)}
    * Responsible to initialize MODEL.
    * Always call {@link GenericPresenter#onCreate(Class, Object)} to initialize the object
@@ -129,5 +131,15 @@ public class PlatosPresenter extends GenericPresenter
         if(isViewRunning()) {
             getView().finishScreen();
         }
+    }
+
+    @Override
+    public int getPosicionDeListaPlatosClicked() {
+        return posicionDeListaPlatosClicked;
+    }
+
+    @Override
+    public int getIdPlatoSeleccionado() {
+        return idPlatoSeleccionado;
     }
 }

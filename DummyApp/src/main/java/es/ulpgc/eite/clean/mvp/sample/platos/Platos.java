@@ -22,8 +22,10 @@ public interface Platos {
   }
 
   interface PlatosTo {
-    Context getManagedContext();
-    void destroyView();
+      Context getManagedContext();
+      void destroyView();
+      int getPosicionDeListaPlatosClicked();
+      int getIdPlatoSeleccionado();
 
   }
 

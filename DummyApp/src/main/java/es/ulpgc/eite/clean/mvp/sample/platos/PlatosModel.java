@@ -58,4 +58,9 @@ public class PlatosModel extends GenericModel<Platos.ModelToPresenter>
   public String getLabel() {
     return platosLabel;
   }
+
+  @Override
+  public int getIdPlatoSeleccionado(int idTipoDeComida, int posicionDeListaPlatosClicked) {
+    return 0;
+  }
 }

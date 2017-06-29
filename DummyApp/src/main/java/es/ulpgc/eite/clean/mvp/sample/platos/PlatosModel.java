@@ -42,7 +42,7 @@ public class PlatosModel extends GenericModel<Platos.ModelToPresenter>
 
   @Override
   public void onChangeMsgByBtnClicked() {
-    msgText = dummyText;
+    msgText = platosText;
     if(numOfTimes > 0) {
       msgText += ", " + numOfTimes + " times";
     }
@@ -56,6 +56,6 @@ public class PlatosModel extends GenericModel<Platos.ModelToPresenter>
 
   @Override
   public String getLabel() {
-    return dummyLabel;
+    return platosLabel;
   }
 }

@@ -34,7 +34,7 @@ public class DummyPresenter extends GenericPresenter
 
     Log.d(TAG, "calling startingDummyScreen()");
     Mediator app = (Mediator) getView().getApplication();
-    app.startingDummyScreen(this);
+    //app.startingDummyScreen(this);
   }
 
   /**

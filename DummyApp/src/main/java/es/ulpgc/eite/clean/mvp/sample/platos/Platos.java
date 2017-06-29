@@ -60,7 +60,7 @@ public interface Platos {
 
     int getIdPlatoSeleccionado(int idTipoDeComida, int posicionDeListaPlatosClicked);
   }
-
+//HOLA
   /**
    * Required PRESENTER methods available to MODEL
    */

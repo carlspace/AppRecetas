@@ -1,7 +1,6 @@
 package es.ulpgc.eite.clean.mvp.sample.inicial;
 
 import es.ulpgc.eite.clean.mvp.GenericModel;
-import es.ulpgc.eite.clean.mvp.sample.dummy.Dummy;
 
 public class InicialModel extends GenericModel<Inicial.ModelToPresenter>
         implements Inicial.PresenterToModel{
@@ -52,23 +51,23 @@ public class InicialModel extends GenericModel<Inicial.ModelToPresenter>
     }
 
     @Override
-    public String getNombreComidaBtn4() {
-        return null;
+    public String getTipoComidaBtn4() {
+        return "Pescado";
     }
 
     @Override
-    public String getNombreComidaBtn3() {
-        return null;
+    public String getTipoComidaBtn3() {
+        return "Carne";
     }
 
     @Override
-    public String getNombreComidaBtn2() {
-        return null;
+    public String getTipoComidaBtn2() {
+        return "Sopa";
     }
 
     @Override
-    public String getNombreComidaBtn1() {
-        return null;
+    public String getTipoComidaBtn1() {
+        return "Ensalada";
     }
 }
 

@@ -5,7 +5,6 @@ import android.content.Context;
 import es.ulpgc.eite.clean.mvp.ContextView;
 import es.ulpgc.eite.clean.mvp.Model;
 import es.ulpgc.eite.clean.mvp.Presenter;
-import es.ulpgc.eite.clean.mvp.sample.dummy.Dummy;
 
 /**
  * Created by Carlos Espacios on 26/06/2017.
@@ -62,13 +61,13 @@ public interface Inicial {
         String getText();
         String getLabel();
 
-        String getNombreComidaBtn4();
+        String getTipoComidaBtn4();
 
-        String getNombreComidaBtn3();
+        String getTipoComidaBtn3();
 
-        String getNombreComidaBtn2();
+        String getTipoComidaBtn2();
 
-        String getNombreComidaBtn1();
+        String getTipoComidaBtn1();
     }
 
     /**

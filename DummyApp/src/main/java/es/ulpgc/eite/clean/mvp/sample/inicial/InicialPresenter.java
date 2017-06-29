@@ -171,10 +171,10 @@ public class InicialPresenter extends GenericPresenter
 
 
     private void inicializarVista() {
-        getView().setLabel1(getModel().getNombreComidaBtn1());
-        getView().setLabel2(getModel().getNombreComidaBtn2());
-        getView().setLabel3(getModel().getNombreComidaBtn3());
-        getView().setLabel4(getModel().getNombreComidaBtn4());
+        getView().setLabel1(getModel().getTipoComidaBtn1());
+        getView().setLabel2(getModel().getTipoComidaBtn2());
+        getView().setLabel3(getModel().getTipoComidaBtn3());
+        getView().setLabel4(getModel().getTipoComidaBtn4());
 
     }
 }

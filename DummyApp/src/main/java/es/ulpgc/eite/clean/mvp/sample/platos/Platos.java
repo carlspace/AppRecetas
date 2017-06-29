@@ -57,6 +57,8 @@ public interface Platos {
     void onChangeMsgByBtnClicked();
     String getText();
     String getLabel();
+
+    int getIdPlatoSeleccionado(int idTipoDeComida, int posicionDeListaPlatosClicked);
   }
 
   /**

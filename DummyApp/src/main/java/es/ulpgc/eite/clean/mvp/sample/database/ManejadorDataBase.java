@@ -1,6 +1,7 @@
 package es.ulpgc.eite.clean.mvp.sample.database;
 
 import io.realm.Realm;
+import io.realm.RealmResults;
 
 /**
  * Created by Carlos Espacios on 29/06/2017.
@@ -22,9 +23,15 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
         initBaseDeDatos();
     }
 
+
+
+
+    //Getters de platos, plato y tipoDeComida
     @Override
     public String getNombreTipoDeComida(int tipoDeComida) {
-        return null;
+        RealmResults<TipoDeComida> result= realm.where(TipoDeComida.class).equalTo("id",tipoDeComida).findAll();
+        return result.get(0).getCategoria();
+
     }
 
     @Override

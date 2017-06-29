@@ -11,7 +11,7 @@ public class TipoDeComida extends RealmObject {
 
     @PrimaryKey
     private int id;
-    private String tipoDeComida;
+    private String nombreTipoDeComida;
     private String imagen;
 
 
@@ -24,11 +24,11 @@ public class TipoDeComida extends RealmObject {
     }
 
     public String getTipoDeComida() {
-        return tipoDeComida;
+        return nombreTipoDeComida;
     }
 
-    public void setTipoDeComida(String tipoDeComida) {
-        this.tipoDeComida = tipoDeComida;
+    public void setTipoDeComida(String nombreTipoDeComida) {
+        this.nombreTipoDeComida = nombreTipoDeComida;
     }
 
 

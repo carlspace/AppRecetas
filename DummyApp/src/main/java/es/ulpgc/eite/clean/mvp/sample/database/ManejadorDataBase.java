@@ -27,10 +27,11 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
 
 
     //Getters de platos, plato y tipoDeComida
+    ///////////////////////////////POSIBLE FALLO AQUIIIIII!!!!!!!!!!!
     @Override
     public String getNombreTipoDeComida(int tipoDeComida) {
-        RealmResults<TipoDeComida> result= realm.where(TipoDeComida.class).equalTo("id",tipoDeComida).findAll();
-        return result.get(0).getCategoria();
+        RealmResults<TipoDeComida> result = realm.where(TipoDeComida.class).equalTo("id",tipoDeComida).findAll();
+        return result.get(0).getTipoDeComida();
 
     }
 

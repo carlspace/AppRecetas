@@ -47,7 +47,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
 
     @Override
     public String getRecetaPlato(int idPlato) {
-
+        return null;
     }
 
     @Override

@@ -8,6 +8,8 @@ import es.ulpgc.eite.clean.mvp.ContextView;
 import es.ulpgc.eite.clean.mvp.GenericActivity;
 import es.ulpgc.eite.clean.mvp.GenericPresenter;
 import es.ulpgc.eite.clean.mvp.sample.app.Mediator;
+import es.ulpgc.eite.clean.mvp.sample.app.Navigator;
+import es.ulpgc.eite.clean.mvp.sample.database.TipoDeComida;
 
 public class PlatosPresenter extends GenericPresenter
     <Platos.PresenterToView, Platos.PresenterToModel, Platos.ModelToPresenter, PlatosModel>
@@ -98,10 +100,15 @@ public class PlatosPresenter extends GenericPresenter
 
     @Override
   public void onItemClickSelected(int pos) {
-    Log.d(TAG, "posicion pulsada " + pos);
-    Mediator mediator = (Mediator) getApplication();
+        Log.d(TAG,"posicion pulsada" + pos);
+        Mediator mediator = (Mediator) getApplication();
+        setPosicionDeListaPlatosClicked(pos);
+        setIdPlatoSeleccionado(mediator.getNumeroBotonPresionado(),pos);
+        Navigator app = (Navigator) getView().getApplication();
 
-  }
+    }
+
+
 
   ///////////////////////////////////////////////////////////////////////////////////
   // To Platos //////////////////////////////////////////////////////////////////////
@@ -141,5 +148,12 @@ public class PlatosPresenter extends GenericPresenter
     @Override
     public int getIdPlatoSeleccionado() {
         return idPlatoSeleccionado;
+    }
+
+    public void setPosicionDeListaPlatosClicked(int posicionDeListaPlatosClicked) {
+        this.posicionDeListaPlatosClicked = posicionDeListaPlatosClicked;
+    }
+    public void setIdPlatoSeleccionado(int numeroBotonPresionado, int posicionDeListaPlatosClicked){
+        this.idPlatoSeleccionado = getModel().getIdPlatoSeleccionado(TipoDeComida,posicionDeListaPlatosClicked);
     }
 }

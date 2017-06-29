@@ -88,7 +88,9 @@ public class PlatosPresenter extends GenericPresenter
 
   @Override
   public void inicializarVista() {
-    Mediator app = (Mediator) getApplication();
+      Mediator app = (Mediator) getApplication();
+      //getView().g(getModel().getPlatos(app.getNumeroBotonPresionado()));
+      //getView().setPosicionLista(app.getPosicionPlatos());
 
 
   }

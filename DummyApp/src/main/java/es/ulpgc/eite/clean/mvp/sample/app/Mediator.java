@@ -8,4 +8,6 @@ public interface Mediator {
   int getNumeroBotonPresionado();
 
     void startingPlatosScreen(PlatosPresenter platosPresenter);
+
+    int getPosicionPlatos();
 }

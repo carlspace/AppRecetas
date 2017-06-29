@@ -89,6 +89,7 @@ public class PlatosView
 
     @Override
     public void setPosicionLista(int pos) {
+        listaPlatos.setSelection(pos);
 
     }
 }

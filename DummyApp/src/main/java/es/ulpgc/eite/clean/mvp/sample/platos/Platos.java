@@ -60,6 +60,8 @@ public interface Platos {
     String getLabel();
 
     int getIdPlatoSeleccionado(int idTipoDeComida, int posicionDeListaPlatosClicked);
+
+    void getPlatos(int idTipoDeComida);
   }
 //HOLA
   /**

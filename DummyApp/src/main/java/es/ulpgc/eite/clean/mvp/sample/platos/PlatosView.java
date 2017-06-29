@@ -21,7 +21,7 @@ public class PlatosView
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    //Falta crear layout
+
     setContentView(R.layout.activity_platos);
 
     text = (TextView) findViewById(R.id.text);

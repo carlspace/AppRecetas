@@ -4,7 +4,9 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import es.ulpgc.eite.clean.mvp.GenericActivity;
@@ -17,36 +19,40 @@ public class PlatosView
   private Toolbar toolbar;
   private Button button;
   private TextView text;
+  private ListView listaPlatos;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
     setContentView(R.layout.activity_platos);
-
-    text = (TextView) findViewById(R.id.text);
-
     toolbar = (Toolbar) findViewById(R.id.toolbar);
-    setSupportActionBar(toolbar);
+    listaPlatos = (ListView) findViewById(R.id.listaPlatos);
+    listaPlatos.setOnItemClickListener(new AdapterView.OnItemClickListener(
+            new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    onItemClickSelected(i);
+                    {
 
-    button = (Button) findViewById(R.id.button);
-    button.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-        getPresenter().onButtonClicked();
-      }
-    });
-  }
 
-  /**
-   * Method that initialized MVP objects
-   * {@link super#onResume(Class, Object)} should always be called
-   */
-  @SuppressLint("MissingSuperCall")
-  @Override
-  protected void onResume() {
-    super.onResume(PlatosPresenter.class, this);
-  }
+                        button = (Button) findViewById(R.id.button);
+                        button.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                getPresenter().onButtonClicked();
+                            }
+                        });
+                    }
+                }
+                    /**
+                     * Method that initialized MVP objects
+                     * {@link super#onResume(Class, Object)} should always be called
+                     */
+                    @Override
+                    protected void onResume () {
+                        super.onResume(PlatosPresenter.class, this);
+                    }
 
   /*
   @Override
@@ -73,13 +79,26 @@ public class PlatosView
   */
 
 
-  ///////////////////////////////////////////////////////////////////////////////////
-  // Presenter To View /////////////////////////////////////////////////////////////
+                    ///////////////////////////////////////////////////////////////////////////////////
+                    // Presenter To View /////////////////////////////////////////////////////////////
 
-  @Override
-  public void finishScreen() {
-    finish();
-  }
+                    @Override
+                    public void finishScreen () {
+                        finish();
+                    }
 
 
+                }
+
+                private void onItemClickSelected(int pos) {
+                    getPresenter().onItemClickSelected(pos);
+
+                }
+
+    @Override
+    public void finishScreen() {
+
+    }
 }
+
+

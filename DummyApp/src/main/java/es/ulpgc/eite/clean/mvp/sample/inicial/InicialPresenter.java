@@ -89,6 +89,7 @@ public class InicialPresenter extends GenericPresenter
         numeroBotonPresionado=1;
         Navigator app = (Navigator) getView().getApplication();
         app.goToPlatosScreen(this);
+
     }
     @Override
     public void onButtonClicked2() {

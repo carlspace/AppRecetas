@@ -17,46 +17,41 @@ public class PlatosView
     extends GenericActivity<Platos.PresenterToView, Platos.ViewToPresenter, PlatosPresenter>
     implements Platos.PresenterToView {
 
-  private Toolbar toolbar;
-  private Button button;
-  private TextView text;
-  private ListView listaPlatos;
+    private Toolbar toolbar;
+    private Button button;
+    private TextView text;
+    private ListView listaPlatos;
 
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-    setContentView(R.layout.activity_platos);
-    toolbar = (Toolbar) findViewById(R.id.toolbar);
-    listaPlatos = (ListView) findViewById(R.id.listaPlatos);
-    listaPlatos.setOnItemClickListener(new AdapterView.OnItemClickListener(
-            new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                    onItemClickSelected(i);
-                    {
+        setContentView(R.layout.activity_platos);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        listaPlatos = (ListView) findViewById(R.id.listaPlatos);
+        listaPlatos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                onItemClickSelected(i);
+            }
+        });
+    }
 
-
-                        button = (Button) findViewById(R.id.button);
-                        button.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                getPresenter().onButtonClicked();
-                            }
-                        });
-                    }
+    private void onItemClickSelected(int pos) {
+        getPresenter().onItemClickSelected(pos);
+    }
 
 
-                /**
-                 * Method that initialized MVP objects
-                 * {@link super#onResume(Class, Object)} should always be called
-                 */
+    /**
+     * Method that initialized MVP objects
+     * {@link super#onResume(Class, Object)} should always be called
+     */
 
-                @SuppressLint("MissingSuperCall")
-                @Override
-                protected void onResume() {
-                    super.onResume(PlatosPresenter.class, this);
-                }
+    @SuppressLint("MissingSuperCall")
+    @Override
+    protected void onResume() {
+        super.onResume(PlatosPresenter.class, this);
+    }
 
   /*
   @Override
@@ -81,11 +76,10 @@ public class PlatosView
     return super.onOptionsItemSelected(item);
   }
   */
-            }
 
-            ///////////////////////////////////////////////////////////////////////////////////
-            /// // Presenter To View ////////////////////////////////////////////////////////////
 
+    ///////////////////////////////////////////////////////////////////////////////////
+    /// // Presenter To View ////////////////////////////////////////////////////////////
 
 
     @Override
@@ -97,7 +91,4 @@ public class PlatosView
     public void setPosicionLista(int pos) {
 
     }
-
-    private void onItemClickSelected(int pos) {
-        getPresenter().onItemClickSelected (pos);
-    }
+}

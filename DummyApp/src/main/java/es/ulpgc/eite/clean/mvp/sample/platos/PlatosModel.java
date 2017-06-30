@@ -63,4 +63,9 @@ public class PlatosModel extends GenericModel<Platos.ModelToPresenter>
   public int getIdPlatoSeleccionado(int idTipoDeComida, int posicionDeListaPlatosClicked) {
     return 0;
   }
+
+  @Override
+  public void getPlatos(int idTipoDeComida) {
+
+  }
 }

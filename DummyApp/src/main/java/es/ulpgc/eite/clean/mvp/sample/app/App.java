@@ -66,15 +66,15 @@ public class App extends Application implements Mediator, Navigator {
 
   @Override
   public int getPosicionPlatos() {
-    return platosToState.posicionListaAutoresPulsada;
+    return platosToState.posicionListaPlatosPulsada;
   }
 
   @Override
   public void startingPlatosScreen(Platos.ToPlatos presenter) {
-    presenter.onScreenStarted();
-    {
 
-    }
+    presenter.onScreenStarted();
+  }
+
 
 
 
@@ -90,4 +90,4 @@ public class App extends Application implements Mediator, Navigator {
     }
 
   }
-}
+

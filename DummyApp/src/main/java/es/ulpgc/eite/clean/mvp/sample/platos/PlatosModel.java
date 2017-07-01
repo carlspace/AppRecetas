@@ -69,8 +69,14 @@ public class PlatosModel extends GenericModel<Platos.ModelToPresenter>
 
   }
 
+
   @Override
   public void getPlatos(int idTipoDeComida) {
 
+  }
+
+  @Override
+  public String getTipoComida(int numeroBotonPresionado) {
+    return null;
   }
 }

@@ -39,7 +39,7 @@ public interface Platos {
     void onItemClickSelected(int pos);
     void inicializarVista();
 
-    void onButtonClicked();
+
   }
 
   /**
@@ -62,12 +62,12 @@ public interface Platos {
    * Methods offered to MODEL to communicate with PRESENTER
    */
   interface PresenterToModel extends Model<ModelToPresenter> {
-    void onChangeMsgByBtnClicked();
+
     String getText();
-    String getLabel();
+
 
     int getIdPlatoSeleccionado(int idTipoDeComida, int posicionDeListaPlatosClicked);
-    void actualizarListaPlatos(String[] nombresPlatos);
+
 
     void getPlatos(int idTipoDeComida);
 

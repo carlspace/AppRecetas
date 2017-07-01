@@ -54,6 +54,7 @@ public class PlatosPresenter extends GenericPresenter
     inicializarVista();
     if (configurationChangeOccurred()) {
       inicializarVista();
+        Log.d(TAG, "ha pasado el segundo corte");
 
     }
   }

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -89,7 +90,7 @@ public class InicialView extends GenericActivity<Inicial.PresenterToView, Inicia
             setSupportActionBar(toolbar);
             Realm.init(this);
             RealmConfiguration config = new RealmConfiguration.Builder().deleteRealmIfMigrationNeeded().build();
-
+            Log.d(TAG, " se inicio realm");
         }
 
         /**

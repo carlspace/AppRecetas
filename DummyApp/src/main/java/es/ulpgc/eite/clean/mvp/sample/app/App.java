@@ -6,12 +6,12 @@ import android.content.Intent;
 import android.util.Log;
 
 import es.ulpgc.eite.clean.mvp.sample.inicial.Inicial;
+import es.ulpgc.eite.clean.mvp.sample.plato.Plato;
 import es.ulpgc.eite.clean.mvp.sample.platos.Platos;
 import es.ulpgc.eite.clean.mvp.sample.platos.PlatosView;
 
 
 public class App extends Application implements Mediator, Navigator {
-
 
   private InicialState toInicialState, inicialToState;
   private PlatosState toPlatosState, platosToState;
@@ -75,11 +75,13 @@ public class App extends Application implements Mediator, Navigator {
     presenter.onScreenStarted();
   }
 
+  @Override
+  public void startingPlatoScreen(Plato.ToPlato presenter) {
+    presenter.onScreenStarted();
+  }
 
 
-
-
-    ///////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////
     // State /////////////////////////////////////////////////////////////////////////
 
     private class PlatosState {

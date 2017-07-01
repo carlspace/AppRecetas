@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import es.ulpgc.eite.clean.mvp.GenericActivity;
 import es.ulpgc.eite.clean.mvp.sample.R;
+import io.realm.Realm;
 
 
 /**
@@ -85,7 +86,7 @@ public class InicialView extends GenericActivity<Inicial.PresenterToView, Inicia
 
             toolbar = (Toolbar) findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
-
+            Realm.init(this);
 
         }
 

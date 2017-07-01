@@ -49,6 +49,9 @@ public interface Platos {
     void finishScreen();
 
       void setPosicionLista(int pos);
+
+    //Este método se introduce para cuando se introduzcan los botones add y delete
+    void actualizarListaPlatos(String[] nombresPlatos);
   }
 
   /**
@@ -60,6 +63,7 @@ public interface Platos {
     String getLabel();
 
     int getIdPlatoSeleccionado(int idTipoDeComida, int posicionDeListaPlatosClicked);
+    void actualizarListaPlatos(String[] nombresPlatos);
 
     void getPlatos(int idTipoDeComida);
   }

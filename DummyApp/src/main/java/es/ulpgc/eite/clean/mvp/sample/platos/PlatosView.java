@@ -92,4 +92,12 @@ public class PlatosView
         listaPlatos.setSelection(pos);
 
     }
+
+    //Este método se introduce para cuando se introduzcan los botones add y delete
+    @Override
+    public void actualizarListaPlatos(String[] nombresPlatos){
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,nombresPlatos
+        );
+        listaPlatos.setAdapter(arrayAdapter);
+    }
 }

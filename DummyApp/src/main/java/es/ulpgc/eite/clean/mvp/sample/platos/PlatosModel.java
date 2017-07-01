@@ -65,6 +65,11 @@ public class PlatosModel extends GenericModel<Platos.ModelToPresenter>
   }
 
   @Override
+  public void actualizarListaPlatos(String[] nombresPlatos) {
+
+  }
+
+  @Override
   public void getPlatos(int idTipoDeComida) {
 
   }

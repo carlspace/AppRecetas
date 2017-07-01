@@ -84,6 +84,7 @@ public class PlatosView
 
     @Override
     public void finishScreen() {
+        finish();
 
     }
 

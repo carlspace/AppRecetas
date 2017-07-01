@@ -54,6 +54,8 @@ public interface Platos {
     void actualizarListaPlatos(String[] nombresPlatos);
 
     void setTituloToolbar(String txt);
+
+
   }
 
   /**

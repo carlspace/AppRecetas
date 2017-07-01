@@ -84,6 +84,7 @@ public class PlatosView
 
     @Override
     public void finishScreen() {
+        finish();
 
     }
 
@@ -99,5 +100,9 @@ public class PlatosView
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,nombresPlatos
         );
         listaPlatos.setAdapter(arrayAdapter);
+    }
+    @Override
+    public void setTituloToolbar(String txt) {
+        toolbar.setTitle(txt);
     }
 }

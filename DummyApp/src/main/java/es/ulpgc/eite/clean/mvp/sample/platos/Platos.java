@@ -52,6 +52,8 @@ public interface Platos {
 
     //Este método se introduce para cuando se introduzcan los botones add y delete
     void actualizarListaPlatos(String[] nombresPlatos);
+
+    void setTituloToolbar(String txt);
   }
 
   /**

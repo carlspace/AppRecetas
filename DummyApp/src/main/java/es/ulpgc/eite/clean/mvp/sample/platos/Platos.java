@@ -68,6 +68,8 @@ public interface Platos {
     void actualizarListaPlatos(String[] nombresPlatos);
 
     void getPlatos(int idTipoDeComida);
+
+    String getTipoComida(int numeroBotonPresionado);
   }
 //HOLA
   /**

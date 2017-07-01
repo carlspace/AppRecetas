@@ -89,9 +89,9 @@ public class PlatosPresenter extends GenericPresenter
   @Override
   public void inicializarVista() {
       Mediator app = (Mediator) getApplication();
-      //getView().g(getModel().getPlatos(app.getNumeroBotonPresionado()));
-      //getView().setPosicionLista(app.getPosicionPlatos());
-
+      getView().actualizarListaPlatos(getModel().getPlatos(app.getTipoComidaPresionado()));
+      getView().setTituloToolbar(getModel().getTipoComida(app.getTipoComidaPresionado()));
+      getView().setPosicionLista(app.getPosicionPlatos());
 
   }
 
@@ -105,9 +105,9 @@ public class PlatosPresenter extends GenericPresenter
         Log.d(TAG,"posicion pulsada" + pos);
         Mediator mediator = (Mediator) getApplication();
         setPosicionDeListaPlatosClicked(pos);
-        setIdPlatoSeleccionado(mediator.getNumeroBotonPresionado(),pos);
+        setIdPlatoSeleccionado(mediator.getTipoComidaPresionado(),pos);
         Navigator app = (Navigator) getView().getApplication();
-
+        //app.goToAutorScreen(this);
     }
 
 

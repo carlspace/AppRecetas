@@ -5,7 +5,7 @@ import es.ulpgc.eite.clean.mvp.sample.platos.PlatosPresenter;
 
 public interface Mediator {
   void startingInicialScreen(Inicial.ToInicial presenter);
-  int getNumeroBotonPresionado();
+  int getTipoComidaPresionado();
 
     void startingPlatosScreen(PlatosPresenter platosPresenter);
 

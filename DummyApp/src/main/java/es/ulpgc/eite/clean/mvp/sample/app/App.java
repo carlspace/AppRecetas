@@ -60,7 +60,7 @@ public class App extends Application implements Mediator, Navigator {
     int numeroBotonPresionado;
   }
   @Override
-  public int getNumeroBotonPresionado(){
+  public int getTipoComidaPresionado(){
     return inicialToState.numeroBotonPresionado;
   }
 

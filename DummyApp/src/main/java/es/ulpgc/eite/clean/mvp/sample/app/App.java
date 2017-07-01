@@ -28,7 +28,7 @@ public class App extends Application implements Mediator, Navigator {
   // Mediator //////////////////////////////////////////////////////////////////////
 
   @Override
-  public void startingInicialScreen(Inicial.ToInicial presenter){
+  public void startingInicialScreen(Inicial.ToInicial presenter) {
 
     presenter.onScreenStarted();
   }
@@ -39,12 +39,12 @@ public class App extends Application implements Mediator, Navigator {
 
   @Override
   public void goToPlatosScreen(Inicial.InicialTo presenter) {
-    Log.d("APP", "goToPlatosScreen() has pulsado el boton: "+ presenter. getNumeroBotonPresionado());
+    Log.d("APP", "goToPlatosScreen() has pulsado el boton: " + presenter.getNumeroBotonPresionado());
     inicialToState = new InicialState();
-    inicialToState.numeroBotonPresionado= presenter.getNumeroBotonPresionado();
+    inicialToState.numeroBotonPresionado = presenter.getNumeroBotonPresionado();
 
     platosToState = new PlatosState();
-    platosToState.posicionDeListaPlatosClicked = 0;
+    platosToState.posicionListaPlatosPulsada = 0;
     Context view = presenter.getManagedContext();
 
     if (view != null) {
@@ -54,33 +54,40 @@ public class App extends Application implements Mediator, Navigator {
 
   }
 
-  private class InicialState{
+  private class InicialState {
     boolean toolbarVisibility;
     int numeroBotonPresionado;
   }
+
   @Override
-  public int getTipoComidaPresionado(){
+  public int getTipoComidaPresionado() {
     return inicialToState.numeroBotonPresionado;
   }
 
   @Override
-  public void startingPlatosScreen(Platos.ToPlatos presenter) {
-
+  public int getPosicionPlatos() {
+    return platosToState.posicionListaAutoresPulsada;
   }
 
   @Override
-  public int getPosicionPlatos() {
-    return platosToState.posicionDeListaPlatosClicked;
+  public void startingPlatosScreen(Platos.ToPlatos presenter) {
+    presenter.onScreenStarted();
+    {
+
+    }
+
+
+
+
+    ///////////////////////////////////////////////////////////////////////////////////
+    // State /////////////////////////////////////////////////////////////////////////
+
+    private class PlatosState {
+      int posicionListaPlatosPulsada;
+      int idPlatoSeleccionado;
+
+
+    }
+
   }
-
-
-  ///////////////////////////////////////////////////////////////////////////////////
-  // State /////////////////////////////////////////////////////////////////////////
-
-  private class PlatosState{
-    int posicionDeListaPlatosClicked;
-    int idPlatoSeleccionado;
-
-  }
-
 }

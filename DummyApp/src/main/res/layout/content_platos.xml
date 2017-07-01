@@ -12,6 +12,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
         <ListView
             android:id="@+id/listaPlatos"
@@ -20,7 +23,7 @@
             android:headerDividersEnabled="false"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="0dp" />
-
+        </FrameLayout>
     </LinearLayout>
 
 </RelativeLayout>

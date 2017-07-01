@@ -51,6 +51,6 @@ public class PlatosModel extends GenericModel<Platos.ModelToPresenter>
 
   @Override
   public String getTipoComida(int numeroBotonPresionado) {
-    return null;
+    return miManejador.getNombreTipoDeComida(numeroBotonPresionado);
   }
 }

@@ -54,6 +54,14 @@ public class App extends Application implements Mediator, Navigator {
 
   }
 
+  @Override
+  public void goToPlatoScreen(Platos.PlatosTo presenter) {
+    platosToState = new PlatosState();
+    platosToState.posicionListaPlatosPulsada = presenter.getPosicionDeListaPlatosClicked();
+
+
+  }
+
   private class InicialState {
     boolean toolbarVisibility;
     int numeroBotonPresionado;

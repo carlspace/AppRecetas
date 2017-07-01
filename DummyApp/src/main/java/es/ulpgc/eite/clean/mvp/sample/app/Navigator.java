@@ -1,9 +1,9 @@
 package es.ulpgc.eite.clean.mvp.sample.app;
 
 import es.ulpgc.eite.clean.mvp.sample.inicial.Inicial;
-import es.ulpgc.eite.clean.mvp.sample.plato.Plato;
+import es.ulpgc.eite.clean.mvp.sample.platos.Platos;
 
 public interface Navigator {
   void goToPlatosScreen(Inicial.InicialTo presenter);
-  void goToPlatoScreen(Plato.PlatoTo presenter);
+  void goToPlatoScreen(Platos.PlatosTo presenter);
 }

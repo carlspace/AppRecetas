@@ -1,6 +1,8 @@
 package es.ulpgc.eite.clean.mvp.sample.inicial;
 
 import es.ulpgc.eite.clean.mvp.GenericModel;
+import es.ulpgc.eite.clean.mvp.sample.database.I_ManejadorDataBase;
+import es.ulpgc.eite.clean.mvp.sample.database.ManejadorDataBase;
 
 public class InicialModel extends GenericModel<Inicial.ModelToPresenter>
         implements Inicial.PresenterToModel{
@@ -11,6 +13,9 @@ public class InicialModel extends GenericModel<Inicial.ModelToPresenter>
     private int numOfTimes;
     private String msgText;
 
+    I_ManejadorDataBase miManejador;
+
+
     /**
      * Method that recovers a reference to the PRESENTER
      * You must ALWAYS call {@link super#onCreate(Object)} here
@@ -20,6 +25,7 @@ public class InicialModel extends GenericModel<Inicial.ModelToPresenter>
     @Override
     public void onCreate(Inicial.ModelToPresenter presenter) {
         super.onCreate(presenter);
+        miManejador = ManejadorDataBase.getInstance();
 
 
     }
@@ -52,22 +58,22 @@ public class InicialModel extends GenericModel<Inicial.ModelToPresenter>
 
     @Override
     public String getTipoComidaBtn4() {
-        return "Pescado";
+        return miManejador.getNombreTipoDeComida(1);
     }
 
     @Override
     public String getTipoComidaBtn3() {
-        return "Carne";
+        return miManejador.getNombreTipoDeComida(2);
     }
 
     @Override
     public String getTipoComidaBtn2() {
-        return "Sopa";
+        return miManejador.getNombreTipoDeComida(3);
     }
 
     @Override
     public String getTipoComidaBtn1() {
-        return "Ensalada";
+        return miManejador.getNombreTipoDeComida(4);
     }
 }
 

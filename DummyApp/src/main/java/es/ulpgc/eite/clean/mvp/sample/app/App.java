@@ -6,8 +6,7 @@ import android.content.Intent;
 import android.util.Log;
 
 import es.ulpgc.eite.clean.mvp.sample.inicial.Inicial;
-import es.ulpgc.eite.clean.mvp.sample.inicial.InicialView;
-import es.ulpgc.eite.clean.mvp.sample.platos.PlatosPresenter;
+import es.ulpgc.eite.clean.mvp.sample.platos.Platos;
 import es.ulpgc.eite.clean.mvp.sample.platos.PlatosView;
 
 
@@ -65,7 +64,7 @@ public class App extends Application implements Mediator, Navigator {
   }
 
   @Override
-  public void startingPlatosScreen(PlatosPresenter platosPresenter) {
+  public void startingPlatosScreen(Platos.ToPlatos presenter) {
 
   }
 

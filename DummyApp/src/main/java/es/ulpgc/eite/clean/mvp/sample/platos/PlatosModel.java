@@ -1,15 +1,13 @@
 package es.ulpgc.eite.clean.mvp.sample.platos;
 
 import es.ulpgc.eite.clean.mvp.GenericModel;
+import es.ulpgc.eite.clean.mvp.sample.database.I_ManejadorDataBase;
 
 
 public class PlatosModel extends GenericModel<Platos.ModelToPresenter>
     implements Platos.PresenterToModel {
 
-  private String platosText;
-  private String platosLabel;
-  private int numOfTimes;
-  private String msgText;
+    I_ManejadorDataBase miManejador;
 
   /**
    * Method that recovers a reference to the PRESENTER
@@ -21,8 +19,7 @@ public class PlatosModel extends GenericModel<Platos.ModelToPresenter>
   public void onCreate(Platos.ModelToPresenter presenter) {
     super.onCreate(presenter);
 
-    platosLabel = "Click Me!";
-    platosText = "Hello World!";
+
   }
 
   /**
@@ -39,26 +36,17 @@ public class PlatosModel extends GenericModel<Platos.ModelToPresenter>
   ///////////////////////////////////////////////////////////////////////////////////
   // Presenter To Model ////////////////////////////////////////////////////////////
 
-
-
-  @Override
-  public String getText() {
-    return msgText;
-  }
-
-
-
   @Override
   public int getIdPlatoSeleccionado(int idTipoDeComida, int posicionDeListaPlatosClicked) {
-    return 0;
+    int[] ids = miManejador.getListaIdPlatos(idTipoDeComida);
+    return ids[posicionDeListaPlatosClicked];
   }
 
 
-
-
   @Override
-  public void getPlatos(int idTipoDeComida) {
-
+  public String[] getPlatos(int idTipoDeComida) {
+      int [] vectorPlatos = miManejador.getListaIdPlatos(idTipoDeComida);
+      return miManejador.getNombresByArrayIdPlatos(vectorPlatos);
   }
 
   @Override

@@ -62,14 +62,8 @@ public interface Platos {
    * Methods offered to MODEL to communicate with PRESENTER
    */
   interface PresenterToModel extends Model<ModelToPresenter> {
-
-    String getText();
-
-
     int getIdPlatoSeleccionado(int idTipoDeComida, int posicionDeListaPlatosClicked);
-
-
-    void getPlatos(int idTipoDeComida);
+    String[] getPlatos(int idTipoDeComida);
 
     String getTipoComida(int numeroBotonPresionado);
   }

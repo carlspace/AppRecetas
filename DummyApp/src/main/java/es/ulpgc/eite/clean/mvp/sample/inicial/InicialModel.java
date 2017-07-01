@@ -8,10 +8,7 @@ public class InicialModel extends GenericModel<Inicial.ModelToPresenter>
         implements Inicial.PresenterToModel{
 
 
-    private String dummyText;
-    private String dummyLabel;
-    private int numOfTimes;
-    private String msgText;
+
 
     I_ManejadorDataBase miManejador;
 
@@ -46,15 +43,7 @@ public class InicialModel extends GenericModel<Inicial.ModelToPresenter>
 
 
 
-    @Override
-    public String getText() {
-        return msgText;
-    }
 
-    @Override
-    public String getLabel() {
-        return dummyLabel;
-    }
 
     @Override
     public String getTipoComidaBtn4() {

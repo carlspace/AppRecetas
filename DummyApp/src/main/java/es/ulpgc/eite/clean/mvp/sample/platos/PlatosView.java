@@ -101,4 +101,8 @@ public class PlatosView
         );
         listaPlatos.setAdapter(arrayAdapter);
     }
+    @Override
+    public void setTituloToolbar(String txt) {
+        toolbar.setTitle(txt);
+    }
 }

@@ -40,34 +40,20 @@ public class PlatosModel extends GenericModel<Platos.ModelToPresenter>
   // Presenter To Model ////////////////////////////////////////////////////////////
 
 
-  @Override
-  public void onChangeMsgByBtnClicked() {
-    msgText = platosText;
-    if(numOfTimes > 0) {
-      msgText += ", " + numOfTimes + " times";
-    }
-    numOfTimes++;
-  }
 
   @Override
   public String getText() {
     return msgText;
   }
 
-  @Override
-  public String getLabel() {
-    return platosLabel;
-  }
+
 
   @Override
   public int getIdPlatoSeleccionado(int idTipoDeComida, int posicionDeListaPlatosClicked) {
     return 0;
   }
 
-  @Override
-  public void actualizarListaPlatos(String[] nombresPlatos) {
 
-  }
 
 
   @Override

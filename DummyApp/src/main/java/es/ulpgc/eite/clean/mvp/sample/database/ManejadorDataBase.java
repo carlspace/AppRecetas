@@ -144,6 +144,8 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
              receta = "";
             addPlato(nombrePlato, receta, idTipoDeComida, "", "",true);
 
+            addTipoDeComida("Sopa");
+            idTipoDeComida=2;
 
         }
         }

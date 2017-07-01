@@ -3,6 +3,7 @@ package es.ulpgc.eite.clean.mvp.sample.platos;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -51,6 +52,7 @@ public class PlatosView
     @Override
     protected void onResume() {
         super.onResume(PlatosPresenter.class, this);
+        Log.d(TAG, "ha pasado el corte");
     }
 
   /*

@@ -37,32 +37,46 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
 
     @Override
     public int[] getListaIdPlatos(int tipoDeComida) {
-        return new int[0];
+        RealmResults<Plato> result = realm.where(Plato.class).equalTo("tipoDeComida",tipoDeComida).findAll(); //encuentra los platos de este tipo
+        int[] array=new int[result.size()];
+        int i;
+        for(i=0;i< result.size();i++){
+            array[i] =result.get(i).getId();
+        }
+        return array;
     }
 
     @Override
     public String[] getNombresByArrayIdPlatos(int[] ids) {
-        return new String[0];
+        String[] array= new String[ids.length];
+        for (int i=0; i< ids.length;i++){
+            array[i]= getNombrePlato(ids[i]);
+        }
+        return array;
     }
 
     @Override
     public String getRecetaPlato(int idPlato) {
-        return null;
+        RealmResults<Plato> result = realm.where(Plato.class).equalTo("id",idPlato).findAll();
+        return result.get(0).getDescripcion();
     }
 
     @Override
     public String getNombrePlato(int idPlato) {
-        return null;
+        RealmResults<Plato> result= realm.where(Plato.class).equalTo("id",idPlato).findAll();
+        return result.get(0).getNombre();
     }
 
     @Override
     public String getImagenPlato(int idPlato) {
-        return null;
+        RealmResults<Plato> result= realm.where(Plato.class).equalTo("id",idPlato).findAll();
+        return result.get(0).getImagen();
     }
 
     @Override
     public Boolean isInAssetsPlato(int idPlato) {
-        return null;
+        RealmResults<Plato> result= realm.where(Plato.class).equalTo("id",idPlato).findAll();
+        return result.get(0).getIsInAssetsPlato();
     }
 
 
@@ -135,7 +149,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
                                 "\n" +
                                 "En el bol donde tenemos todo picadito y aliñado ponemos un poco de perejil o cilantro. Lo removemos bien. Esta será la vinagreta para los cogollos con anchoas\n" +
                                 "Después aliñaremos nuestros cogollos de lechuga con queso y anchoas con esta vinagreta. ¡Y ya estarán listos!\n";
-                        addPlato(nombrePlato, receta, idTipoDeComida, "", "https://www.youtube.com/watch?v=gr3LiqwIVx4",true);
+                        addPlato(nombrePlato, receta, idTipoDeComida, "ensalada_cogollos_con_tudela_y_anchoas", "https://www.youtube.com/watch?v=gr3LiqwIVx4",true);
 
 
                         //Pimientos asados con bonito(id=2)
@@ -146,7 +160,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
                                 "A continuación, colocamos los lomos de bonito del norte por encima y regamos con un poco del aceite del mismo" +
                                 " o bote o si preferimos con un poco de aceite de oliva virgen extra\n";
 
-                        addPlato(nombrePlato, receta, idTipoDeComida, "", "https://www.youtube.com/watch?v=gh5sdgbvpJU",true);
+                        addPlato(nombrePlato, receta, idTipoDeComida, "ensalada_pimientos_asados_con_bonito.jpg", "https://www.youtube.com/watch?v=gh5sdgbvpJU",true);
 
                         //plato Ensalada de buey de mar (id=3)
                         nombrePlato = "Ensalada de buey de mar";
@@ -162,7 +176,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
                                 "Mezclar bien todo y sazonar al gusto si lo consideras necesario.\n" +
                                 "Cuando ya tengamos la mezcla lista, solo nos queda rellenar los caparazones con nuestra ensalada de buey de mar y servir.\n";
 
-                        addPlato(nombrePlato, receta, idTipoDeComida, "", "https://www.youtube.com/watch?v=81Jo4YGuRCY",true);
+                        addPlato(nombrePlato, receta, idTipoDeComida, "ensalada_buey_mar.jpg", "https://www.youtube.com/watch?v=81Jo4YGuRCY",true);
 
 
             addTipoDeComida("Sopa");

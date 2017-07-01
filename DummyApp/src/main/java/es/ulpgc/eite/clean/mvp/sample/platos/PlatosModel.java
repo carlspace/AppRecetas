@@ -30,7 +30,6 @@ public class PlatosModel extends GenericModel<Platos.ModelToPresenter>
    */
   @Override
   public void onDestroy(boolean isChangingConfiguration) {
-
   }
 
   ///////////////////////////////////////////////////////////////////////////////////

@@ -13,7 +13,7 @@ public class Plato extends RealmObject {
     private int id;
     private String nombre;
     private String descripcion;
-    private int idTipoDeComida;
+    private int idTipoComida;
     private String imagen;
     private String enlaceYoutbe;
     private Boolean isInAssetsPlato;
@@ -45,12 +45,12 @@ public class Plato extends RealmObject {
     }
 
 
-    public int getIdTipoDeComida() {
-        return idTipoDeComida;
+    public int getIdTipoComida() {
+        return idTipoComida;
     }
 
-    public void setIdTipoDeComida(int idCategoria) {
-        this.idTipoDeComida = idTipoDeComida;
+    public void setIdTipoComida(int idTipoComida) {
+        this.idTipoComida = idTipoComida;
     }
 
     public String getImagen() {

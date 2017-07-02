@@ -29,15 +29,15 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
     //Getters de platos, plato y tipoDeComida
     ///////////////////////////////POSIBLE FALLO AQUIIIIII!!!!!!!!!!! en el "id"
     @Override
-    public String getTipoComida(int idTipoDeComida) {
-        RealmResults<TipoDeComida> result = realm.where(TipoDeComida.class).equalTo("id",idTipoDeComida).findAll();
-        return result.get(0).getTipoDeComida();
+    public String getTipoComida(int idTipoComida) {
+        RealmResults<TipoComida> result = realm.where(TipoComida.class).equalTo("id",idTipoComida).findAll();
+        return result.get(0).getNombreTipoComida();
 
     }
 
     @Override
-    public int[] getListaIdPlatos(int idTipoDeComida) {
-        RealmResults<Plato> result = realm.where(Plato.class).equalTo("idTipoDeComida",idTipoDeComida).findAll(); //encuentra los platos de este tipo
+    public int[] getListaIdPlatos(int idTipoComida) {
+        RealmResults<Plato> result = realm.where(Plato.class).equalTo("idTipoComida",idTipoComida).findAll(); //encuentra los platos de este tipo
         int[] array=new int[result.size()];
         int i;
         for(i=0;i< result.size();i++){
@@ -88,20 +88,20 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
     public void addTipoDeComida(String nombre) {
         realm.beginTransaction();
         // Se incrementa el id
-        Number currentIdNum = realm.where(TipoDeComida.class).max("id");
+        Number currentIdNum = realm.where(TipoComida.class).max("id");
         int nextId;
         if(currentIdNum == null) {
             nextId = 1;
         } else {
             nextId = currentIdNum.intValue() + 1;
         }
-        TipoDeComida tipoDeComida= realm.createObject(TipoDeComida.class,nextId);
-        tipoDeComida.setTipoDeComida(nombre);
+        TipoComida tipoDeComida= realm.createObject(TipoComida.class,nextId);
+        tipoDeComida.setNombreTipoComida(nombre);
                realm.commitTransaction();
     }
 
     @Override
-    public void addPlato(String nombre, String descripcion, int idTipoDeComida, String imagen, String enlaceYoutube, Boolean isInAssets) {
+    public void addPlato(String nombre, String descripcion, int idTipoComida, String imagen, String enlaceYoutube, Boolean isInAssets) {
         realm.beginTransaction();
         Number currentIdNum = realm.where(Plato.class).max("id");
         int nextId;
@@ -114,7 +114,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
         plato.setNombre(nombre);
         plato.setDescripcion(descripcion);
         plato.setImagen(imagen);
-        plato.setIdTipoDeComida(idTipoDeComida);
+        plato.setIdTipoComida(idTipoComida);
         plato.setEnlaceYoutbe(enlaceYoutube);
         plato.setIsInAssetsPlato(isInAssets);
         realm.commitTransaction();
@@ -132,7 +132,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
 
             //Platos ensalada
             addTipoDeComida("Ensaladas");
-                int idTipoDeComida=1;
+                int idTipoComida=1;
                         //plato Cogollos de Tudela con anchoas y queso (id=1)
                         String nombrePlato = "Cogollos de Tudela con anchoas y queso";
 
@@ -149,7 +149,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
                                 "\n" +
                                 "En el bol donde tenemos todo picadito y aliñado ponemos un poco de perejil o cilantro. Lo removemos bien. Esta será la vinagreta para los cogollos con anchoas\n" +
                                 "Después aliñaremos nuestros cogollos de lechuga con queso y anchoas con esta vinagreta. ¡Y ya estarán listos!\n";
-                        addPlato(nombrePlato, receta, idTipoDeComida, "ensalada_cogollos_con_tudela_y_anchoas", "https://www.youtube.com/watch?v=gr3LiqwIVx4",true);
+                        addPlato(nombrePlato, receta, idTipoComida, "ensalada_cogollos_con_tudela_y_anchoas", "https://www.youtube.com/watch?v=gr3LiqwIVx4",true);
 
 
                         //Pimientos asados con bonito(id=2)
@@ -160,7 +160,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
                                 "A continuación, colocamos los lomos de bonito del norte por encima y regamos con un poco del aceite del mismo" +
                                 " o bote o si preferimos con un poco de aceite de oliva virgen extra\n";
 
-                        addPlato(nombrePlato, receta, idTipoDeComida, "ensalada_pimientos_asados_con_bonito.jpg", "https://www.youtube.com/watch?v=gh5sdgbvpJU",true);
+                        addPlato(nombrePlato, receta, idTipoComida, "ensalada_pimientos_asados_con_bonito.jpg", "https://www.youtube.com/watch?v=gh5sdgbvpJU",true);
 
                         //plato Ensalada de buey de mar (id=3)
                         nombrePlato = "Ensalada de buey de mar";
@@ -176,64 +176,26 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
                                 "Mezclar bien todo y sazonar al gusto si lo consideras necesario.\n" +
                                 "Cuando ya tengamos la mezcla lista, solo nos queda rellenar los caparazones con nuestra ensalada de buey de mar y servir.\n";
 
-                        addPlato(nombrePlato, receta, idTipoDeComida, "ensalada_buey_mar.jpg", "https://www.youtube.com/watch?v=81Jo4YGuRCY",true);
+                        addPlato(nombrePlato, receta, idTipoComida, "ensalada_buey_mar.jpg", "https://www.youtube.com/watch?v=81Jo4YGuRCY",true);
 
 
-            addTipoDeComida("Sopas");
-            idTipoDeComida=2;
+            addTipoDeComida("Sopa");
+            idTipoComida=2;
 
-                //Plato sopa castellana(id=4)
-                nombrePlato = "Sopa castellana";
-                receta = "Pela los ajos, lamínalos y rehógalos en una cazuela grande. Retira la piel del chorizo, córtalo en cuartos y añádelos. Pica " +
-                        "el jamón en dados y agrégalos.\n" +
-                        "Con ayuda de un cuchillo de sierra, corta el pan e incorpóralo. Rehoga todo bien. Añade el pimentón y remueve todo un poco.\n" +
-                        "Cubre con 2 litros de agua y cuece todo conjuntamente durante 20 minutos. Pon a punto de sal.\n" +
-                        "Reparte la sopa en 4 cuencos soperos de barro. Casca 1 huevo en cada uno y colócalos en la placa de horno. Hornea a 180ºC durante unos" +
-                        " 10 minutos aproximadamente. Sirve y adorna con unas hojas de perejil.\n";
 
-                addPlato(nombrePlato, receta, idTipoDeComida, "sopa_sopa_castellana", "https://www.youtube.com/watch?v=JHS2yw5_aFE",true);
 
-                //Plato gazpacho (id=5)
-                nombrePlato = "Gazpacho";
-                receta = "Reserva 1 tomate, 1/2 cebolleta, 1/2 pimiento y 1/2 pepino (pelado) para la guarnición.\n" +
-                        "Pica el resto de las verduras (tomates, cebolleta, pimiento, pepino y ajos) y ponlos en una jarra. Pica la miga de pan e incorpórala. Sazona, vierte un " +
-                        "chorrito de vinagre y un buen chorro de aceite de oliva. Tritura con la batidora eléctrica y cuela la mezcla. Resérvalo en el frigorífico.\n" +
-                        "Corta el pan en daditos y fríelos en una sartén con aceite. Cuando se doren, sácalos a un plato forrado con papel absorbente de cocina. " +
-                        "Sirve el gazpacho, riégalo con un chorrito de aceite y acompáñalo con la guarnición de verduras y el pan frito. Decora con perejil.\n";
-
-                addPlato(nombrePlato, receta, idTipoDeComida, "sopa_gazpacho", "https://www.youtube.com/watch?v=7TrCI6mLT3E",true);
-
-                //Plato salmorejo (id=6)
-                nombrePlato = "Salmorejo tradicional";
-                receta = "Lava los tomates, córtalos y colócalos en una jarra. Tritúralos bien con la batidora eléctrica. Cuélalos para eliminar la piel y las pepitas.\n" +
-                        "Pasa el puré de tomate a la jarra. Trocea la miga de pan e incorpórala. Añade el diente de ajo picado, una pizca de sal y 100 ml de aceite. " +
-                        "Tritura todo bien hasta que quede una crema homogénea. Enfríalo en el frigorífico.\n" +
-                        "Cuece los huevos en una cazuela con agua durante 5 minutos desde el momento en que empiece a hervir el agua. Refresca, pela y córtalos en 4 gajos.\n";
-
-                addPlato(nombrePlato, receta, idTipoDeComida, "sopa_salmorejo", "https://www.youtube.com/watch?v=_mb2N9apN2A",true);
 
 
 
 
             addTipoDeComida("Carnes");
-            idTipoDeComida=3;
+            idTipoComida=3;
 
-                //(id=)
-                nombrePlato = "";
-                receta = "";
-
-                addPlato(nombrePlato, receta, idTipoDeComida, "", "",true);
 
 
 
             addTipoDeComida("Pescado");
-            idTipoDeComida=4;
-
-                //(id=)
-                nombrePlato = "";
-                receta = "";
-
-                addPlato(nombrePlato, receta, idTipoDeComida, "", "",true);
+            idTipoComida=4;
 
         }
         }

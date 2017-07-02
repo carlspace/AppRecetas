@@ -152,7 +152,7 @@ public class PlatosPresenter extends GenericPresenter
     public void setPosicionDeListaPlatosClicked(int posicionDeListaPlatosClicked) {
         this.posicionDeListaPlatosClicked = posicionDeListaPlatosClicked;
     }
-    public void setIdPlatoSeleccionado(int idTipoDeComida, int posicionDeListaPlatosClicked){
-        this.idPlatoSeleccionado = getModel().getIdPlatoSeleccionado(idTipoDeComida,posicionDeListaPlatosClicked);
+    public void setIdPlatoSeleccionado(int idTipoComida, int posicionDeListaPlatosClicked){
+        this.idPlatoSeleccionado = getModel().getIdPlatoSeleccionado(idTipoComida,posicionDeListaPlatosClicked);
     }
 }

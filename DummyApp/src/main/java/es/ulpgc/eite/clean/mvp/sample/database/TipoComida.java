@@ -7,11 +7,11 @@ import io.realm.annotations.PrimaryKey;
  * Created by Carlos Espacios on 29/06/2017.
  */
 
-public class TipoDeComida extends RealmObject {
+public class TipoComida extends RealmObject {
 
     @PrimaryKey
     private int id;
-    private String nombreTipoDeComida;
+    private String nombreTipoComida;
     private String imagen;
 
 
@@ -23,12 +23,12 @@ public class TipoDeComida extends RealmObject {
         this.id = id;
     }
 
-    public String getTipoDeComida() {
-        return nombreTipoDeComida;
+    public String getNombreTipoComida() {
+        return nombreTipoComida;
     }
 
-    public void setTipoDeComida(String nombreTipoDeComida) {
-        this.nombreTipoDeComida = nombreTipoDeComida;
+    public void setNombreTipoComida(String nombreTipoComida) {
+        this.nombreTipoComida = nombreTipoComida;
     }
 
 
@@ -39,4 +39,6 @@ public class TipoDeComida extends RealmObject {
     public void setImagen(String imagen) {
         this.imagen = imagen;
     }
+
+
 }

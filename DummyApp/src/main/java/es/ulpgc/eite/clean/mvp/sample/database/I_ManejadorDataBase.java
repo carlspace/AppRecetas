@@ -7,10 +7,10 @@ package es.ulpgc.eite.clean.mvp.sample.database;
 public interface  I_ManejadorDataBase {
 
     //TipoDeComida
-    String getTipoComida (int idTipoDeComida);
+    String getTipoComida (int idTipoComida);
 
     //platos
-    int [] getListaIdPlatos (int tipoDeComida);
+    int [] getListaIdPlatos (int tipoComida);
     String[] getNombresByArrayIdPlatos(int[] ids);
 
     //plato
@@ -21,5 +21,5 @@ public interface  I_ManejadorDataBase {
 
 
     void addTipoDeComida(String nombre);
-    void addPlato(String nombre, String descripcion, int idTipoDeComida, String imagen, String enlaceYoutube, Boolean isInAssets);
+    void addPlato(String nombre, String descripcion, int idTipoComida, String imagen, String enlaceYoutube, Boolean isInAssets);
 }

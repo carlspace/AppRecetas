@@ -20,6 +20,6 @@ public interface  I_ManejadorDataBase {
     Boolean isInAssetsPlato(int idPlato);
 
 
-    void addTipoDeComida(String nombre);
+    void addTipoComida(String nombre);
     void addPlato(String nombre, String descripcion, int idTipoComida, String imagen, String enlaceYoutube, Boolean isInAssets);
 }

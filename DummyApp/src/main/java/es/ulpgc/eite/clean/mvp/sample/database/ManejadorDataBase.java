@@ -127,9 +127,6 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
 
         if(realm.isEmpty()) {
 
-
-
-
             //Platos ensalada
             addTipoComida("Ensaladas");
                 int idTipoComida=1;
@@ -214,18 +211,75 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
 
 
 
-
-
-
             addTipoComida("Carnes");
             idTipoComida=3;
+            //Plato  (id=7)
+            nombrePlato = "Carne guisada con papas";
+            receta = "Corta la carne en dados grandes, salpimienta y dóralos en una sartén con un chorro de aceite. Sácalos, escurre y resérvalos en un plato.\n" +
+                    "Pela y pica los ajos, las cebollas y 2 zanahorias en daditos. Ponlos a pochar en una cazuela con aceite. Pica el pimiento y agrégalo. Rehoga todo bien. Añade la carne, vierte el vino y dale un hervor. Incorpora un vaso de agua y la pastilla para guisos de carne desmenuzada. Tapa y cocina todo durante 30-40 minutos.\n" +
+                    "Pela las otras zanahorias, córtalas en lonchas de 1 centímetro y cuécelas en un cazo con agua. Una vez cocidas, escurre bien y añádelas al guiso.\n" +
+                    "Pela las patatas, córtalas en dados y ponlas a freír en una sartén con aceite. Escurre y añádelas al guiso. Espolvorea con perejil picado y sirve.\n";
+
+            addPlato(nombrePlato, receta, idTipoComida, "carne_carne_guisada_con_carne", "https://www.youtube.com/watch?v=qSMjgjSLhpk",true);
+
+
+            //Plato  (id=8)
+            nombrePlato = "Solomillo Wellington";
+            receta = "Salpimienta la carne y séllala por todos los lados hasta que quede dorada. Deja que se enfríe y úntala con la mostaza. Reserva.\n" +
+                    "Pica las chalotas y los ajos y ponlos a pochar en una sartén con un chorrito de aceite. Retira la parte inferior de los champiñones y límpialos. Pícalos finamente, incorpóralos a la sartén, sazona y cocínalos durante" +
+                    " 10 minutos. Deja que se enfríen. Añade el paté de foie y mezcla todo bien hasta que quede una pasta homogénea. Deja templar.\n" +
+                    "Calienta el horno a 200ºC durante 5 minutos. Extiende la masa de hojaldre sobre una placa de horno. Coloca encima, en la parte central, una capa de la mezcla de champiñones y foie. Coloca encima la carne y cúbrela" +
+                    " con otra capa de la mezcla de champiñones y foie. Cierra el hojaldre con cuidado, dejando la unión en la parte inferior. Bate el huevo y con ayuda de un pincel pinta la masa (Puedes decorar la superficie con algunos recortes de hojaldre). Hornéalo a 200ºC durante 20 minutos. Deja que repose durante 10 minutos.\n" +
+                    "Pon los espárragos en el vaso de la batidora, agrega la leche y un poco de aceite. Tritura. Sirve la carne con la salsa y decora con una ramita de perejil.\n";
+
+            addPlato(nombrePlato, receta, idTipoComida, "carne_solomillo_wellington", "https://www.youtube.com/watch?v=bNDh4QWbPC4",true);
+
+            //Plato  (id=9)
+            nombrePlato = "Rabo de toro";
+            receta = "Trocea el rabo y dóralo en una sartén con un chorro de aceite de oliva. Pásalo a la olla rápida.\n" +
+                    "Dora la cabeza de ajos entera en la misma sartén. Incorpora el puerro, las zanahorias, la cebolla y el apio, todo finamente picado. Condimenta con sal, pimienta, tomillo y laurel. Agrega el tomate rallado.\n" +
+                    "Vierte el brandy sobre el rabo y flambéalo. Añade el vino blanco y el tinto y deja que reduzcan. Vierte un poco de agua e incorpora la verdura pochada.\n" +
+                    "Sazona, tapa y cocina durante 25-30 minutos a partir de que la olla coja presión.\n" +
+                    "Retira el rabo a un plato y pasa las verduras por el pasapurés. Introduce de nuevo el rabo en la salsa y cocina durante 15-20 minutos más.\n" +
+                    "Cuece las coles de Bruselas en una cazuela con abundante agua, sal y perejil durante 15 minutos aproximadamente. Escurre y saltéalas en una sartén con un poco de mantequilla.\n" +
+                    "Sirve el rabo con bien de salsa y acompaña con las coles de Bruselas. Decora con una ramita de tomillo.\n";
+
+            addPlato(nombrePlato, receta, idTipoComida, "carne_rabo_de_toro", "https://www.youtube.com/watch?v=rGmXY2fy1Ow",true);
 
 
 
 
             addTipoComida("Pescado");
             idTipoComida=4;
+            //Plato  (id=10)
+            nombrePlato = "Salmon encebollado";
+            receta = "Corta la parte dura de los tallos de los espárragos y trocéalos. Quítales el rabito a las vainas y pícalas finamente. Cuece los espárragos y las vainas al vapor durante 10-12 minutos.\n" +
+                    "Pica el ajo y corta las cebollas en medias lunas y sofríe todo en una sartén con un chorrito de aceite. Sazona y deja que la cebolla se caramelice.\n" +
+                    "Salpimienta las rodajas de salmón e incorpóralas a la sartén. Tapa y deja que se cocine unos 5 minutos.\n" +
+                    "Emplata el salmón con la cebolla y acompaña con los espárragos y las vainas. Dale un toque de tamari a las verduras y espolvorea el pescado con perejil picado.\n";
 
+            addPlato(nombrePlato, receta, idTipoComida, "pescado_salmon_encebollado", "https://www.youtube.com/watch?v=ZnCb9p0R0-Y",true);
+
+
+
+            //Plato  (id=11)
+            nombrePlato = "Boquerones en vinagre";
+            receta = "Limpia las anchoas retirando la cabeza y eliminando bien las vísceras y espina central. Congélalas durante 48 horas.\n" +
+                    "Descongela las anchoas y colócalas en un recipiente con la piel hacia abajo. Sazona. Mezcla el vinagre y el agua, cubre las anchoas y déjalas marinando durante 2-4 horas.\n" +
+                    "Escúrrelas bien. Pela y pica los ajos finamente y repártelos sobre las anchoas. Cúbrelas con aceite de oliva virgen extra, espolvorea con perejil picado y deja macerar.\n" +
+                    "Pela las patatas y córtalas en lonchas finas con ayuda de una mandolina. Ponlas a remojo en un bol con agua para que suelten el almidón y no se peguen entre sí durante la fritura. Escúrrelas bien y sécalas con papel de cocina.\n" +
+                    "Pon abundante aceite a calentar en una sartén. Agrega las patatas y fríelas a fuego no muy fuerte. Escúrrelas sobre un plato forrado con papel absorbente de cocina. Sazona.\n" +
+                    "Sirve las anchoas y acompáñalas con las patatas y unas aceitunas rellenas. Decora con una ramita de perejil.\n";
+
+            addPlato(nombrePlato, receta, idTipoComida, "pescado_boquerones_en_vinagre", "https://www.youtube.com/watch?v=cBxe7SsExEc",true);
+            //Plato  (id=12)
+            nombrePlato = "Cazon en adobo";
+            receta = "Limpia el cazón retirándole la piel y las espinas. Córtalo en trozos de bocado y colócalos en un bol.\n" +
+                    "Maja en el mortero 2 dientes de ajo con una pizca de sal. Agrega el orégano, el pimentón y el comino. Mezcla bien. Añade 200 ml de vinagre y viértelo sobre el cazón. Agrega las hojas de laurel y deja que macere durante 6 horas.\n" +
+                    "Escurre los trozos de pescado y sécalos con papel absorbente de cocina. Pásalos por harina y fríelos en una sartén con abundante aceite caliente y 1 diente de ajo sin pelar. Escúrrelos.\n" +
+                    "Lava las hojas de lechuga, trocea y sécalas. Colócalas en una fuente grande y alíñalas con aceite, vinagre y sal. Sirve el cazón y acompáñalo con la ensalada y los picos de pan. Adorna con unas hojas de perejil.\n";
+
+            addPlato(nombrePlato, receta, idTipoComida, "pescado_cazon_en_adobo", "https://www.youtube.com/watch?v=rQi-DEEiEss",true);
         }
         }
 }

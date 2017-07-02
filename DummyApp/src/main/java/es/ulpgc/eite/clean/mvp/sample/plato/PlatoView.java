@@ -3,8 +3,10 @@ package es.ulpgc.eite.clean.mvp.sample.plato;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import es.ulpgc.eite.clean.mvp.GenericActivity;
@@ -15,37 +17,35 @@ public class PlatoView
     implements Plato.PresenterToView {
 
   private Toolbar toolbar;
-  private Button button;
-  private TextView text;
+  private ImageView imagen;
+  private TextView receta;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_plato);
 
-    text = (TextView) findViewById(R.id.text);
+    toolbar = (Toolbar) findViewById(R.id.toolbar);
 
     toolbar = (Toolbar) findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
+    receta = (TextView) findViewById(R.id.recetaPlato);
+    receta.setMovementMethod(new ScrollingMovementMethod());
+    imagen = (ImageView) findViewById(R.id.imagenPlato);
+    {
 
-    button = (Button) findViewById(R.id.button);
-    button.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-        getPresenter().onButtonClicked();
-      }
-    });
-  }
+    }
 
-  /**
-   * Method that initialized MVP objects
-   * {@link super#onResume(Class, Object)} should always be called
-   */
-  @SuppressLint("MissingSuperCall")
-  @Override
-  protected void onResume() {
-    super.onResume(PlatoPresenter.class, this);
-  }
+    /**
+     * Method that initialized MVP objects
+     * {@link super#onResume(Class, Object)} should always be called
+     */
+    @SuppressLint("MissingSuperCall")
+    @Override
+    protected void onResume () {
+      super.onResume(PlatoPresenter.class, this);
+      getPresenter().inicializarVista();
+    }
 
   /*
   @Override
@@ -72,8 +72,13 @@ public class PlatoView
   */
 
 
-  ///////////////////////////////////////////////////////////////////////////////////
-  // Presenter To View /////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////
+    // Presenter To View /////////////////////////////////////////////////////////////
+
+
+
+
+  }
 
   @Override
   public void finishScreen() {
@@ -82,15 +87,13 @@ public class PlatoView
 
   @Override
   public void setDescripcionPlato(String txt) {
-
+    receta.setText(txt);
   }
 
   @Override
   public void setNombrePlato(String txt) {
-
+    toolbar.setTitle(txt);
   }
-
-
-
-
 }
+
+

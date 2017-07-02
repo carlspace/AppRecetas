@@ -7,7 +7,7 @@ package es.ulpgc.eite.clean.mvp.sample.database;
 public interface  I_ManejadorDataBase {
 
     //TipoDeComida
-    String getNombreTipoDeComida (int tipoDeComida);
+    String getTipoComida (int idTipoDeComida);
 
     //platos
     int [] getListaIdPlatos (int tipoDeComida);

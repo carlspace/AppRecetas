@@ -29,15 +29,15 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
     //Getters de platos, plato y tipoDeComida
     ///////////////////////////////POSIBLE FALLO AQUIIIIII!!!!!!!!!!! en el "id"
     @Override
-    public String getNombreTipoDeComida(int tipoDeComida) {
-        RealmResults<TipoDeComida> result = realm.where(TipoDeComida.class).equalTo("id",tipoDeComida).findAll();
+    public String getTipoComida(int idTipoDeComida) {
+        RealmResults<TipoDeComida> result = realm.where(TipoDeComida.class).equalTo("id",idTipoDeComida).findAll();
         return result.get(0).getTipoDeComida();
 
     }
 
     @Override
-    public int[] getListaIdPlatos(int tipoDeComida) {
-        RealmResults<Plato> result = realm.where(Plato.class).equalTo("tipoDeComida",tipoDeComida).findAll(); //encuentra los platos de este tipo
+    public int[] getListaIdPlatos(int idTipoDeComida) {
+        RealmResults<Plato> result = realm.where(Plato.class).equalTo("idTipoDeComida",idTipoDeComida).findAll(); //encuentra los platos de este tipo
         int[] array=new int[result.size()];
         int i;
         for(i=0;i< result.size();i++){

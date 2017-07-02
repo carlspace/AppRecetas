@@ -47,22 +47,22 @@ public class InicialModel extends GenericModel<Inicial.ModelToPresenter>
 
     @Override
     public String getTipoComidaBtn4() {
-        return miManejador.getNombreTipoDeComida(4);
+        return miManejador.getTipoComida(4);
     }
 
     @Override
     public String getTipoComidaBtn3() {
-        return miManejador.getNombreTipoDeComida(3);
+        return miManejador.getTipoComida(3);
     }
 
     @Override
     public String getTipoComidaBtn2() {
-        return miManejador.getNombreTipoDeComida(2);
+        return miManejador.getTipoComida(2);
     }
 
     @Override
     public String getTipoComidaBtn1() {
-        return miManejador.getNombreTipoDeComida(1);
+        return miManejador.getTipoComida(1);
     }
 }
 

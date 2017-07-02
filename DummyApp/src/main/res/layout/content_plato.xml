@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/imagenPlato"
+        android:layout_width="147dp"
+        android:layout_height="128dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="45dp" />
+
+    <TextView
+        android:id="@+id/textReceta"
+        android:layout_width="348dp"
+        android:layout_height="182dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="193dp" />
+
+    <VideoView
+        android:id="@+id/videoYotube"
+        android:layout_width="284dp"
+        android:layout_height="463dp"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="395dp" />
 </android.support.constraint.ConstraintLayout>

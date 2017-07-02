@@ -35,7 +35,7 @@ public class PlatoView
     {
 
     }
-
+  }
     /**
      * Method that initialized MVP objects
      * {@link super#onResume(Class, Object)} should always be called

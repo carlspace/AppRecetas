@@ -15,4 +15,6 @@ public interface Mediator {
 
 
     int getPosicionPlatos();
+
+  int getIdPlatoSeleccionado();
 }

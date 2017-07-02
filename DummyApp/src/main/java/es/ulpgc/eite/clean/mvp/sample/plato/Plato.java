@@ -18,8 +18,7 @@ public interface Plato {
 
   interface ToPlato {
     void onScreenStarted();
-    void setToolbarVisibility(boolean visible);
-    void setTextVisibility(boolean visible);
+
   }
 
   interface PlatoTo {
@@ -58,6 +57,8 @@ public interface Plato {
     String getReceta(int id);
     String getImagen(int id);
     Boolean getInitial(int id);
+
+    String getNombre(int id);
   }
 
   /**

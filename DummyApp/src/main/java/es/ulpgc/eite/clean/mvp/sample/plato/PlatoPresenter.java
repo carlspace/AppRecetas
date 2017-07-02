@@ -14,9 +14,6 @@ public class PlatoPresenter extends GenericPresenter
     implements Plato.ViewToPresenter, Plato.ModelToPresenter, Plato.PlatoTo, Plato.ToPlato {
 
 
-  private boolean toolbarVisible;
-  private boolean buttonClicked;
-  private boolean textVisible;
 
   /**
    * Operation called during VIEW creation in {@link GenericActivity#onResume(Class, Object)}
@@ -33,8 +30,7 @@ public class PlatoPresenter extends GenericPresenter
     Log.d(TAG, "calling onCreate()");
 
 
-    Mediator app = (Mediator) getView().getApplication();
-    //app.startingDummyScreen(this);
+
   }
 
   /**
@@ -49,16 +45,7 @@ public class PlatoPresenter extends GenericPresenter
     setView(view);
     Log.d(TAG, "calling onResume()");
 
-    if(configurationChangeOccurred()) {
-      getView().setLabel(getModel().getLabel());
-
-      checkToolbarVisibility();
-      checkTextVisibility();
-
-      if (buttonClicked) {
-        getView().setText(getModel().getText());
-      }
-    }
+    inicializarVista();
   }
 
   /**
@@ -91,19 +78,29 @@ public class PlatoPresenter extends GenericPresenter
   @Override
   public void onButtonClicked() {
     Log.d(TAG, "calling onButtonClicked()");
-    if(isViewRunning()) {
-      getModel().onChangeMsgByBtnClicked();
-      getView().setText(getModel().getText());
-      textVisible = true;
-      buttonClicked = true;
-    }
-    checkTextVisibility();
+    Mediator app=(Mediator) getView().getApplication();
+    int id=app.getIdPlatoSeleccionado();
+
+    String nombrePlato = getModel().getNombre(id);
+
+
+
+
+
   }
 
   @Override
   public void inicializarVista() {
+    Mediator app=(Mediator) getView().getApplication();
+
+    int id=app.getIdPlatoSeleccionado();
+
+    getView().setDescripcionPlato(getModel().getReceta(id));
+    getView().setNombrePlato(getModel().getNombre(id));
 
   }
+
+
 
 
   ///////////////////////////////////////////////////////////////////////////////////
@@ -113,25 +110,17 @@ public class PlatoPresenter extends GenericPresenter
   public void onScreenStarted() {
     Log.d(TAG, "calling onScreenStarted()");
     if(isViewRunning()) {
-      getView().setLabel(getModel().getLabel());
+      inicializarVista();
     }
-    checkToolbarVisibility();
-    checkTextVisibility();
+
   }
 
-  @Override
-  public void setToolbarVisibility(boolean visible) {
-    toolbarVisible = visible;
-  }
-
-  @Override
-  public void setTextVisibility(boolean visible) {
-    textVisible = visible;
-  }
 
 
   ///////////////////////////////////////////////////////////////////////////////////
   // Platos To //////////////////////////////////////////////////////////////////////
+
+
 
 
   @Override
@@ -145,37 +134,9 @@ public class PlatoPresenter extends GenericPresenter
       getView().finishScreen();
     }
   }
-  @Override
-  public boolean isToolbarVisible() {
-    return toolbarVisible;
-  }
-
-  @Override
-  public boolean isTextVisible() {
-    return textVisible;
-  }
-
 
   ///////////////////////////////////////////////////////////////////////////////////
 
-  private void checkToolbarVisibility(){
-    Log.d(TAG, "calling checkToolbarVisibility()");
-    if(isViewRunning()) {
-      if (!toolbarVisible) {
-        getView().hideToolbar();
-      }
-    }
-  }
 
-  private void checkTextVisibility(){
-    Log.d(TAG, "calling checkTextVisibility()");
-    if(isViewRunning()) {
-      if(!textVisible) {
-        getView().hideText();
-      } else {
-        getView().showText();
-      }
-    }
-  }
 
 }

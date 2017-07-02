@@ -25,7 +25,7 @@ public class PlatoView
 
     toolbar = (Toolbar) findViewById(R.id.toolbar);
 
-    toolbar = (Toolbar) findViewById(R.id.toolbar);
+
     setSupportActionBar(toolbar);
     receta = (TextView) findViewById(R.id.recetaPlato);
     //receta.setMovementMethod(new ScrollingMovementMethod());

@@ -23,6 +23,15 @@
             android:headerDividersEnabled="false"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="0dp" />
+
+            <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btnAddPlato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+
+            app:backgroundTint="@android:color/background_light"
+            app:srcCompat="@android:drawable/ic_input_add" />
         </FrameLayout>
     </LinearLayout>
 

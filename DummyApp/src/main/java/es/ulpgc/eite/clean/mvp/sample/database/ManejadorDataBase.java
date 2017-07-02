@@ -179,7 +179,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
                         addPlato(nombrePlato, receta, idTipoComida, "ensalada_buey_mar.jpg", "https://www.youtube.com/watch?v=81Jo4YGuRCY",true);
 
 
-            addTipoComida("Sopa");
+            addTipoComida("Sopas");
             idTipoComida=2;
             //Plato sopa castellana(id=4)
             nombrePlato = "Sopa castellana";

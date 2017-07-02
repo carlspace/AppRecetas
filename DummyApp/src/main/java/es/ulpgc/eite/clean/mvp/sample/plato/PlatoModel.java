@@ -1,15 +1,14 @@
 package es.ulpgc.eite.clean.mvp.sample.plato;
 
 import es.ulpgc.eite.clean.mvp.GenericModel;
+import es.ulpgc.eite.clean.mvp.sample.database.I_ManejadorDataBase;
+import es.ulpgc.eite.clean.mvp.sample.database.ManejadorDataBase;
 
 
 public class PlatoModel extends GenericModel<Plato.ModelToPresenter>
     implements Plato.PresenterToModel {
 
-  private String dummyText;
-  private String dummyLabel;
-  private int numOfTimes;
-  private String msgText;
+  I_ManejadorDataBase miManejador;
 
   /**
    * Method that recovers a reference to the PRESENTER
@@ -20,6 +19,7 @@ public class PlatoModel extends GenericModel<Plato.ModelToPresenter>
   @Override
   public void onCreate(Plato.ModelToPresenter presenter) {
     super.onCreate(presenter);
+    miManejador = ManejadorDataBase.getInstance();
 
   }
 
@@ -39,21 +39,22 @@ public class PlatoModel extends GenericModel<Plato.ModelToPresenter>
 
 
   @Override
-  public void onChangeMsgByBtnClicked() {
-    msgText = dummyText;
-    if(numOfTimes > 0) {
-      msgText += ", " + numOfTimes + " times";
-    }
-    numOfTimes++;
+  public String getNombrePlato(int id) {
+    return miManejador.getNombrePlato(id);
   }
 
   @Override
-  public String getText() {
-    return msgText;
+  public String getReceta(int id) {
+    return miManejador.getRecetaPlato(id);
   }
 
   @Override
-  public String getLabel() {
-    return dummyLabel;
+  public String getImagen(int id) {
+    return miManejador.getImagenPlato(id);
+  }
+
+  @Override
+  public Boolean getInitial(int id) {
+    return miManejador.isInAssetsPlato(id);
   }
 }

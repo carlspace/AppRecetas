@@ -8,6 +8,8 @@
     android:fitsSystemWindows="true"
     tools:context="es.ulpgc.eite.clean.mvp.sample.platos.PlatosView">
 
+    <include layout="@layout/content_platos"/>
+
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,16 +23,7 @@
             android:background="?attr/actionModeSplitBackground"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/btnAddPlato"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            app:backgroundTint="@color/colorAccent" />
-
     </android.support.design.widget.AppBarLayout>
-
-    <include layout="@layout/content_platos"/>
 
 
 </android.support.design.widget.CoordinatorLayout>

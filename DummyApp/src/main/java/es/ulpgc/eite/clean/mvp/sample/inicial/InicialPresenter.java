@@ -110,7 +110,7 @@ public class InicialPresenter extends GenericPresenter
     @Override
     public void onButtonClicked4() {
         Log.d(TAG, "calling onButtonClicked3()");
-        numeroBotonPresionado=3;
+        numeroBotonPresionado=4;
         Navigator app = (Navigator) getView().getApplication();
         app.goToPlatosScreen(this);
     }

@@ -105,7 +105,7 @@ public class PlatosPresenter extends GenericPresenter
         setPosicionDeListaPlatosClicked(pos);
         setIdPlatoSeleccionado(mediator.getTipoComidaPresionado(),pos);
         Navigator app = (Navigator) getView().getApplication();
-        //app.goToPlatoScreen(this);
+        app.goToPlatoScreen(this);
     }
 
 

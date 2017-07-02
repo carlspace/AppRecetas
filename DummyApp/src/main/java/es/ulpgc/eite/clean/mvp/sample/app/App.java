@@ -66,10 +66,7 @@ public class App extends Application implements Mediator, Navigator {
       view.startActivity(new Intent(view, PlatoView.class));
     }
   }
-  private class InicialState {
-    boolean toolbarVisibility;
-    int numeroBotonPresionado;
-  }
+
 
   @Override
   public int getTipoComidaPresionado() {
@@ -95,10 +92,13 @@ public class App extends Application implements Mediator, Navigator {
 
   ///////////////////////////////////////////////////////////////////////////////////
     // State /////////////////////////////////////////////////////////////////////////
-
+   private class InicialState {
+         boolean toolbarVisibility;
+         int numeroBotonPresionado;
+  }
     private class PlatosState {
-      int posicionListaPlatosPulsada;
-      int idPlatoSeleccionado;
+         int posicionListaPlatosPulsada;
+         int idPlatoSeleccionado;
 
 
     }

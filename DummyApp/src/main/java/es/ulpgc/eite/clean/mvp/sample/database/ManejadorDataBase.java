@@ -179,11 +179,38 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
                         addPlato(nombrePlato, receta, idTipoDeComida, "ensalada_buey_mar.jpg", "https://www.youtube.com/watch?v=81Jo4YGuRCY",true);
 
 
-            addTipoDeComida("Sopa");
+            addTipoDeComida("Sopas");
             idTipoDeComida=2;
 
+                //Plato sopa castellana(id=4)
+                nombrePlato = "Sopa castellana";
+                receta = "Pela los ajos, lamínalos y rehógalos en una cazuela grande. Retira la piel del chorizo, córtalo en cuartos y añádelos. Pica " +
+                        "el jamón en dados y agrégalos.\n" +
+                        "Con ayuda de un cuchillo de sierra, corta el pan e incorpóralo. Rehoga todo bien. Añade el pimentón y remueve todo un poco.\n" +
+                        "Cubre con 2 litros de agua y cuece todo conjuntamente durante 20 minutos. Pon a punto de sal.\n" +
+                        "Reparte la sopa en 4 cuencos soperos de barro. Casca 1 huevo en cada uno y colócalos en la placa de horno. Hornea a 180ºC durante unos" +
+                        " 10 minutos aproximadamente. Sirve y adorna con unas hojas de perejil.\n";
 
+                addPlato(nombrePlato, receta, idTipoDeComida, "sopa_sopa_castellana", "https://www.youtube.com/watch?v=JHS2yw5_aFE",true);
 
+                //Plato gazpacho (id=5)
+                nombrePlato = "Gazpacho";
+                receta = "Reserva 1 tomate, 1/2 cebolleta, 1/2 pimiento y 1/2 pepino (pelado) para la guarnición.\n" +
+                        "Pica el resto de las verduras (tomates, cebolleta, pimiento, pepino y ajos) y ponlos en una jarra. Pica la miga de pan e incorpórala. Sazona, vierte un " +
+                        "chorrito de vinagre y un buen chorro de aceite de oliva. Tritura con la batidora eléctrica y cuela la mezcla. Resérvalo en el frigorífico.\n" +
+                        "Corta el pan en daditos y fríelos en una sartén con aceite. Cuando se doren, sácalos a un plato forrado con papel absorbente de cocina. " +
+                        "Sirve el gazpacho, riégalo con un chorrito de aceite y acompáñalo con la guarnición de verduras y el pan frito. Decora con perejil.\n";
+
+                addPlato(nombrePlato, receta, idTipoDeComida, "sopa_gazpacho", "https://www.youtube.com/watch?v=7TrCI6mLT3E",true);
+
+                //Plato salmorejo (id=6)
+                nombrePlato = "Salmorejo tradicional";
+                receta = "Lava los tomates, córtalos y colócalos en una jarra. Tritúralos bien con la batidora eléctrica. Cuélalos para eliminar la piel y las pepitas.\n" +
+                        "Pasa el puré de tomate a la jarra. Trocea la miga de pan e incorpórala. Añade el diente de ajo picado, una pizca de sal y 100 ml de aceite. " +
+                        "Tritura todo bien hasta que quede una crema homogénea. Enfríalo en el frigorífico.\n" +
+                        "Cuece los huevos en una cazuela con agua durante 5 minutos desde el momento en que empiece a hervir el agua. Refresca, pela y córtalos en 4 gajos.\n";
+
+                addPlato(nombrePlato, receta, idTipoDeComida, "sopa_salmorejo", "https://www.youtube.com/watch?v=_mb2N9apN2A",true);
 
 
 
@@ -191,11 +218,22 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
             addTipoDeComida("Carnes");
             idTipoDeComida=3;
 
+                //(id=)
+                nombrePlato = "";
+                receta = "";
+
+                addPlato(nombrePlato, receta, idTipoDeComida, "", "",true);
 
 
 
             addTipoDeComida("Pescado");
             idTipoDeComida=4;
+
+                //(id=)
+                nombrePlato = "";
+                receta = "";
+
+                addPlato(nombrePlato, receta, idTipoDeComida, "", "",true);
 
         }
         }

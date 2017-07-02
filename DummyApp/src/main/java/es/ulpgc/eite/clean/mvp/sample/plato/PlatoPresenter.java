@@ -81,7 +81,7 @@ public class PlatoPresenter extends GenericPresenter
     Mediator app=(Mediator) getView().getApplication();
     int id=app.getIdPlatoSeleccionado();
 
-    String nombrePlato = getModel().getNombre(id);
+    String nombrePlato = getModel().getNombrePlato(id);
 
 
 
@@ -96,7 +96,7 @@ public class PlatoPresenter extends GenericPresenter
     int id=app.getIdPlatoSeleccionado();
 
     getView().setDescripcionPlato(getModel().getReceta(id));
-    getView().setNombrePlato(getModel().getNombre(id));
+    getView().setNombrePlato(getModel().getNombrePlato(id));
 
   }
 

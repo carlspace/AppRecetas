@@ -20,6 +20,7 @@ public class PlatosPresenter extends GenericPresenter
     private boolean textVisible;
     private int idPlatoSeleccionado;
     private int posicionDeListaPlatosClicked;
+    int posicionListaPlatoSeleccionado;
 
       /**
    * Operation called during VIEW creation in {@link GenericActivity#onResume(Class, Object)}
@@ -147,6 +148,12 @@ public class PlatosPresenter extends GenericPresenter
     @Override
     public int getIdPlatoSeleccionado() {
         return idPlatoSeleccionado;
+    }
+
+    @Override
+    public int getPosicionListaPlatoSeleccionado() {
+
+        return posicionListaPlatoSeleccionado;
     }
 
     public void setPosicionDeListaPlatosClicked(int posicionDeListaPlatosClicked) {

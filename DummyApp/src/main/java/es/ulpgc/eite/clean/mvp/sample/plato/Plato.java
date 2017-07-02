@@ -58,7 +58,7 @@ public interface Plato {
     String getImagen(int id);
     Boolean getInitial(int id);
 
-    String getNombre(int id);
+
   }
 
   /**

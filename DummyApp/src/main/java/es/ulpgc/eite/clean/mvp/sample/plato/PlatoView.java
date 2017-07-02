@@ -78,7 +78,7 @@ public class PlatoView
 
 
 
-  }
+
 
   @Override
   public void finishScreen() {

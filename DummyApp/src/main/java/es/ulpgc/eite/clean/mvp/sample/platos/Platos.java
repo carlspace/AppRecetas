@@ -27,6 +27,7 @@ public interface Platos {
       int getPosicionDeListaPlatosClicked();
       int getIdPlatoSeleccionado();
 
+    int getPosicionListaPlatoSeleccionado();
   }
 
   ///////////////////////////////////////////////////////////////////////////////////

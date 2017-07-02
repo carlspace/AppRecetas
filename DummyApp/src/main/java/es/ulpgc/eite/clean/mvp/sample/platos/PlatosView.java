@@ -2,6 +2,7 @@ package es.ulpgc.eite.clean.mvp.sample.platos;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
@@ -22,6 +23,7 @@ public class PlatosView
     private Button button;
     private TextView text;
     private ListView listaPlatos;
+    private FloatingActionButton btnAddPlato;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,7 @@ public class PlatosView
 
         setContentView(R.layout.activity_platos);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+        btnAddPlato= (FloatingActionButton) findViewById(R.id.btnAddPlato);
         listaPlatos = (ListView) findViewById(R.id.listaPlatos);
         listaPlatos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

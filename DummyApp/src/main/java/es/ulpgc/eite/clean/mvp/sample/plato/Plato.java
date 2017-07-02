@@ -25,8 +25,6 @@ public interface Plato {
   interface PlatoTo {
     Context getManagedContext();
     void destroyView();
-    boolean isToolbarVisible();
-    boolean isTextVisible();
   }
 
   ///////////////////////////////////////////////////////////////////////////////////
@@ -37,6 +35,7 @@ public interface Plato {
    */
   interface ViewToPresenter extends Presenter<PresenterToView> {
     void onButtonClicked();
+    void inicializarVista();
   }
 
   /**
@@ -44,20 +43,21 @@ public interface Plato {
    */
   interface PresenterToView extends ContextView {
     void finishScreen();
-    void hideToolbar();
-    void hideText();
-    void showText();
-    void setText(String txt);
-    void setLabel(String txt);
+    void setDescripcionPlato(String txt);
+    void setNombrePlato(String txt);
   }
 
   /**
    * Methods offered to MODEL to communicate with PRESENTER
    */
   interface PresenterToModel extends Model<ModelToPresenter> {
-    void onChangeMsgByBtnClicked();
-    String getText();
-    String getLabel();
+
+
+
+    String getNombrePlato(int id);
+    String getReceta(int id);
+    String getImagen(int id);
+    Boolean getInitial(int id);
   }
 
   /**

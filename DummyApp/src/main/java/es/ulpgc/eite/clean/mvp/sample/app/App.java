@@ -7,6 +7,7 @@ import android.util.Log;
 
 import es.ulpgc.eite.clean.mvp.sample.inicial.Inicial;
 import es.ulpgc.eite.clean.mvp.sample.plato.Plato;
+import es.ulpgc.eite.clean.mvp.sample.plato.PlatoView;
 import es.ulpgc.eite.clean.mvp.sample.platos.Platos;
 import es.ulpgc.eite.clean.mvp.sample.platos.PlatosView;
 
@@ -59,9 +60,12 @@ public class App extends Application implements Mediator, Navigator {
     platosToState = new PlatosState();
     platosToState.posicionListaPlatosPulsada = presenter.getPosicionDeListaPlatosClicked();
 
+    Context view = presenter.getManagedContext();
 
+    if (view != null) {
+      view.startActivity(new Intent(view, PlatoView.class));
+    }
   }
-
   private class InicialState {
     boolean toolbarVisibility;
     int numeroBotonPresionado;

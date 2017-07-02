@@ -90,6 +90,7 @@ public class InicialView extends GenericActivity<Inicial.PresenterToView, Inicia
             setSupportActionBar(toolbar);
             Realm.init(this);
             RealmConfiguration config = new RealmConfiguration.Builder().deleteRealmIfMigrationNeeded().build();
+            Realm.setDefaultConfiguration(config);
             Log.d(TAG, " se inicio realm");
         }
 

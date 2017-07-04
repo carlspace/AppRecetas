@@ -31,7 +31,7 @@ public class PlatoView
     receta.setMovementMethod(new ScrollingMovementMethod());
     imagen = (ImageView) findViewById(R.id.imagenPlato);
     {
-
+//hola
 
 
     }

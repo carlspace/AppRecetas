@@ -28,6 +28,7 @@ public interface Platos {
       int getIdPlatoSeleccionado();
 
     int getPosicionListaPlatoSeleccionado();
+
   }
 
   ///////////////////////////////////////////////////////////////////////////////////
@@ -41,6 +42,7 @@ public interface Platos {
     void inicializarVista();
 
 
+    void onButtonAddPlato();
   }
 
   /**

@@ -17,6 +17,7 @@ public class App extends Application implements Mediator, Navigator {
     private InicialState toInicialState, inicialToState;
     private PlatosState toPlatosState, platosToState;
     private PlatoState toPlatoState, platoState;
+    private AddPlatoState toAddPlatoState, addPlatoToState;
 
     @Override
     public void onCreate() {
@@ -35,7 +36,10 @@ public class App extends Application implements Mediator, Navigator {
         presenter.onScreenStarted();
     }
 
-
+    @Override
+    public void startingAddPlatoScreen(AddPlatoPresenter presenter) {
+        presenter.onScreenStarted();
+    }
     ///////////////////////////////////////////////////////////////////////////////////
     // Navigator /////////////////////////////////////////////////////////////////////
 
@@ -52,6 +56,18 @@ public class App extends Application implements Mediator, Navigator {
         if (view != null) {
             view.startActivity(new Intent(view, PlatosView.class));
 
+        }
+
+    }
+    @Override
+    public void goToAddPlatoScreen(Platos.PlatosTo presenter){
+
+        Log.d("APP", "goToAddPlatoScreen() ");
+        Context view = presenter.getManagedContext();
+        addPlatoToState = new AddPlatoState();
+        addPlatoToState.imagenPlato="ic_escultura.png";
+        if (view != null) {
+            view.startActivity(new Intent(view, AddPlatoView.class));
         }
 
     }
@@ -103,6 +119,18 @@ public class App extends Application implements Mediator, Navigator {
     }
 
 
+    @Override
+    public String getImagenPlato(){
+        return addPlatoToState.imagenPlato;
+    }
+
+
+    @Override
+    public void setImagenPlato(String imagen){
+        addPlatoToState.imagenPlato =imagen;
+    }
+
+
 
     ///////////////////////////////////////////////////////////////////////////////////
     // State /////////////////////////////////////////////////////////////////////////
@@ -124,5 +152,8 @@ public class App extends Application implements Mediator, Navigator {
         int idPlatoSeleccionado;
 
     }
-}
+    private class AddPlatoState {
+        String imagenPlato;
+    }
+        }
 

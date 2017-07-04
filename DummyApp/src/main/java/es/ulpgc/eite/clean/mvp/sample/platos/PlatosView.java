@@ -32,6 +32,13 @@ public class PlatosView
         setContentView(R.layout.activity_platos);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         btnAddPlato= (FloatingActionButton) findViewById(R.id.btnAddPlato);
+        btnAddPlato.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getPresenter().onButtonAddPlato();
+
+            }
+        });
         listaPlatos = (ListView) findViewById(R.id.listaPlatos);
         listaPlatos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

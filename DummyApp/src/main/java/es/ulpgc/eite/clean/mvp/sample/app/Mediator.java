@@ -8,6 +8,7 @@ public interface Mediator {
   void startingInicialScreen(Inicial.ToInicial presenter);
   void startingPlatosScreen(Platos.ToPlatos presenter);
   void startingPlatoScreen(Plato.ToPlato presenter);
+  void startingAddPlatoScreen(AddPlatoPresenter addPlatoPresenter);
 
 
   int getTipoComidaPresionado();

@@ -12,14 +12,14 @@ import java.io.File;
 import java.util.Observable;
 
 import es.ulpgc.eite.clean.mvp.ContextView;
+import es.ulpgc.eite.clean.mvp.GenericPresenter;
 import es.ulpgc.eite.clean.mvp.sample.app.Mediator;
 
 /**
  * Created by Erik on 04/07/2017.
  */
 
-public class AddPlatoPresenter extends GenericPresenter
-<AddPlato.PresenterToView, AddPlato.PresenterToModel, AddPlato.ModelToPresenter, AddPlatoModel>
+public class AddPlatoPresenter extends GenericPresenter<AddPlato.PresenterToView, AddPlato.PresenterToModel, AddPlato.ModelToPresenter, AddPlatoModel>
         implements AddPlato.ViewToPresenter, AddPlato.ModelToPresenter, AddPlato.AddPlatoTo, AddPlato.ToAddPlato {
 
 private String imagenPath;
@@ -98,7 +98,7 @@ public void onButtonAddImagenClicked(){
         Intent.ACTION_PICK,
         android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI
         );
-        getView().startGaleria(intent);
+        getView().startMenu(intent);
 
         }
 
@@ -134,10 +134,10 @@ class MyObserver implements java.util.Observer{
         if((!nombre.equals(""))&&(!receta.equals(""))
                 ){
             if (path.equals("ic_escultura.png")){
-                getModel().addAutorSinImagen(nombre, receta, app.getIdBotonCategoriaClicked());
+                getModel().addPlatoSinImagen(nombre, receta, app.getTipoComidaPresionado());
             }
             else {
-                getModel().addAutorConImagen(nombre, receta, app.getIdBotonCategoriaClicked(),
+                getModel().addPlatoConImagen(nombre, receta, app.getTipoComidaPresionado(),
                         path);
             }
             getView().finishScreen();
@@ -180,7 +180,7 @@ class MyObserver implements java.util.Observer{
     public void setImagenSelecionada(){
         Mediator app = (Mediator) getView().getApplication();
         String imagen = imagenPath;
-        app.setImagenAutor(imagen);
+        app.setImagenPlato(imagen);
 
     }
 

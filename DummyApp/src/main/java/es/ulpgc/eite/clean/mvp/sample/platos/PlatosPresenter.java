@@ -96,6 +96,11 @@ public class PlatosPresenter extends GenericPresenter
 
   }
 
+    @Override
+    public void onButtonAddPlato() {
+        Navigator app = (Navigator) getView().getApplication();
+        app.goToAddPlatoScreen(this);
+    }
 
 
     @Override

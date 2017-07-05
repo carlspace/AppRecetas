@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_add_obra"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#81BEF7"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="es.ulpgc.eite.clean.mvp.sample.AddPlato.AddPlatoView"
+    tools:showIn="@layout/activity_add_plato">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/labelNombreObra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/labelNombre"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <EditText
+                android:id="@+id/nombreObraIntroducido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines = "2"
+                android:scrollbars = "vertical"
+                android:layout_weight="1"
+                android:ems="10"
+                android:textColorLink="@android:color/background_dark"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/labelDescripcionObra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/labelReceta"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <EditText
+                android:id="@+id/descripcionObraIntroducida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines = "4"
+                android:scrollbars = "vertical"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:textColorLink="@android:color/background_dark"/>
+
+        </LinearLayout>
+
+
+
+
+
+
+        <Button
+            android:id="@+id/addImagenObra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/labelBtnAddImagen"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/fab_margin"/>
+
+        <ImageView
+            android:id="@+id/imagenSeleccionadaObra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxHeight="100dp"
+            android:maxWidth="100dp"
+            app:srcCompat="@mipmap/ic_plato" />
+
+        <Button
+            android:id="@+id/btnDoneObra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/labelBtnAddDone"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/fab_margin"/>
+
+    </LinearLayout>
+</RelativeLayout>
+

@@ -1,7 +1,6 @@
 package es.ulpgc.eite.clean.mvp.sample.AddPlato;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Bitmap;
 
 import es.ulpgc.eite.clean.mvp.ContextView;
@@ -13,11 +12,20 @@ import es.ulpgc.eite.clean.mvp.Presenter;
  */
 
 interface AddPlato {
+
+    ///////////////////////////////////////////////////////////////////////////////////
+    // State ////////////////////////////////////////////////////////////////////////
+
     interface ToAddAutor {
         void onScreenStarted();
 
     }
 
+
+    interface ToAddPlato{
+        void onScreenStarted();
+
+    }
     interface AddPlatoTo {
         Context getManagedContext();
         void destroyView();
@@ -71,4 +79,4 @@ interface AddPlato {
     }
 }
 
-1
+

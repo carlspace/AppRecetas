@@ -40,7 +40,7 @@ public void onCreate(AddPlato.PresenterToView view) {
         setView(view);
         Log.d(TAG, "calling onCreate()");
 
-        Log.d(TAG, "calling startingAddAutorScreen()");
+        Log.d(TAG, "calling startingAddPlatoScreen()");
         Mediator app = (Mediator) getView().getApplication();
         app.startingAddPlatoScreen(this);
         }

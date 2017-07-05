@@ -22,4 +22,6 @@ public interface  I_ManejadorDataBase {
 
     void addTipoComida(String nombre);
     void addPlato(String nombre, String descripcion, int idTipoComida, String imagen, String enlaceYoutube, Boolean isInAssets);
+
+
 }

@@ -47,7 +47,7 @@ public class AddPlatoView
 
             nombreIntroducido = (EditText) findViewById(R.id.nombrePlatoIntroducido);
             nombreIntroducido.setMovementMethod(new ScrollingMovementMethod());
-            recetaIntroducida = (EditText) findViewById(R.id.recetaPlatoIntroducida);
+            recetaIntroducida = (EditText) findViewById(R.id.recetaPlatoIntroducido);
             recetaIntroducida.setMovementMethod(new ScrollingMovementMethod());
             imagenSeleccionada=(ImageView)  findViewById(R.id.imagenSeleccionadaPlato);
 
@@ -130,6 +130,7 @@ public class AddPlatoView
         public void setTitle(String txt){
             toolbar.setTitle(txt);
         }
+
         @Override
         public void showToast(String txt){
             Toast toast = Toast.makeText(getActivityContext(), txt,Toast.LENGTH_SHORT);

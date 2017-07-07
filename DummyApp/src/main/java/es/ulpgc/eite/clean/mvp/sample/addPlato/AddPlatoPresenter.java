@@ -1,11 +1,9 @@
-package es.ulpgc.eite.clean.mvp.sample.AddPlato;
+package es.ulpgc.eite.clean.mvp.sample.addPlato;
 
 import android.content.Context;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
-import android.provider.MediaStore;
 import android.util.Log;
 
 import java.io.File;
@@ -133,7 +131,7 @@ class MyObserver implements java.util.Observer{
 
         if((!nombre.equals(""))&&(!receta.equals(""))
                 ){
-            if (path.equals("ic_escultura.png")){
+            if (path.equals("")){
                 getModel().addPlatoSinImagen(nombre, receta, app.getTipoComidaPresionado());
             }
             else {
@@ -187,8 +185,8 @@ class MyObserver implements java.util.Observer{
     ///////////////////////////////////////////////////////////////////////////////////
 
     public void inicializarVista(){
-        getView().setTitle("Nuevo Autor");
-        if(getImagenSelecionada().equals("ic_escultura.png")){
+        getView().setTitle("");
+        if(getImagenSelecionada().equals("")){
             getView().hideImagen();
         }else{
             getView().showImagen();

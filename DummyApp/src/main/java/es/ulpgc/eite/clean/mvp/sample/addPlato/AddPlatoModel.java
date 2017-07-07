@@ -1,4 +1,4 @@
-package es.ulpgc.eite.clean.mvp.sample.AddPlato;
+package es.ulpgc.eite.clean.mvp.sample.addPlato;
 
 import es.ulpgc.eite.clean.mvp.GenericModel;
 import es.ulpgc.eite.clean.mvp.sample.database.I_ManejadorDataBase;
@@ -41,7 +41,7 @@ public class AddPlatoModel extends GenericModel<AddPlato.ModelToPresenter>
 
     @Override
     public void  addPlatoSinImagen(String nombre,String receta,int idTipoComida){
-        String imgDefault ="ic_escultura.png";
+        String imgDefault ="";
         miManejador.addPlato(nombre,receta,idTipoComida,imgDefault,true);
 
     }

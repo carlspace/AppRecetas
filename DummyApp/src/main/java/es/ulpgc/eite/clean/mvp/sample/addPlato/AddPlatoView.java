@@ -1,4 +1,4 @@
-package es.ulpgc.eite.clean.mvp.sample.AddPlato;
+package es.ulpgc.eite.clean.mvp.sample.addPlato;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;

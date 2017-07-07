@@ -13,6 +13,8 @@ public interface Mediator {
 
   int getTipoComidaPresionado();
 
+  void setImagenPlato(String imagen);
+  String getImagenPlato();
 
 
     int getPosicionPlatos();

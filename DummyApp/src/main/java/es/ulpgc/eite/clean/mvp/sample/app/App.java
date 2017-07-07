@@ -38,7 +38,7 @@ public class App extends Application implements Mediator, Navigator {
 
     @Override
     public void startingAddPlatoScreen(AddPlatoPresenter presenter) {
-        presenter.onScreenStarted();
+        presenter.o;
     }
     ///////////////////////////////////////////////////////////////////////////////////
     // Navigator /////////////////////////////////////////////////////////////////////
@@ -65,7 +65,7 @@ public class App extends Application implements Mediator, Navigator {
         Log.d("APP", "goToAddPlatoScreen() ");
         Context view = presenter.getManagedContext();
         addPlatoToState = new AddPlatoState();
-        addPlatoToState.imagenPlato="ic_escultura.png";
+        addPlatoToState.imagenPlato="";
         if (view != null) {
             view.startActivity(new Intent(view, AddPlatoView.class));
         }
@@ -75,12 +75,12 @@ public class App extends Application implements Mediator, Navigator {
     @Override
     public void goToPlatoScreen(Platos.PlatosTo presenter) {
 
-            Log.d("APP", "goToAutorScreen() has pulsado: "+ presenter.getPosicionListaPlatoSeleccionado());
+            Log.d("APP", "goToPlatosScreen() has pulsado: "+ presenter.getPosicionListaPlatoSeleccionado());
 
             platosToState.posicionListaPlatoSelecionado = presenter.getPosicionListaPlatoSeleccionado();
             platosToState.idPlatoSeleccionado = presenter.getIdPlatoSeleccionado();
 
-            Log.d("APP", "goToObraScreen() con id obra: "+ platosToState.idPlatoSeleccionado);
+            Log.d("APP", "goToPlatoScreen() con id obra: "+ platosToState.idPlatoSeleccionado);
             Context view = presenter.getManagedContext();
 
             if (view != null) {

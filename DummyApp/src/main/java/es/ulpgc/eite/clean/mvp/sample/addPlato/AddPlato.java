@@ -1,6 +1,7 @@
-package es.ulpgc.eite.clean.mvp.sample.AddPlato;
+package es.ulpgc.eite.clean.mvp.sample.addPlato;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 
 import es.ulpgc.eite.clean.mvp.ContextView;
@@ -53,11 +54,11 @@ interface AddPlato {
     interface PresenterToView extends ContextView {
 
         void finishScreen();
-
+        void startMenu(Intent intent);
         String getNombre();
         String getReceta();
         void setTitle(String txt);
-
+        void showToast(String txt);
         void setImagen(Bitmap imagen);
         void showImagen();
         void hideImagen();

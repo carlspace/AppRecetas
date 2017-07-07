@@ -94,8 +94,7 @@ public void onButtonAddImagenClicked(){
         observer = new MyObserver();
         Intent intent = new Intent(
         Intent.ACTION_PICK,
-        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI
-        );
+        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         getView().startMenu(intent);
 
         }
@@ -135,8 +134,7 @@ class MyObserver implements java.util.Observer{
                 getModel().addPlatoSinImagen(nombre, receta, app.getTipoComidaPresionado());
             }
             else {
-                getModel().addPlatoConImagen(nombre, receta, app.getTipoComidaPresionado(),
-                        path);
+                getModel().addPlatoConImagen(nombre, receta, app.getTipoComidaPresionado(), path);
             }
             getView().finishScreen();
         }else {

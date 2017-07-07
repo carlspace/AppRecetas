@@ -83,7 +83,7 @@ public class App extends Application implements Mediator, Navigator {
             platosToState.posicionListaPlatoSelecionado = presenter.getPosicionListaPlatoSeleccionado();
             platosToState.idPlatoSeleccionado = presenter.getIdPlatoSeleccionado();
 
-            Log.d("APP", "goToPlatoScreen() con id obra: "+ platosToState.idPlatoSeleccionado);
+            Log.d("APP", "goToPlatoScreen() con id plato: "+ platosToState.idPlatoSeleccionado);
             Context view = presenter.getManagedContext();
 
             if (view != null) {

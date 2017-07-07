@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
+import es.ulpgc.eite.clean.mvp.sample.addPlato.AddPlatoPresenter;
+import es.ulpgc.eite.clean.mvp.sample.addPlato.AddPlatoView;
 import es.ulpgc.eite.clean.mvp.sample.inicial.Inicial;
 import es.ulpgc.eite.clean.mvp.sample.plato.Plato;
 import es.ulpgc.eite.clean.mvp.sample.plato.PlatoView;
@@ -38,8 +40,9 @@ public class App extends Application implements Mediator, Navigator {
 
     @Override
     public void startingAddPlatoScreen(AddPlatoPresenter presenter) {
-        presenter.;
+        presenter.onScreenStarted();
     }
+
     ///////////////////////////////////////////////////////////////////////////////////
     // Navigator /////////////////////////////////////////////////////////////////////
 

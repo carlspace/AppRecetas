@@ -38,7 +38,7 @@ public class App extends Application implements Mediator, Navigator {
 
     @Override
     public void startingAddPlatoScreen(AddPlatoPresenter presenter) {
-        presenter.o;
+        presenter.;
     }
     ///////////////////////////////////////////////////////////////////////////////////
     // Navigator /////////////////////////////////////////////////////////////////////

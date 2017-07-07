@@ -68,8 +68,8 @@ interface AddPlato {
      * Methods offered to MODEL to communicate with PRESENTER
      */
     interface PresenterToModel extends Model<ModelToPresenter> {
-        void  addPlatoSinImagen(String nombre, String receta, int idPlato);
-        void  addPlatoConImagen(String nombre, String descripcion, int idPlato, String PathImagen);
+        void  addPlatoSinImagen(String nombre, String receta, int idPlato, String enlaceYoutube);
+        void  addPlatoConImagen(String nombre, String descripcion, int idPlato, String PathImagen, String enlaceYoutube);
     }
 
     /**

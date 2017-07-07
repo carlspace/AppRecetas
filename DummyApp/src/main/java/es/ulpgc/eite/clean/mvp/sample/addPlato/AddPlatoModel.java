@@ -40,15 +40,15 @@ public class AddPlatoModel extends GenericModel<AddPlato.ModelToPresenter>
 
 
     @Override
-    public void  addPlatoSinImagen(String nombre,String receta,int idTipoComida){
+    public void  addPlatoSinImagen(String nombre,String receta,int idTipoComida, String enlaceYoutube){
         String imgDefault ="";
-        miManejador.addPlato(nombre,receta,idTipoComida,imgDefault,true);
+        miManejador.addPlato(nombre,receta,idTipoComida,imgDefault,enlaceYoutube,true);
 
     }
 
     @Override
-    public void  addPlatoConImagen(String nombre, String receta, int idTipoComida, String PathImagen){
-        miManejador.addPlato(nombre,receta,idTipoComida,PathImagen,false);
+    public void  addPlatoConImagen(String nombre, String receta, int idTipoComida, String PathImagen, String enlaceYoutube){
+        miManejador.addPlato(nombre,receta,idTipoComida,PathImagen,enlaceYoutube,false);
 
     }
 

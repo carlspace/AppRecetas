@@ -8,6 +8,7 @@ import android.util.Log;
 
 import java.io.File;
 import java.util.Observable;
+import java.util.StringTokenizer;
 
 import es.ulpgc.eite.clean.mvp.ContextView;
 import es.ulpgc.eite.clean.mvp.GenericPresenter;
@@ -37,6 +38,7 @@ public void onCreate(AddPlato.PresenterToView view) {
         super.onCreate(AddPlatoModel.class, this);
         setView(view);
         Log.d(TAG, "calling onCreate()");
+
 
         Log.d(TAG, "calling startingAddPlatoScreen()");
         Mediator app = (Mediator) getView().getApplication();
@@ -127,6 +129,7 @@ class MyObserver implements java.util.Observer{
         String nombre= getView().getNombre();
         String receta= getView().getReceta();
         String path = getImagenSelecionada();
+
 
         if((!nombre.equals(""))&&(!receta.equals(""))
                 ){

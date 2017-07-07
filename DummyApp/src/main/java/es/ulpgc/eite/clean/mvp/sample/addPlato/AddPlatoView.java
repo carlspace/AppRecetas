@@ -47,7 +47,7 @@ public class AddPlatoView
 
             nombreIntroducido = (EditText) findViewById(R.id.nombrePlatoIntroducido);
             nombreIntroducido.setMovementMethod(new ScrollingMovementMethod());
-            recetaIntroducida = (EditText) findViewById(R.id.recetaPlatoIntroducido);
+            recetaIntroducida = (EditText) findViewById(R.id.recetaPlatoIntroducida);
             recetaIntroducida.setMovementMethod(new ScrollingMovementMethod());
             imagenSeleccionada=(ImageView)  findViewById(R.id.imagenSeleccionadaPlato);
 

@@ -70,6 +70,8 @@ interface AddPlato {
     interface PresenterToModel extends Model<ModelToPresenter> {
         void  addPlatoSinImagen(String nombre, String receta, int idPlato, String enlaceYoutube);
         void  addPlatoConImagen(String nombre, String descripcion, int idPlato, String PathImagen, String enlaceYoutube);
+
+        
     }
 
     /**

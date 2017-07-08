@@ -5,10 +5,13 @@ import es.ulpgc.eite.clean.mvp.sample.database.I_ManejadorDataBase;
 import es.ulpgc.eite.clean.mvp.sample.database.ManejadorDataBase;
 
 
+
 public class PlatosModel extends GenericModel<Platos.ModelToPresenter>
     implements Platos.PresenterToModel {
 
     I_ManejadorDataBase miManejador;
+  private static final String NOTIFY_DELETED = "Deleted";
+
 
   /**
    * Method that recovers a reference to the PRESENTER
@@ -20,6 +23,7 @@ public class PlatosModel extends GenericModel<Platos.ModelToPresenter>
   public void onCreate(Platos.ModelToPresenter presenter) {
     super.onCreate(presenter);
     miManejador = ManejadorDataBase.getInstance();
+
 
   }
 
@@ -53,4 +57,18 @@ public class PlatosModel extends GenericModel<Platos.ModelToPresenter>
   public String getTipoComida(int idTipoDeComida) {
     return miManejador.getTipoComida(idTipoDeComida);
   }
+
+  @Override
+  public void deleteItem(String id) {
+
+  }
+
+  @Override
+  public String getNotifyDeleted() {
+    return NOTIFY_DELETED;
+
+  }
+
+
 }
+

@@ -97,6 +97,11 @@ public class PlatosPresenter extends GenericPresenter
   }
 
     @Override
+    public void onSwipedItem(String id) {
+
+    }
+
+    @Override
     public void onButtonAddPlato() {
         Navigator app = (Navigator) getView().getApplication();
         app.goToAddPlatoScreen(this);
@@ -167,4 +172,9 @@ public class PlatosPresenter extends GenericPresenter
     public void setIdPlatoSeleccionado(int idTipoComida, int posicionDeListaPlatosClicked){
         this.idPlatoSeleccionado = getModel().getIdPlatoSeleccionado(idTipoComida,posicionDeListaPlatosClicked);
     }
-}
+
+
+    }
+
+
+

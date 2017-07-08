@@ -56,25 +56,7 @@ public class PlatosView
         adaptador = new ArrayAdapter<String>( this, android.R.layout.simple_list_item_1, arrayList);
         listaPlatos.setAdapter(adaptador);
         //Deslizar item para borrarlo
-        SwipeListViewTouchListener touchListener =new SwipeListViewTouchListener(listaPlatos,new SwipeListViewTouchListener.OnSwipeCallback() {
-            @Override
-            public void onSwipeLeft(ListView listaPlatos, int [] reverseSortedPositions) {
-                //Aqui ponemos lo que hara el programa cuando deslizamos un item a la izquierda
-                arrayList.remove(reverseSortedPositions[0]);
-                adaptador.notifyDataSetChanged();
-            }
 
-            @Override
-            public void onSwipeRight(ListView listaPlatos, int [] reverseSortedPositions) {
-                //Aqui ponemos lo que hara el programa cuando deslizamos un item ha la derecha
-                arrayList.remove(reverseSortedPositions[0]);
-                adaptador.notifyDataSetChanged();
-            }
-        },true, false);
-
-        //Observadores del listView
-        listaPlatos.setOnTouchListener(touchListener);
-        listaPlatos.setOnScrollListener(touchListener.makeScrollListener());
     }
 
     private void onItemClickSelected(int pos) {

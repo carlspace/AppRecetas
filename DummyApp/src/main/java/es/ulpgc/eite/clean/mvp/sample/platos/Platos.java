@@ -41,7 +41,7 @@ public interface Platos {
     void onItemClickSelected(int pos);
     void inicializarVista();
 
-
+    void onSwipedItem(String id);
     void onButtonAddPlato();
   }
 
@@ -59,6 +59,7 @@ public interface Platos {
     void setTituloToolbar(String txt);
 
 
+
   }
 
   /**
@@ -69,6 +70,9 @@ public interface Platos {
     String[] getPlatos(int idTipoDeComida);
 
     String getTipoComida(int idTipoDeComida);
+    void deleteItem(String id);
+
+    String getNotifyDeleted();
   }
 //HOLA
   /**

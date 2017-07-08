@@ -94,7 +94,8 @@ public void onDestroy(boolean isChangingConfiguration) {
 @Override
 public void onButtonAddImagenClicked(){
         observer = new MyObserver();
-        Intent intent = new Intent(
+    //Fallos con el Intent
+    Intent intent = new Intent(
         Intent.ACTION_PICK,
         android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         getView().startMenu(intent);
@@ -108,6 +109,7 @@ class MyObserver implements java.util.Observer{
         Log.d(TAG,"update observer");
         uri =(Uri)arg;
         if(uri != null){
+            //Fallo con el metodo getRealPathFromUri
             imagenPath = getRealPathFromURI(uri);
             if(imagenPath != null) {
                 setImagenSelecionada();
@@ -134,6 +136,7 @@ class MyObserver implements java.util.Observer{
         if((!nombre.equals(""))&&(!receta.equals(""))
                 ){
             if (path.equals("")){
+                //Falta poner enlace de Youtube
                 getModel().addPlatoSinImagen(nombre, receta, app.getTipoComidaPresionado());
             }
             else {

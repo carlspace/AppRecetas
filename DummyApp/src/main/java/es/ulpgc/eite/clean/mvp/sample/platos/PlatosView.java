@@ -26,8 +26,8 @@ public class PlatosView
     private TextView text;
     private ListView listaPlatos;
     private FloatingActionButton btnAddPlato;
-    ArrayList<String> arrayList = new ArrayList<String>();
-    ArrayAdapter<String> adaptador;
+    private ArrayList<String> arrayList = new ArrayList<String>();
+    private ArrayAdapter<String> adaptador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,13 +36,13 @@ public class PlatosView
         setContentView(R.layout.activity_platos);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         btnAddPlato= (FloatingActionButton) findViewById(R.id.btnAddPlato);
-        btnAddPlato.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getPresenter().onButtonAddPlato();
+//        btnAddPlato.setOnClickListener(new View.OnClickListener() {
+   //         @Override
+     //       public void onClick(View v) {
+       //         getPresenter().onButtonAddPlato();
 
-            }
-        });
+         //   }
+        //});
         //Instanciamos el listView
         listaPlatos = (ListView) findViewById(R.id.listaPlatos);
         listaPlatos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -59,7 +59,7 @@ public class PlatosView
         SwipeListViewTouchListener touchListener =new SwipeListViewTouchListener(listaPlatos,new SwipeListViewTouchListener.OnSwipeCallback() {
             @Override
             public void onSwipeLeft(ListView listaPlatos, int [] reverseSortedPositions) {
-                //Aqui ponemos lo que hara el programa cuando deslizamos un item ha la izquierda
+                //Aqui ponemos lo que hara el programa cuando deslizamos un item a la izquierda
                 arrayList.remove(reverseSortedPositions[0]);
                 adaptador.notifyDataSetChanged();
             }
@@ -72,7 +72,7 @@ public class PlatosView
             }
         },true, false);
 
-        //Escuchadores del listView
+        //Observadores del listView
         listaPlatos.setOnTouchListener(touchListener);
         listaPlatos.setOnScrollListener(touchListener.makeScrollListener());
     }

@@ -96,7 +96,6 @@ public void onDestroy(boolean isChangingConfiguration) {
 @Override
 public void onButtonAddImagenClicked(){
         observer = new MyObserver();
-    //Fallos con el Intent
         Intent intent = new Intent(
         Intent.ACTION_PICK,
         android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
@@ -111,7 +110,6 @@ class MyObserver implements java.util.Observer{
         Log.d(TAG,"update observer");
         uri =(Uri)arg;
         if(uri != null){
-            //Fallo con el metodo getRealPathFromUri
             imagenPath = getRealPathFromURI(uri);
             if(imagenPath != null) {
                 setImagenSelecionada();

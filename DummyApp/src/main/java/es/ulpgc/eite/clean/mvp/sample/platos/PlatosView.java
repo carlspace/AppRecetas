@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 import es.ulpgc.eite.clean.mvp.GenericActivity;
 import es.ulpgc.eite.clean.mvp.sample.R;
 
@@ -24,6 +26,8 @@ public class PlatosView
     private TextView text;
     private ListView listaPlatos;
     private FloatingActionButton btnAddPlato;
+    ArrayList<String> arrayList = new ArrayList<String>();
+    ArrayAdapter<String> adaptador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,13 +43,38 @@ public class PlatosView
 
             }
         });
+        //Instanciamos el listView
         listaPlatos = (ListView) findViewById(R.id.listaPlatos);
         listaPlatos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 onItemClickSelected(i);
+
             }
         });
+        //Instanciamos el adaptador, le pasamos el arraylist y al listview la pasamos nuestro adapter como adaptador de contenido
+        adaptador = new ArrayAdapter<String>( this, android.R.layout.simple_list_item_1, arrayList);
+        listaPlatos.setAdapter(adaptador);
+        //Deslizar item para borrarlo
+        SwipeListViewTouchListener touchListener =new SwipeListViewTouchListener(listaPlatos,new SwipeListViewTouchListener.OnSwipeCallback() {
+            @Override
+            public void onSwipeLeft(ListView listaPlatos, int [] reverseSortedPositions) {
+                //Aqui ponemos lo que hara el programa cuando deslizamos un item ha la izquierda
+                arrayList.remove(reverseSortedPositions[0]);
+                adaptador.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onSwipeRight(ListView listaPlatos, int [] reverseSortedPositions) {
+                //Aqui ponemos lo que hara el programa cuando deslizamos un item ha la derecha
+                arrayList.remove(reverseSortedPositions[0]);
+                adaptador.notifyDataSetChanged();
+            }
+        },true, false);
+
+        //Escuchadores del listView
+        listaPlatos.setOnTouchListener(touchListener);
+        listaPlatos.setOnScrollListener(touchListener.makeScrollListener());
     }
 
     private void onItemClickSelected(int pos) {

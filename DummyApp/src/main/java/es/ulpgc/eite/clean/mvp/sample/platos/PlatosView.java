@@ -47,32 +47,14 @@ public class PlatosView
         });
         //Instanciamos el listView
         listaPlatos = (ListView) findViewById(R.id.listaPlatos);
-        listaPlatos.setAdapter(adaptador);
-        listaPlatos.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+        listaPlatos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                final int posicion=i;
-                AlertDialog.Builder dialogo1 = new AlertDialog.Builder(PlatosView.this);
-                dialogo1.setTitle("Importante");
-                dialogo1.setMessage("¿ Elimina este plato ?");
-                dialogo1.setCancelable(false);
-                dialogo1.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialogo1, int id) {
-                        platos.remove(posicion);
-                        adaptador.notifyDataSetChanged();
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+              onItemClickSelected(i);
             }
 
         });
-        //Instanciamos el adaptador, le pasamos el arraylist y al listview la pasamos nuestro adapter como adaptador de contenido
-                dialogo1.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialogo1, int id) {
-                    }
-                });
-                dialogo1.show();
 
-                return false;
-            }
-        });
     }
 
 

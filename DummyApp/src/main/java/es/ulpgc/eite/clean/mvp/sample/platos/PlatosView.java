@@ -11,6 +11,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 
 import java.util.ArrayList;
 
@@ -26,7 +28,7 @@ public class PlatosView
     private TextView text;
     private ListView listaPlatos;
     private FloatingActionButton btnAddPlato;
-    private ArrayList<String> arrayList = new ArrayList<String>();
+    private ArrayList<String> platos= new ArrayList<String>();
     private ArrayAdapter<String> adaptador;
 
     @Override
@@ -45,19 +47,36 @@ public class PlatosView
         });
         //Instanciamos el listView
         listaPlatos = (ListView) findViewById(R.id.listaPlatos);
-        listaPlatos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listaPlatos.setAdapter(adaptador);
+        listaPlatos.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                onItemClickSelected(i);
-
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+                final int posicion=i;
+                AlertDialog.Builder dialogo1 = new AlertDialog.Builder(PlatosView.this);
+                dialogo1.setTitle("Importante");
+                dialogo1.setMessage("¿ Elimina este plato ?");
+                dialogo1.setCancelable(false);
+                dialogo1.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialogo1, int id) {
+                        platos.remove(posicion);
+                        adaptador.notifyDataSetChanged();
             }
+
         });
         //Instanciamos el adaptador, le pasamos el arraylist y al listview la pasamos nuestro adapter como adaptador de contenido
-        adaptador = new ArrayAdapter<String>( this, android.R.layout.simple_list_item_1, arrayList);
-        listaPlatos.setAdapter(adaptador);
-        //Deslizar item para borrarlo
+                dialogo1.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialogo1, int id) {
+                    }
+                });
+                dialogo1.show();
 
+                return false;
+            }
+        });
     }
+
+
+
 
     private void onItemClickSelected(int pos) {
         getPresenter().onItemClickSelected(pos);

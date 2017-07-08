@@ -4,19 +4,21 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.method.ScrollingMovementMethod;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import es.ulpgc.eite.clean.mvp.GenericActivity;
 import es.ulpgc.eite.clean.mvp.sample.R;
 
+
 public class PlatoView
-    extends GenericActivity<Plato.PresenterToView, Plato.ViewToPresenter, PlatoPresenter>
-    implements Plato.PresenterToView {
+    extends GenericActivity<Plato.PresenterToView, Plato.ViewToPresenter, PlatoPresenter>, YoutubeBaseActivity implements Plato.PresenterToView {
 
   private Toolbar toolbar;
   private ImageView imagen;
   private TextView receta;
+  private Button btnYoutube;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +33,7 @@ public class PlatoView
     receta.setMovementMethod(new ScrollingMovementMethod());
     imagen = (ImageView) findViewById(R.id.imagenPlato);
     {
-//hola
+
 
 
     }

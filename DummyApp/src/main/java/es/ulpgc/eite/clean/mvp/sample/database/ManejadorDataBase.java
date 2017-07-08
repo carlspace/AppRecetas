@@ -249,7 +249,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
 
 
 
-            addTipoComida("Pescado");
+            addTipoComida("Pescados");
             idTipoComida=4;
             //Plato  (id=10)
             nombrePlato = "Salmon encebollado";

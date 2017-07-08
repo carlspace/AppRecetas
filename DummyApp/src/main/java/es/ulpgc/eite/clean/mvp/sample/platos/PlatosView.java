@@ -91,6 +91,7 @@ public class PlatosView
     @Override
     protected void onResume() {
         super.onResume(PlatosPresenter.class, this);
+        getPresenter().inicializarVista();
         Log.d(TAG, "ha pasado el corte");
     }
 

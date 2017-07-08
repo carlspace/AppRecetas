@@ -69,10 +69,10 @@ public class BasicInstrumentedTest {
     @Test
     public void testRealmGetIdsPlatoPorTipoDeComida(){
         Realm realm = Realm.getDefaultInstance();
-        int idTipoDeComida=2;
+        int idTipoComida=2;
         int[] ids={4,5,6};
 
-        RealmResults<Plato> result =realm.where(Plato.class).equalTo("idTipoDeComida",idTipoDeComida).findAll();
+        RealmResults<Plato> result =realm.where(Plato.class).equalTo("idTipoComida",idTipoComida).findAll();
         int[] array=new int[result.size()];
         int i;
         for(i=0; i<result.size();i++){

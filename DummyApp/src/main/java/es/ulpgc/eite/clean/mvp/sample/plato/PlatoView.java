@@ -13,7 +13,7 @@ import es.ulpgc.eite.clean.mvp.sample.R;
 
 
 public class PlatoView
-    extends GenericActivity<Plato.PresenterToView, Plato.ViewToPresenter, PlatoPresenter>, YoutubeBaseActivity implements Plato.PresenterToView {
+    extends GenericActivity<Plato.PresenterToView, Plato.ViewToPresenter, PlatoPresenter> implements Plato.PresenterToView {
 
   private Toolbar toolbar;
   private ImageView imagen;

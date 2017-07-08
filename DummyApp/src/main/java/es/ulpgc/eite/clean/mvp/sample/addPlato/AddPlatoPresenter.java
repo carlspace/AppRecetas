@@ -1,14 +1,16 @@
 package es.ulpgc.eite.clean.mvp.sample.addPlato;
 
 import android.content.Context;
+import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.provider.MediaStore;
 import android.util.Log;
 
 import java.io.File;
 import java.util.Observable;
-import java.util.StringTokenizer;
 
 import es.ulpgc.eite.clean.mvp.ContextView;
 import es.ulpgc.eite.clean.mvp.GenericPresenter;
@@ -95,7 +97,7 @@ public void onDestroy(boolean isChangingConfiguration) {
 public void onButtonAddImagenClicked(){
         observer = new MyObserver();
     //Fallos con el Intent
-    Intent intent = new Intent(
+        Intent intent = new Intent(
         Intent.ACTION_PICK,
         android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         getView().startMenu(intent);
@@ -130,6 +132,7 @@ class MyObserver implements java.util.Observer{
         Mediator app = (Mediator) getView().getApplication();
         String nombre= getView().getNombre();
         String receta= getView().getReceta();
+        String enlaceYoutube = getView().getEnlaceYoutube();
         String path = getImagenSelecionada();
 
 
@@ -137,10 +140,10 @@ class MyObserver implements java.util.Observer{
                 ){
             if (path.equals("")){
                 //Falta poner enlace de Youtube
-                getModel().addPlatoSinImagen(nombre, receta, app.getTipoComidaPresionado());
+                getModel().addPlatoSinImagen(nombre, receta, app.getTipoComidaPresionado(), enlaceYoutube);
             }
             else {
-                getModel().addPlatoConImagen(nombre, receta, app.getTipoComidaPresionado(), path);
+                getModel().addPlatoConImagen(nombre, receta, app.getTipoComidaPresionado(),enlaceYoutube, path);
             }
             getView().finishScreen();
         }else {
@@ -213,6 +216,20 @@ class MyObserver implements java.util.Observer{
         }
     }
 
+    public String getRealPathFromURI(Uri contentUri) {
+
+        String res = null;
+        String[] proj = { MediaStore.Images.Media.DATA };
+        Cursor cursor = getActivityContext().getContentResolver().query(contentUri, proj, null, null, null);
+        if (cursor.moveToFirst()) {
+
+            int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+            res = cursor.getString(column_index);
+        }
+        cursor.close();
+
+        return res;
+    }
 
 
 }

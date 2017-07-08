@@ -57,6 +57,7 @@ interface AddPlato {
         void startMenu(Intent intent);
         String getNombre();
         String getReceta();
+        String getEnlaceYoutube();
         void setTitle(String txt);
         void showToast(String txt);
         void setImagen(Bitmap imagen);

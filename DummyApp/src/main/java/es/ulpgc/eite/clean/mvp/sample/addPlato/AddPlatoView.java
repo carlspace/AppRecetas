@@ -120,11 +120,15 @@ public class AddPlatoView
             return nombreIntroducido.getText().toString();
         }
 
-    @Override
-    public String getReceta() {
+         @Override
+         public String getReceta() {
         return recetaIntroducida.getText().toString();
     }
 
+    @Override
+        public String getEnlaceYoutube(){
+            return null;
+        }
 
         @Override
         public void setTitle(String txt){

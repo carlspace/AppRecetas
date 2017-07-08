@@ -40,7 +40,7 @@ public class PlatosPresenter extends GenericPresenter
     Mediator app = (Mediator) getView().getApplication();
     app.startingPlatosScreen(this);
   }
-
+//
   /**
    * Operation called by VIEW after its reconstruction.
    * Always call {@link GenericPresenter#setView(ContextView)}

@@ -91,7 +91,7 @@ public class PlatoView
   }
 
   @Override
-  public void setDescripcionPlato(String txt) {
+  public void setRecetaPlato(String txt) {
     receta.setText(txt);
   }
 

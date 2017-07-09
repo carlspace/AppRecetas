@@ -57,6 +57,7 @@ interface AddPlato {
         void startMenu(Intent intent);
         String getNombre();
         String getReceta();
+        String getIngredientes();
         String getEnlaceYoutube();
         void setTitle(String txt);
         void showToast(String txt);
@@ -69,8 +70,8 @@ interface AddPlato {
      * Methods offered to MODEL to communicate with PRESENTER
      */
     interface PresenterToModel extends Model<ModelToPresenter> {
-        void  addPlatoSinImagen(String nombre, String receta, int idPlato, String enlaceYoutube);
-        void  addPlatoConImagen(String nombre, String descripcion, int idPlato, String PathImagen, String enlaceYoutube);
+        void  addPlatoSinImagen(String nombre, String receta,  int idPlato, String ingredientes, String enlaceYoutube);
+        void  addPlatoConImagen(String nombre, String receta,  int idPlato, String ingredientes,  String PathImagen, String enlaceYoutube);
 
         
     }

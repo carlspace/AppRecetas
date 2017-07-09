@@ -125,7 +125,12 @@ public class AddPlatoView
         return recetaIntroducida.getText().toString();
     }
 
-    @Override
+        @Override
+        public String getIngredientes() {
+        return null;
+        }
+
+         @Override
         public String getEnlaceYoutube(){
             return null;
         }

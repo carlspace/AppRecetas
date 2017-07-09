@@ -63,25 +63,25 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
 
     @Override
     public String getNombrePlato(int idPlato) {
-        RealmResults<Plato> result= realm.where(Plato.class).equalTo("id",idPlato).findAll();
+        RealmResults<Plato> result = realm.where(Plato.class).equalTo("id",idPlato).findAll();
         return result.get(0).getNombre();
     }
 
     @Override
     public String getIngredientes(int idPlato) {
-        RealmResults<Plato> result= realm.where(Plato.class).equalTo("id",idPlato).findAll();
+        RealmResults<Plato> result = realm.where(Plato.class).equalTo("id",idPlato).findAll();
         return result.get(0).getIngredientes();
     }
 
     @Override
     public String getImagenPlato(int idPlato) {
-        RealmResults<Plato> result= realm.where(Plato.class).equalTo("id",idPlato).findAll();
+        RealmResults<Plato> result = realm.where(Plato.class).equalTo("id",idPlato).findAll();
         return result.get(0).getImagen();
     }
 
     @Override
     public Boolean isInAssetsPlato(int idPlato) {
-        RealmResults<Plato> result= realm.where(Plato.class).equalTo("id",idPlato).findAll();
+        RealmResults<Plato> result = realm.where(Plato.class).equalTo("id",idPlato).findAll();
         return result.get(0).getIsInAssetsPlato();
     }
 
@@ -119,6 +119,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
         Plato plato= realm.createObject(Plato.class,nextId);
         plato.setNombre(nombre);
         plato.setDescripcion(descripcion);
+        plato.setIngredientes(ingredientes);
         plato.setImagen(imagen);
         plato.setIdTipoComida(idTipoComida);
         plato.setEnlaceYoutbe(enlaceYoutube);
@@ -165,7 +166,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
                                 " 1 Pizca de Pimienta\n" +
                                 " 1 Chorro de Aceite de oliva\n" +
                                 " 1 Chorro de Vinagre\n";
-                        addPlato(nombrePlato, receta, idTipoComida,ingredientes, "ensalada_cogollos_con_tudela_y_anchoas", "https://www.youtube.com/watch?v=gr3LiqwIVx4",true);
+                        addPlato(nombrePlato, receta, idTipoComida, ingredientes, "ensalada_cogollos_con_tudela_y_anchoas", "https://www.youtube.com/watch?v=gr3LiqwIVx4",true);
 
 
                         //Pimientos asados con bonito(id=2)

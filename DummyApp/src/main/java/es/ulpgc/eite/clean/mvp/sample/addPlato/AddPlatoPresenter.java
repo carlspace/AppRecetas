@@ -130,6 +130,7 @@ class MyObserver implements java.util.Observer{
         Mediator app = (Mediator) getView().getApplication();
         String nombre= getView().getNombre();
         String receta= getView().getReceta();
+        String ingredientes =getView().getIngredientes();
         String enlaceYoutube = getView().getEnlaceYoutube();
         String path = getImagenSelecionada();
 
@@ -138,10 +139,10 @@ class MyObserver implements java.util.Observer{
                 ){
             if (path.equals("")){
                 //Falta poner enlace de Youtube
-                getModel().addPlatoSinImagen(nombre, receta, app.getTipoComidaPresionado(), enlaceYoutube);
+                getModel().addPlatoSinImagen(nombre, receta, app.getTipoComidaPresionado(), ingredientes, enlaceYoutube);
             }
             else {
-                getModel().addPlatoConImagen(nombre, receta, app.getTipoComidaPresionado(),enlaceYoutube, path);
+                getModel().addPlatoConImagen(nombre, receta, app.getTipoComidaPresionado(),ingredientes,enlaceYoutube, path);
             }
             getView().finishScreen();
         }else {

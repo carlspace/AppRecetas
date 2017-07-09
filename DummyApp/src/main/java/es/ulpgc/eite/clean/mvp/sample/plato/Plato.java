@@ -42,7 +42,7 @@ public interface Plato {
    */
   interface PresenterToView extends ContextView {
     void finishScreen();
-    void setDescripcionPlato(String txt);
+    void setRecetaPlato(String txt);
     void setNombrePlato(String txt);
     void setIngredientesPlato(String txt);
   }

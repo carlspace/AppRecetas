@@ -60,7 +60,6 @@ public class PlatoModel extends GenericModel<Plato.ModelToPresenter>
   }
 
 
-
   @Override
   public Boolean getInitial(int id) {
     return miManejador.isInAssetsPlato(id);

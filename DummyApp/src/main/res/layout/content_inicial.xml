@@ -1,92 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_bright">
 
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/btnSopa"
         android:layout_width="0dp"
         android:layout_height="223dp"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/btnPescado"
-        android:layout_marginStart="9dp"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintLeft_creator="1"
         android:layout_marginBottom="22dp"
-        app:layout_constraintLeft_toRightOf="@+id/btnEnsalada">
+        android:layout_marginStart="9dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnPescado"
+        app:layout_constraintLeft_toRightOf="@+id/btnEnsalada"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1">
 
         <ImageView
             android:id="@+id/iconoBtnSopa"
             android:layout_width="0dp"
             android:layout_height="136dp"
-            app:srcCompat="@mipmap/icono_inicial_sopa"
-            tools:layout_constraintTop_creator="1"
-            tools:layout_constraintRight_creator="1"
-            android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="31dp"
-            tools:layout_constraintLeft_creator="1"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/icono_inicial_sopa"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1" />
 
         <TextView
             android:id="@+id/textoBtnSopa"
             android:layout_width="86dp"
             android:layout_height="41dp"
-            android:text="TextView"
-            tools:layout_constraintTop_creator="1"
-            tools:layout_constraintRight_creator="1"
-            app:layout_constraintRight_toRightOf="parent"
             android:layout_marginTop="12dp"
+            android:text="TextView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iconoBtnSopa"
             tools:layout_constraintLeft_creator="1"
-            app:layout_constraintLeft_toLeftOf="parent" />
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1" />
     </android.support.constraint.ConstraintLayout>
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/btnCarne"
         android:layout_width="181dp"
         android:layout_height="223dp"
-        tools:layout_constraintBottom_creator="1"
+        android:layout_marginBottom="16dp"
         android:layout_marginStart="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintLeft_toLeftOf="parent">
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1">
 
         <ImageView
             android:id="@+id/iconoBtnCarne"
             android:layout_width="0dp"
             android:layout_height="136dp"
-            app:srcCompat="@mipmap/icono_inicial_carne"
-            tools:layout_constraintTop_creator="1"
-            tools:layout_constraintRight_creator="1"
-            android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="26dp"
-            tools:layout_constraintLeft_creator="1"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/icono_inicial_carne"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1" />
 
         <TextView
             android:id="@+id/textoBtnCarne"
             android:layout_width="86dp"
             android:layout_height="41dp"
-            android:text="TextView"
-            tools:layout_constraintTop_creator="1"
-            tools:layout_constraintRight_creator="1"
-            app:layout_constraintRight_toRightOf="parent"
             android:layout_marginTop="12dp"
+            android:text="TextView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iconoBtnCarne"
             tools:layout_constraintLeft_creator="1"
-            app:layout_constraintLeft_toLeftOf="parent" />
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1" />
 
     </android.support.constraint.ConstraintLayout>
 
@@ -94,42 +94,42 @@
         android:id="@+id/btnPescado"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toBottomOf="@+id/btnCarne"
-        app:layout_constraintRight_toRightOf="@+id/btnSopa"
-        tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="@+id/btnSopa"
-        app:layout_constraintTop_toTopOf="@+id/btnCarne">
+        app:layout_constraintRight_toRightOf="@+id/btnSopa"
+        app:layout_constraintTop_toTopOf="@+id/btnCarne"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
 
         <ImageView
             android:id="@+id/iconoBtnPescado"
             android:layout_width="0dp"
             android:layout_height="136dp"
-            app:srcCompat="@mipmap/icono_inicial_pescado"
-            tools:layout_constraintTop_creator="1"
-            tools:layout_constraintRight_creator="1"
-            android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="27dp"
-            tools:layout_constraintLeft_creator="1"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/icono_inicial_pescado"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1" />
 
         <TextView
             android:id="@+id/textoBtnPescado"
             android:layout_width="86dp"
             android:layout_height="41dp"
-            android:text="TextView"
-            tools:layout_constraintTop_creator="1"
-            tools:layout_constraintRight_creator="1"
-            app:layout_constraintRight_toRightOf="parent"
             android:layout_marginTop="12dp"
+            android:text="TextView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iconoBtnPescado"
             tools:layout_constraintLeft_creator="1"
-            app:layout_constraintLeft_toLeftOf="parent" />
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1" />
 
     </android.support.constraint.ConstraintLayout>
 
@@ -137,44 +137,44 @@
         android:id="@+id/btnEnsalada"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toBottomOf="@+id/btnSopa"
-        app:layout_constraintRight_toRightOf="@+id/btnCarne"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/btnCarne"
-        app:layout_constraintTop_toTopOf="@+id/btnSopa"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintLeft_toLeftOf="@+id/btnCarne"
+        app:layout_constraintRight_toRightOf="@+id/btnCarne"
+        app:layout_constraintTop_toTopOf="@+id/btnSopa"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
 
         <ImageView
             android:id="@+id/iconoBtnEnsalada"
             android:layout_width="0dp"
             android:layout_height="136dp"
-            app:srcCompat="@mipmap/icono_inicial_ensalada"
-            tools:layout_constraintTop_creator="1"
-            tools:layout_constraintRight_creator="1"
-            android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="32dp"
-            tools:layout_constraintLeft_creator="1"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/icono_inicial_ensalada"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1" />
 
         <TextView
             android:id="@+id/textoBtnEnsalada"
             android:layout_width="86dp"
             android:layout_height="41dp"
-            android:text="TextView"
-            tools:layout_constraintTop_creator="1"
-            tools:layout_constraintRight_creator="1"
-            app:layout_constraintRight_toRightOf="parent"
             android:layout_marginTop="12dp"
+            android:text="TextView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iconoBtnEnsalada"
             tools:layout_constraintLeft_creator="1"
-            app:layout_constraintLeft_toLeftOf="parent" />
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1" />
     </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>

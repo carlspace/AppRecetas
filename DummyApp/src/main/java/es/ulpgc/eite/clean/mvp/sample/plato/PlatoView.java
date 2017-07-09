@@ -1,6 +1,7 @@
 package es.ulpgc.eite.clean.mvp.sample.plato;
 
 import android.annotation.SuppressLint;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.method.ScrollingMovementMethod;
@@ -103,6 +104,11 @@ public class PlatoView
   @Override
   public void setIngredientesPlato(String txt) {
     ingredientes.setText(txt);
+  }
+
+  @Override
+  public void setImagenPlato(Bitmap imagen) {
+    this.imagen.setImageBitmap(imagen);
   }
 }
 

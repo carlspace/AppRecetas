@@ -2,7 +2,14 @@ package es.ulpgc.eite.clean.mvp.sample.plato;
 
 
 import android.content.Context;
+import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.util.Log;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 
 import es.ulpgc.eite.clean.mvp.ContextView;
 import es.ulpgc.eite.clean.mvp.GenericActivity;
@@ -82,13 +89,32 @@ public class PlatoPresenter extends GenericPresenter
     int id=app.getIdPlatoSeleccionado();
 
     String nombrePlato = getModel().getNombrePlato(id);
+}
+  private void inicializarImagen(Boolean inicial, int id){
+    String imagen =getModel().getImagen(id);
+    // la imagen se obtiene desde assets
+    if (inicial){
 
+      AssetManager am = getView().getActivityContext().getAssets();
+      InputStream is = null;
+      try{
 
+        is = am.open(imagen);
+      }catch(IOException e){
+        e.printStackTrace();
+      }
 
+      Bitmap bitmapAssets = BitmapFactory.decodeStream(is);
+      getView().setImagenPlato(bitmapAssets);
 
+      // no se obtiene de assets
+    }else{
 
+      File imgFile = new  File(imagen);
+      Bitmap bitmapUsuario = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+      getView().setImagenPlato(bitmapUsuario);
+    }
   }
-
   @Override
   public void inicializarVista() {
     Mediator app=(Mediator) getView().getApplication();

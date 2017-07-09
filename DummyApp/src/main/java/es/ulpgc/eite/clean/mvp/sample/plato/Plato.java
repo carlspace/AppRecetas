@@ -1,6 +1,7 @@
 package es.ulpgc.eite.clean.mvp.sample.plato;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 
 import es.ulpgc.eite.clean.mvp.ContextView;
 import es.ulpgc.eite.clean.mvp.Model;
@@ -45,6 +46,7 @@ public interface Plato {
     void setRecetaPlato(String txt);
     void setNombrePlato(String txt);
     void setIngredientesPlato(String txt);
+    void setImagenPlato(Bitmap imagen);
   }
 
   /**

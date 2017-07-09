@@ -31,6 +31,7 @@ public class AddPlatoView
         private Button addImagen;
         private EditText nombreIntroducido;
         private EditText recetaIntroducida;
+        private EditText ingredientesIntroducidos;
         private ImageView imagenSeleccionada;
         private Button btnDone;
         private static MyObservable observable;
@@ -49,6 +50,8 @@ public class AddPlatoView
             nombreIntroducido.setMovementMethod(new ScrollingMovementMethod());
             recetaIntroducida = (EditText) findViewById(R.id.recetaPlatoIntroducida);
             recetaIntroducida.setMovementMethod(new ScrollingMovementMethod());
+            ingredientesIntroducidos = (EditText) findViewById(R.id.ingredientesIntroducidos);
+            ingredientesIntroducidos.setMovementMethod(new ScrollingMovementMethod());
             imagenSeleccionada=(ImageView)  findViewById(R.id.imagenSeleccionadaPlato);
 
             btnDone=(Button) findViewById(R.id.btnDonePlato);
@@ -127,7 +130,7 @@ public class AddPlatoView
 
         @Override
         public String getIngredientes() {
-        return null;
+        return ingredientesIntroducidos.getText().toString();
         }
 
          @Override

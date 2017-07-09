@@ -41,7 +41,7 @@ public class AddPlatoModel extends GenericModel<AddPlato.ModelToPresenter>
 
     @Override
     public void  addPlatoSinImagen(String nombre, String receta, int idTipoComida, String ingredientes, String enlaceYoutube){
-        String imgDefault ="";
+        String imgDefault = "ic_launcher.png";
         miManejador.addPlato(nombre,receta,idTipoComida,ingredientes,imgDefault,enlaceYoutube,true);
 
     }

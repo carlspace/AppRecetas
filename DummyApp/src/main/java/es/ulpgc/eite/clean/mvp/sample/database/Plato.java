@@ -13,6 +13,7 @@ public class Plato extends RealmObject {
     private int id;
     private String nombre;
     private String descripcion;
+    private String ingredientes;
     private int idTipoComida;
     private String imagen;
     private String enlaceYoutbe;
@@ -78,4 +79,11 @@ public class Plato extends RealmObject {
     }
 
 
+    public String getIngredientes() {
+        return ingredientes;
+    }
+
+    public void setIngredientes(String ingredientes) {
+        this.ingredientes = ingredientes;
+    }
 }

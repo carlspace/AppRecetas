@@ -18,6 +18,7 @@ public class PlatoView
   private Toolbar toolbar;
   private ImageView imagen;
   private TextView receta;
+  private TextView ingredientes;
   private Button btnYoutube;
 
   @Override
@@ -31,6 +32,8 @@ public class PlatoView
     setSupportActionBar(toolbar);
     receta = (TextView) findViewById(R.id.recetaPlato);
     receta.setMovementMethod(new ScrollingMovementMethod());
+    ingredientes = (TextView) findViewById(R.id.ingredientesPlato);
+    ingredientes.setMovementMethod(new ScrollingMovementMethod());
     imagen = (ImageView) findViewById(R.id.imagenPlato);
     {
 
@@ -95,6 +98,11 @@ public class PlatoView
   @Override
   public void setNombrePlato(String txt) {
     toolbar.setTitle(txt);
+  }
+
+  @Override
+  public void setIngredientesPlato(String txt) {
+    ingredientes.setText(txt);
   }
 }
 

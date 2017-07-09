@@ -16,12 +16,13 @@ public interface  I_ManejadorDataBase {
     //plato
     String getRecetaPlato(int idPlato);
     String getNombrePlato(int idPlato);
+    String getIngredientes (int idPlato);
     String getImagenPlato(int idPlato);
     Boolean isInAssetsPlato(int idPlato);
 
 
     void addTipoComida(String nombre);
-    void addPlato(String nombre, String descripcion, int idTipoComida, String imagen, String enlaceYoutube, Boolean isInAssets);
+    void addPlato(String nombre, String descripcion, int idTipoComida, String ingredientes, String imagen, String enlaceYoutube, Boolean isInAssets);
 
 
 }

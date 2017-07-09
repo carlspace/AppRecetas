@@ -44,6 +44,7 @@ public interface Plato {
     void finishScreen();
     void setDescripcionPlato(String txt);
     void setNombrePlato(String txt);
+    void setIngredientesPlato(String txt);
   }
 
   /**
@@ -55,6 +56,7 @@ public interface Plato {
 
     String getNombrePlato(int id);
     String getReceta(int id);
+    String getIngredientes(int id);
     String getImagen(int id);
     Boolean getInitial(int id);
 
@@ -65,6 +67,6 @@ public interface Plato {
    * Required PRESENTER methods available to MODEL
    */
   interface ModelToPresenter {
-//Prueba
+
   }
 }

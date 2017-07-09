@@ -48,10 +48,18 @@ public class PlatoModel extends GenericModel<Plato.ModelToPresenter>
     return miManejador.getRecetaPlato(id);
   }
 
+
+  @Override
+  public String getIngredientes(int id) {
+    return miManejador.getIngredientes(id);
+  }
+
   @Override
   public String getImagen(int id) {
     return miManejador.getImagenPlato(id);
   }
+
+
 
   @Override
   public Boolean getInitial(int id) {

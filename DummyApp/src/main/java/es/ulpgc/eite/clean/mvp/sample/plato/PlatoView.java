@@ -51,6 +51,7 @@ public class PlatoView
     protected void onResume () {
       super.onResume(PlatoPresenter.class, this);
       getPresenter().inicializarVista();
+
     }
 
   /*

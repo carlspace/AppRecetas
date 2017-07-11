@@ -75,7 +75,7 @@ public class Plato extends RealmObject {
     }
 
     public void setIsInAssetsPlato(Boolean inAssetsPlato) {
-        isInAssetsPlato = isInAssetsPlato;
+        isInAssetsPlato = inAssetsPlato;
     }
 
 

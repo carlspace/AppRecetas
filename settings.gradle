@@ -1,3 +1,3 @@
-include ':DummyApp', ':CleanMvpLib'
+include ':DummyApp', ':CleanMvpLib', ':YouTubeAndroidPlayerApi'
 
 include ':youTubeAndroidAPIDemo'

@@ -34,4 +34,5 @@ dependencies {
     androidTestCompile 'org.mockito:mockito-android:2.7.22'
     compile project(':CleanMvpLib')
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile files('libs/YouTubeAndroidPlayerApi.jar')
 }

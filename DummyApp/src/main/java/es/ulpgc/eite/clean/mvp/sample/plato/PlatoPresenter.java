@@ -123,6 +123,7 @@ public class PlatoPresenter extends GenericPresenter
     getView().setNombrePlato(getModel().getNombrePlato(id));
     getView().setRecetaPlato(getModel().getReceta(id));
     getView().setIngredientesPlato(getModel().getIngredientes(id));
+    inicializarImagen(getModel().getInitial(id), id);
 
   }
 

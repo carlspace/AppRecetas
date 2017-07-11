@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/AppRecetas.iml" filepath="$PROJECT_DIR$/AppRecetas.iml" />
       <module fileurl="file://$PROJECT_DIR$/CleanMvpLib/CleanMvpLib.iml" filepath="$PROJECT_DIR$/CleanMvpLib/CleanMvpLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/DummyApp/DummyApp.iml" filepath="$PROJECT_DIR$/DummyApp/DummyApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/YouTubeAndroidPlayerApi/YouTubeAndroidPlayerApi.iml" filepath="$PROJECT_DIR$/YouTubeAndroidPlayerApi/YouTubeAndroidPlayerApi.iml" />
       <module fileurl="file://$PROJECT_DIR$/youTubeAndroidAPIDemo/youTubeAndroidAPIDemo.iml" filepath="$PROJECT_DIR$/youTubeAndroidAPIDemo/youTubeAndroidAPIDemo.iml" />
     </modules>
   </component>

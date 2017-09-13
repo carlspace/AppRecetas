@@ -58,7 +58,7 @@ public void onCreate(AddPlato.PresenterToView view) {
 public void onResume(AddPlato.PresenterToView view) {
         setView(view);
         Log.d(TAG, "calling onResume()");
-        inicializarVista();
+
         if(configurationChangeOccurred()) {
         inicializarVista();
 

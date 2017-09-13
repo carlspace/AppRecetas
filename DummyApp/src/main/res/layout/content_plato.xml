@@ -50,7 +50,8 @@
         tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="4dp" />
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="159dp" />
 
     <TextView
         android:id="@+id/ingredientesPlato"

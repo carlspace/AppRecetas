@@ -117,9 +117,9 @@ public class PlatoPresenter extends GenericPresenter
   }
   @Override
   public void inicializarVista() {
-    Mediator app=(Mediator) getView().getApplication();
+    Mediator app = (Mediator) getView().getApplication();
 
-    int id=app.getIdPlatoSeleccionado();
+    int id = app.getIdPlatoSeleccionado();
     getView().setNombrePlato(getModel().getNombrePlato(id));
     getView().setRecetaPlato(getModel().getReceta(id));
     getView().setIngredientesPlato(getModel().getIngredientes(id));

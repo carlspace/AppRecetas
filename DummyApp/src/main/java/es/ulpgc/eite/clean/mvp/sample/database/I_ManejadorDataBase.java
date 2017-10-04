@@ -19,6 +19,7 @@ public interface  I_ManejadorDataBase {
     String getIngredientes (int idPlato);
     String getImagenPlato(int idPlato);
     Boolean isInAssetsPlato(int idPlato);
+    String getEnlaceYoutube (int idPlato);
 
 
     void addTipoComida(String nombre);

@@ -36,6 +36,8 @@ public class PlatoView
     ingredientes = (TextView) findViewById(R.id.ingredientesPlato);
     ingredientes.setMovementMethod(new ScrollingMovementMethod());
     imagen = (ImageView) findViewById(R.id.imagenPlato);
+
+
     {
 
 

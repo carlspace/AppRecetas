@@ -8,13 +8,13 @@ import es.ulpgc.eite.clean.mvp.sample.database.ManejadorDataBase;
  * Created by Carlos Espacios on 04/10/2017.
  */
 
-public class YoutubeModel extends GenericModel<youtube.ModelToPresenter>
-        implements youtube.PresenterToModel{
+public class YoutubeModel extends GenericModel<Youtube.ModelToPresenter>
+        implements Youtube.PresenterToModel{
 
     I_ManejadorDataBase miManejador;
 
     @Override
-    public void onCreate(youtube.ModelToPresenter presenter) {
+    public void onCreate(Youtube.ModelToPresenter presenter) {
         super.onCreate(presenter);
         miManejador = ManejadorDataBase.getInstance();
 

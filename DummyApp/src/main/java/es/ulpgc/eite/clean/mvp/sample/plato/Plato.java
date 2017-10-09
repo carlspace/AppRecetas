@@ -25,6 +25,8 @@ public interface Plato {
   interface PlatoTo {
     Context getManagedContext();
     void destroyView();
+    int getIdPlatoSeleccionado();
+
   }
 
   ///////////////////////////////////////////////////////////////////////////////////

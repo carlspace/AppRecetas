@@ -138,7 +138,7 @@ class MyObserver implements java.util.Observer{
         if((!nombre.equals(""))&&(!receta.equals("")&&(!ingredientes.equals("")))
                 ){
             if (path.equals("")){
-                //Falta poner enlace de youtube
+                //Falta poner enlace de Youtube
                 getModel().addPlatoSinImagen(nombre, receta, app.getTipoComidaPresionado(), ingredientes, enlaceYoutube);
             }
             else {

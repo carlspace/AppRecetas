@@ -11,8 +11,8 @@ import es.ulpgc.eite.clean.mvp.sample.R;
  * Created by Carlos Espacios on 04/10/2017.
  */
 
-public class YoutubeView extends GenericActivity<youtube.PresenterToView, youtube.ViewToPresenter, YoutubePresenter>
-        implements youtube.PresenterToView{
+public class YoutubeView extends GenericActivity<Youtube.PresenterToView, Youtube.ViewToPresenter, ConfigYoutube>
+        implements Youtube.PresenterToView{
 
 
 
@@ -40,7 +40,7 @@ public class YoutubeView extends GenericActivity<youtube.PresenterToView, youtub
     @SuppressLint("MissingSuperCall")
     @Override
     protected void onResume () {
-        super.onResume(YoutubePresenter.class, this);
+        super.onResume(ConfigYoutube.class, this);
         getPresenter().inicializarVista();
 
     }

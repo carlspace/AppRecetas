@@ -15,13 +15,15 @@ import es.ulpgc.eite.clean.mvp.ContextView;
 import es.ulpgc.eite.clean.mvp.GenericActivity;
 import es.ulpgc.eite.clean.mvp.GenericPresenter;
 import es.ulpgc.eite.clean.mvp.sample.app.Mediator;
+import es.ulpgc.eite.clean.mvp.sample.app.Navigator;
+import es.ulpgc.eite.clean.mvp.sample.youtube.Youtube;
 
 public class PlatoPresenter extends GenericPresenter
     <Plato.PresenterToView, Plato.PresenterToModel, Plato.ModelToPresenter, PlatoModel>
     implements Plato.ViewToPresenter, Plato.ModelToPresenter, Plato.PlatoTo, Plato.ToPlato {
 
 
-
+  private int idPlatoSeleccionado;
   /**
    * Operation called during VIEW creation in {@link GenericActivity#onResume(Class, Object)}
    * Responsible to initialize MODEL.
@@ -85,10 +87,14 @@ public class PlatoPresenter extends GenericPresenter
   @Override
   public void onButtonClicked() {
     Log.d(TAG, "calling onButtonClicked()");
-    Mediator app=(Mediator) getView().getApplication();
-    int id=app.getIdPlatoSeleccionado();
+    Mediator mediator=(Mediator) getView().getApplication();
+    int id=mediator.getIdPlatoSeleccionado();
+    Navigator app = (Navigator) getView().getApplication();
 
-    String nombrePlato = getModel().getNombrePlato(id);
+    app.goToYoutubeScreen((Youtube.YoutubeTo) this);
+
+
+
 }
   private void inicializarImagen(Boolean inicial, int id){
     String imagen =getModel().getImagen(id);
@@ -148,7 +154,10 @@ public class PlatoPresenter extends GenericPresenter
   // Platos To //////////////////////////////////////////////////////////////////////
 
 
-
+  @Override
+  public int getIdPlatoSeleccionado() {
+    return idPlatoSeleccionado;
+  }
 
   @Override
   public Context getManagedContext(){

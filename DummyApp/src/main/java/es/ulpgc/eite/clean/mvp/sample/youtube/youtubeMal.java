@@ -14,7 +14,7 @@ import es.ulpgc.eite.clean.mvp.sample.R;
 
 public class youtubeMal extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
     public static final String DEVELOPER_KEY = ConfigYoutube.DEVELOPER_KEY;
-    private static String VIDEO_ID = ConfigYoutube.YOUTUBE_VIDEO_CODE;
+    private String VIDEO_ID = ConfigYoutube.YOUTUBE_VIDEO_CODE;
     private static final int RECOVERY_DIALOG_REQUEST = 1;
     YouTubePlayerFragment myYouTubePlayerFragment;
 

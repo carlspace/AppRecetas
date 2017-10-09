@@ -12,6 +12,8 @@ import es.ulpgc.eite.clean.mvp.sample.plato.Plato;
 import es.ulpgc.eite.clean.mvp.sample.plato.PlatoView;
 import es.ulpgc.eite.clean.mvp.sample.platos.Platos;
 import es.ulpgc.eite.clean.mvp.sample.platos.PlatosView;
+import es.ulpgc.eite.clean.mvp.sample.youtube.Youtube;
+import es.ulpgc.eite.clean.mvp.sample.youtube.YoutubeView;
 
 
 public class App extends Application implements Mediator, Navigator {
@@ -20,6 +22,7 @@ public class App extends Application implements Mediator, Navigator {
     private PlatosState toPlatosState, platosToState;
     private PlatoState toPlatoState, platoState;
     private AddPlatoState toAddPlatoState, addPlatoToState;
+    private YoutubeState toYoutubeState, YoutubeToState;
 
     @Override
     public void onCreate() {
@@ -41,6 +44,11 @@ public class App extends Application implements Mediator, Navigator {
     @Override
     public void startingAddPlatoScreen(AddPlatoPresenter presenter) {
         presenter.onScreenStarted();
+    }
+
+    @Override
+    public void startingYoutubeScreen(Youtube.ToYoutube presenter) { presenter.onScreenStarted();
+
     }
 
     ///////////////////////////////////////////////////////////////////////////////////
@@ -73,6 +81,18 @@ public class App extends Application implements Mediator, Navigator {
             view.startActivity(new Intent(view, AddPlatoView.class));
         }
 
+    }
+
+    @Override
+    public void goToYoutubeScreen(Youtube.YoutubeTo presenter) {
+        Log.d("APP", "goToYoutubeScreen() para ver el video de: "+ getIdPlatoSeleccionado());
+        platosToState.idPlatoSeleccionado = getIdPlatoSeleccionado();
+        Context view = presenter.getManagedContext();
+
+        if (view != null) {
+            view.startActivity(new Intent(view, YoutubeView.class));
+
+        }
     }
 
     @Override
@@ -158,5 +178,10 @@ public class App extends Application implements Mediator, Navigator {
     private class AddPlatoState {
         String imagenPlato;
     }
-        }
+
+
+    private class YoutubeState{
+        int idPlatoSeleccionado;
+    }
+}
 

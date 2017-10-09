@@ -10,7 +10,7 @@ import es.ulpgc.eite.clean.mvp.Presenter;
  * Created by Carlos Espacios on 04/10/2017.
  */
 
-public interface youtube {
+public interface Youtube {
 
 
 

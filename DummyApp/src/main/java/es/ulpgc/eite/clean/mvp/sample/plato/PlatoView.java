@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.method.ScrollingMovementMethod;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -36,13 +37,13 @@ public class PlatoView
     ingredientes = (TextView) findViewById(R.id.ingredientesPlato);
     ingredientes.setMovementMethod(new ScrollingMovementMethod());
     imagen = (ImageView) findViewById(R.id.imagenPlato);
-
-
-    {
-
-
-
-    }
+    btnYoutube =(Button) findViewById(R.id.btnYoutube);
+    btnYoutube.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        getPresenter().onButtonClicked();
+      }
+    });
   }
     /**
      * Method that initialized MVP objects

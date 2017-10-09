@@ -3,6 +3,7 @@ package es.ulpgc.eite.clean.mvp.sample.platos;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
@@ -11,8 +12,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 
 import java.util.ArrayList;
 
@@ -30,6 +29,8 @@ public class PlatosView
     private FloatingActionButton btnAddPlato;
     private ArrayList<String> platos= new ArrayList<String>();
     private ArrayAdapter<String> adaptador;
+    private RecyclerView recyclerView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,7 @@ public class PlatosView
 
         setContentView(R.layout.activity_platos);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+
         btnAddPlato= (FloatingActionButton) findViewById(R.id.btnAddPlato);
          btnAddPlato.setOnClickListener(new View.OnClickListener() {
             @Override

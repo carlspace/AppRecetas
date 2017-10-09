@@ -59,9 +59,16 @@ public class PlatosModel extends GenericModel<Platos.ModelToPresenter>
   }
 
   @Override
-  public void deleteItem(String id) {
+  public void deleteListItemAt(int id) {
 
   }
+
+  @Override
+  public void showUndoSnackbar() {
+
+  }
+
+
 
   @Override
   public String getNotifyDeleted() {

@@ -96,10 +96,7 @@ public class PlatosPresenter extends GenericPresenter
 
   }
 
-    @Override
-    public void onSwipedItem(String id) {
 
-    }
 
     @Override
     public void onButtonAddPlato() {

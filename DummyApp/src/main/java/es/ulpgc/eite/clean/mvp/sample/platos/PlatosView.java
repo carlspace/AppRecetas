@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -56,11 +57,20 @@ public class PlatosView
             }
 
         });
+        adaptador = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, new String[] { "Item 1",
+                "Item 2", "Item 2", "Item 3", "Item 4", "Item 5" });
+        listaPlatos.setAdapter(adaptador);
 
     }
 
 
-
+    @Override
+    public void getSwipeItem(boolean isRight, int position) {
+        Toast.makeText(this,
+                "Swipe to " + (isRight ? "right" : "left") + " direction",
+                Toast.LENGTH_SHORT).show();
+    }
 
     private void onItemClickSelected(int pos) {
         getPresenter().onItemClickSelected(pos);

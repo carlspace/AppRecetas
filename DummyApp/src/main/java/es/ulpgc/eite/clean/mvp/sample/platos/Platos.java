@@ -49,6 +49,8 @@ public interface Platos {
    * Required VIEW methods available to PRESENTER
    */
   interface PresenterToView extends ContextView {
+    void getSwipeItem(boolean isRight, int position);
+
     void finishScreen();
 
       void setPosicionLista(int pos);

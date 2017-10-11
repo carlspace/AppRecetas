@@ -16,7 +16,6 @@ import es.ulpgc.eite.clean.mvp.GenericActivity;
 import es.ulpgc.eite.clean.mvp.GenericPresenter;
 import es.ulpgc.eite.clean.mvp.sample.app.Mediator;
 import es.ulpgc.eite.clean.mvp.sample.app.Navigator;
-import es.ulpgc.eite.clean.mvp.sample.youtube.Youtube;
 
 public class PlatoPresenter extends GenericPresenter
     <Plato.PresenterToView, Plato.PresenterToModel, Plato.ModelToPresenter, PlatoModel>
@@ -91,7 +90,7 @@ public class PlatoPresenter extends GenericPresenter
     int id=mediator.getIdPlatoSeleccionado();
     Navigator app = (Navigator) getView().getApplication();
 
-    app.goToYoutubeScreen((Youtube.YoutubeTo) this);
+    app.goToYoutubeScreen(this);
 
 
 

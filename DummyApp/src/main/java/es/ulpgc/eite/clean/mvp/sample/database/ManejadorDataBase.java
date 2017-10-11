@@ -170,7 +170,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
                                 " 1 Pizca de Pimienta\n" +
                                 " 1 Chorro de Aceite de oliva\n" +
                                 " 1 Chorro de Vinagre\n";
-                        addPlato(nombrePlato, receta, idTipoComida, ingredientes, "ensalada_cogollos_con_tudela_y_anchoas.jpg", "https://www.youtubeMal.com/watch?v=gr3LiqwIVx4",true);
+                        addPlato(nombrePlato, receta, idTipoComida, ingredientes, "ensalada_cogollos_con_tudela_y_anchoas.jpg", "gr3LiqwIVx4",true);
 
 
                         //Pimientos asados con bonito(id=2)
@@ -184,7 +184,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
                                 " 1 Bote de Bonito del norte en aceite de oliva (de calidad)\n" +
                                 " 1 Pizca de Sal al gusto\n" +
                                 " 1 Chorro de Aceite de oliva virgen extra\n";
-                        addPlato(nombrePlato, receta, idTipoComida,ingredientes, "ensalada_pimientos_asados_con_bonito.jpg", "https://www.youtubeMal.com/watch?v=gh5sdgbvpJU",true);
+                        addPlato(nombrePlato, receta, idTipoComida,ingredientes, "ensalada_pimientos_asados_con_bonito.jpg", "gh5sdgbvpJU",true);
 
                         //plato Ensalada de buey de mar (id=3)
                         nombrePlato = "Ensalada de buey de mar";
@@ -207,7 +207,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
                                  " 6 Cucharadas soperas de Mayonesa\n" +
                                  " 1 Cucharadita de Concentrado de Tomate (ketchup)\n" +
                                  " 1 Cucharadita de Brandy\n";
-                        addPlato(nombrePlato, receta, idTipoComida,ingredientes, "ensalada_buey_mar.jpg", "https://www.youtubeMal.com/watch?v=81Jo4YGuRCY",true);
+                        addPlato(nombrePlato, receta, idTipoComida,ingredientes, "ensalada_buey_mar.jpg", "81Jo4YGuRCY",true);
 
 
             addTipoComida("Sopas");
@@ -229,7 +229,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
                     "Aceite de oliva virgen extra\n" +
                     "Sal\n" +
                     "Perejil\n";
-            addPlato(nombrePlato, receta, idTipoComida,ingredientes, "sopa_sopa_castellana.jpg", "https://www.youtubeMal.com/watch?v=JHS2yw5_aFE",true);
+            addPlato(nombrePlato, receta, idTipoComida,ingredientes, "sopa_sopa_castellana.jpg", "JHS2yw5_aFE",true);
 
             //Plato gazpacho (id=5)
             nombrePlato = "Gazpacho";
@@ -248,7 +248,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
                     "Aceite de oliva virgen extra\n" +
                     "Vinagre\n" +
                     "Sal\n";
-            addPlato(nombrePlato, receta, idTipoComida, ingredientes, "sopa_gazpacho.jpg", "https://www.youtubeMal.com/watch?v=7TrCI6mLT3E",true);
+            addPlato(nombrePlato, receta, idTipoComida, ingredientes, "sopa_gazpacho.jpg", "7TrCI6mLT3E",true);
 
             //Plato salmorejo (id=6)
             nombrePlato = "Salmorejo tradicional";
@@ -263,7 +263,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
                     "1 diente de ajo\n" +
                     "Aceite de oliva virgen extra\n" +
                     "Sal\n";
-            addPlato(nombrePlato, receta, idTipoComida,ingredientes, "sopa_salmorejo.jpg", "https://www.youtubeMal.com/watch?v=_mb2N9apN2A",true);
+            addPlato(nombrePlato, receta, idTipoComida,ingredientes, "sopa_salmorejo.jpg", "_mb2N9apN2A",true);
 
 
 
@@ -288,7 +288,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
                     "Sal\n" +
                     "Pimienta\n" +
                     "Perejil\n";
-            addPlato(nombrePlato, receta, idTipoComida,ingredientes, "carne_guisada_con_carne.jpg", "https://www.youtubeMal.com/watch?v=qSMjgjSLhpk",true);
+            addPlato(nombrePlato, receta, idTipoComida,ingredientes, "carne_guisada_con_carne.jpg", "qSMjgjSLhpk",true);
 
 
             //Plato  (id=8)
@@ -313,7 +313,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
                     "Perejil\n" +
                     "10 yemas de espárragos blancos\n" +
                     "50 ml de leche\n";
-            addPlato(nombrePlato, receta, idTipoComida,ingredientes, "carne_solomillo_wellington.jpg", "https://www.youtubeMal.com/watch?v=bNDh4QWbPC4",true);
+            addPlato(nombrePlato, receta, idTipoComida,ingredientes, "carne_solomillo_wellington.jpg", "bNDh4QWbPC4",true);
 
             //Plato  (id=9)
             nombrePlato = "Rabo de toro";
@@ -342,7 +342,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
                     "20 bolas de pimienta\n" +
                     "2 hojas de laurel\n" +
                     "1 rama de tomillo\n";
-            addPlato(nombrePlato, receta, idTipoComida,ingredientes, "carne_rabo_de_toro.jpg", "https://www.youtubeMal.com/watch?v=rGmXY2fy1Ow",true);
+            addPlato(nombrePlato, receta, idTipoComida,ingredientes, "carne_rabo_de_toro.jpg", "rGmXY2fy1Ow",true);
 
 
 
@@ -365,7 +365,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
                     "Sal marina\n" +
                     "Pimienta\n" +
                     "Perejil\n";
-            addPlato(nombrePlato, receta, idTipoComida,ingredientes, "pescado_salmon_encebollado.jpg", "https://www.youtubeMal.com/watch?v=ZnCb9p0R0-Y",true);
+            addPlato(nombrePlato, receta, idTipoComida,ingredientes, "pescado_salmon_encebollado.jpg", "ZnCb9p0R0-Y",true);
 
 
 
@@ -386,7 +386,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
                     "Aceite de oliva virgen extra\n" +
                     "Sal\n" +
                     "Perejil\n";
-            addPlato(nombrePlato, receta, idTipoComida,ingredientes, "pescado_boquerones_en_vinagre.jpg", "https://www.youtubeMal.com/watch?v=cBxe7SsExEc",true);
+            addPlato(nombrePlato, receta, idTipoComida,ingredientes, "pescado_boquerones_en_vinagre.jpg", "cBxe7SsExEc",true);
             //Plato  (id=12)
             nombrePlato = "Cazon en adobo";
             receta = "Limpia el cazón retirándole la piel y las espinas. Córtalo en trozos de bocado y colócalos en un bol.\n" +
@@ -406,7 +406,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
                     "1/2 cucharadita de comino\n" +
                     "2 hojas de laurel\n" +
                     "Perejil\n";
-            addPlato(nombrePlato, receta, idTipoComida,ingredientes, "pescado_cazon_en_adobo.jpg", "https://www.youtubeMal.com/watch?v=rQi-DEEiEss",true);
+            addPlato(nombrePlato, receta, idTipoComida,ingredientes, "pescado_cazon_en_adobo.jpg", "rQi-DEEiEss",true);
         }
         }
 }

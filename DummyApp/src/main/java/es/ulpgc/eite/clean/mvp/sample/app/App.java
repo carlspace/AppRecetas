@@ -13,7 +13,7 @@ import es.ulpgc.eite.clean.mvp.sample.plato.PlatoView;
 import es.ulpgc.eite.clean.mvp.sample.platos.Platos;
 import es.ulpgc.eite.clean.mvp.sample.platos.PlatosView;
 import es.ulpgc.eite.clean.mvp.sample.youtube.Youtube;
-import es.ulpgc.eite.clean.mvp.sample.youtube.YoutubeView;
+import es.ulpgc.eite.clean.mvp.sample.youtube.youtubeMal;
 
 
 public class App extends Application implements Mediator, Navigator {
@@ -84,13 +84,13 @@ public class App extends Application implements Mediator, Navigator {
     }
 
     @Override
-    public void goToYoutubeScreen(Youtube.YoutubeTo presenter) {
+    public void goToYoutubeScreen(Plato.PlatoTo presenter) {
         Log.d("APP", "goToYoutubeScreen() para ver el video de: "+ getIdPlatoSeleccionado());
         platosToState.idPlatoSeleccionado = getIdPlatoSeleccionado();
         Context view = presenter.getManagedContext();
 
         if (view != null) {
-            view.startActivity(new Intent(view, YoutubeView.class));
+            view.startActivity(new Intent(view, youtubeMal.class));
 
         }
     }

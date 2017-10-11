@@ -22,7 +22,7 @@ public class ConfigYoutube extends GenericPresenter<Youtube.PresenterToView, You
     public static final String DEVELOPER_KEY = "AIzaSyCJ4yOn8M9R-nAM5Lb9GSL5KrbVqo_AL00";
 
     // YouTube video id
-    public  static String YOUTUBE_VIDEO_CODE = ConfigYoutube.cogerEnlace();
+    public static String YOUTUBE_VIDEO_CODE = ConfigYoutube.cogerEnlaceEstatico();
 
     @Override
     public void onCreate(Youtube.PresenterToView view) {
@@ -95,7 +95,7 @@ public class ConfigYoutube extends GenericPresenter<Youtube.PresenterToView, You
 
     }
 
-    public static String cogerEnlace(){
+    public  String cogerEnlace(){
         Mediator app = (Mediator) getView().getApplication();
         int id = app.getIdPlatoSeleccionado();
         miManejador = ManejadorDataBase.getInstance();
@@ -103,7 +103,11 @@ public class ConfigYoutube extends GenericPresenter<Youtube.PresenterToView, You
         return enlace;
 
     }
-
+    public static String cogerEnlaceEstatico(){
+        ConfigYoutube miConfig = new ConfigYoutube();
+        String enlace = miConfig.cogerEnlace();
+        return  enlace;
+    }
 
 
 

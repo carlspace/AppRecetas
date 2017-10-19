@@ -46,7 +46,7 @@ public class ConfigYoutube extends GenericPresenter<Youtube.PresenterToView, You
         setView(view);
         Log.d(TAG, "calling onResume()");
 
-        inicializarVista();
+       // inicializarVista();
     }
 
     /**
@@ -85,7 +85,7 @@ public class ConfigYoutube extends GenericPresenter<Youtube.PresenterToView, You
         String nombrePlato = getModel().getNombrePlato(id);
     }
 
-    @Override
+   // @Override
     public void inicializarVista() {
         Mediator app = (Mediator) getView().getApplication();
 

@@ -41,7 +41,7 @@ public class YoutubeView extends GenericActivity<Youtube.PresenterToView, Youtub
     @Override
     protected void onResume () {
         super.onResume(ConfigYoutube.class, this);
-        getPresenter().inicializarVista();
+        //getPresenter().inicializarVista();
 
     }
 

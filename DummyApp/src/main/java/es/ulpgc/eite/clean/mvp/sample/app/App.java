@@ -86,7 +86,7 @@ public class App extends Application implements Mediator, Navigator {
     @Override
     public void goToYoutubeScreen(Plato.PlatoTo presenter) {
         Log.d("APP", "goToYoutubeScreen() para ver el video de: "+ getIdPlatoSeleccionado());
-        platosToState.idPlatoSeleccionado = getIdPlatoSeleccionado();
+       // platosToState.idPlatoSeleccionado = getIdPlatoSeleccionado();
         Context view = presenter.getManagedContext();
 
         if (view != null) {

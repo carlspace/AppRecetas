@@ -27,7 +27,7 @@ public interface Youtube {
 
     interface ViewToPresenter extends Presenter<PresenterToView> {
         void onButtonClicked();
-        void inicializarVista();
+       // void inicializarVista();
     }
 
 

@@ -3,15 +3,12 @@ package es.ulpgc.eite.clean.mvp.sample.platos;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -24,13 +21,11 @@ public class PlatosView
     implements Platos.PresenterToView {
 
     private Toolbar toolbar;
-    private Button button;
-    private TextView text;
     private ListView listaPlatos;
     private FloatingActionButton btnAddPlato;
     private ArrayList<String> platos= new ArrayList<String>();
     private ArrayAdapter<String> adaptador;
-    private RecyclerView recyclerView;
+
 
 
     @Override

@@ -288,7 +288,7 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
                     "Sal\n" +
                     "Pimienta\n" +
                     "Perejil\n";
-            addPlato(nombrePlato, receta, idTipoComida,ingredientes, "carne_guisada_con_carne.jpg", "qSMjgjSLhpk",true);
+            addPlato(nombrePlato, receta, idTipoComida,ingredientes, "carne_guisada_con_papas.jpg", "qSMjgjSLhpk",true);
 
 
             //Plato  (id=8)

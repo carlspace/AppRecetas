@@ -135,10 +135,9 @@ class MyObserver implements java.util.Observer{
         String path = getImagenSelecionada();
 
 
-        if((!nombre.equals(""))&&(!receta.equals("")&&(!ingredientes.equals("")))
+        if((!nombre.equals(""))&&(!receta.equals("")&&(!ingredientes.equals(""))&&(!enlaceYoutube.equals("")))
                 ){
             if (path.equals("")){
-                //Falta poner enlace de Youtube
                 getModel().addPlatoSinImagen(nombre, receta, app.getTipoComidaPresionado(), ingredientes, enlaceYoutube);
             }
             else {

@@ -10,7 +10,7 @@ public interface Mediator {
   void startingPlatosScreen(Platos.ToPlatos presenter);
   void startingPlatoScreen(Plato.ToPlato presenter);
   void startingAddPlatoScreen(AddPlatoPresenter addPlatoPresenter);
-  void startingYoutubeScreen(Youtube.ToYoutube presenter);
+  //void startingYoutubeScreen(Youtube.ToYoutube presenter);
 
   int getTipoComidaPresionado();
 

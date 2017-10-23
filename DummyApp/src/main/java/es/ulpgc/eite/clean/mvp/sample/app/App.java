@@ -12,8 +12,7 @@ import es.ulpgc.eite.clean.mvp.sample.plato.Plato;
 import es.ulpgc.eite.clean.mvp.sample.plato.PlatoView;
 import es.ulpgc.eite.clean.mvp.sample.platos.Platos;
 import es.ulpgc.eite.clean.mvp.sample.platos.PlatosView;
-import es.ulpgc.eite.clean.mvp.sample.youtube.Youtube;
-import es.ulpgc.eite.clean.mvp.sample.youtube.youtubeMal;
+import es.ulpgc.eite.clean.mvp.sample.youtube.YoutubeFinal;
 
 
 public class App extends Application implements Mediator, Navigator {
@@ -90,7 +89,7 @@ public class App extends Application implements Mediator, Navigator {
         Context view = presenter.getManagedContext();
 
         if (view != null) {
-            view.startActivity(new Intent(view, youtubeMal.class));
+            view.startActivity(new Intent(view, YoutubeFinal.class));
 
         }
     }

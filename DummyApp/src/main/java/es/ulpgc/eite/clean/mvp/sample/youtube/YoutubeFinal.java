@@ -2,6 +2,7 @@ package es.ulpgc.eite.clean.mvp.sample.youtube;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
@@ -11,10 +12,16 @@ import com.google.android.youtube.player.YouTubePlayerFragment;
 import com.google.android.youtube.player.YouTubePlayerView;
 
 import es.ulpgc.eite.clean.mvp.sample.R;
+import es.ulpgc.eite.clean.mvp.sample.app.Mediator;
+import es.ulpgc.eite.clean.mvp.sample.database.ManejadorDataBase;
 
-public class youtubeMal extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
-    public static final String DEVELOPER_KEY = ConfigYoutube.DEVELOPER_KEY;
-    private String VIDEO_ID = ConfigYoutube.YOUTUBE_VIDEO_CODE;
+public class YoutubeFinal extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
+
+    // Google Console APIs developer clave
+    public static final String DEVELOPER_KEY = "AIzaSyCJ4yOn8M9R-nAM5Lb9GSL5KrbVqo_AL00";
+
+    //public static final String DEVELOPER_KEY = ConfigYoutube.DEVELOPER_KEY;
+    //private String VIDEO_ID = ConfigYoutube.YOUTUBE_VIDEO_CODE;
     private static final int RECOVERY_DIALOG_REQUEST = 1;
     YouTubePlayerFragment myYouTubePlayerFragment;
 
@@ -26,7 +33,8 @@ public class youtubeMal extends YouTubeBaseActivity implements YouTubePlayer.OnI
         myYouTubePlayerFragment = (YouTubePlayerFragment) getFragmentManager()
                 .findFragmentById(R.id.youtubeplayerfragment);
 
-        myYouTubePlayerFragment.initialize(ConfigYoutube.DEVELOPER_KEY, youtubeMal.this);
+        //myYouTubePlayerFragment.initialize(ConfigYoutube.DEVELOPER_KEY, YoutubeFinal.this);
+        myYouTubePlayerFragment.initialize(DEVELOPER_KEY, YoutubeFinal.this);
     }
 
 
@@ -55,13 +63,22 @@ public class youtubeMal extends YouTubeBaseActivity implements YouTubePlayer.OnI
   }
   */
 
+    public  String pasarEnlaceYoutube(){
+        Mediator app = (Mediator) getApplication();
+        int id = app.getIdPlatoSeleccionado();
+        ManejadorDataBase miManejador = ManejadorDataBase.getInstance();
+        String enlace=miManejador.getEnlaceYoutube(id);
+        return enlace;
 
+    }
 
 
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer player, boolean wasRestored) {
         if (!wasRestored) {
-            player.cueVideo(VIDEO_ID);
+            //player.cueVideo(VIDEO_ID);
+            Log.d("YOUTUBE", "VIDEO_ID=" + pasarEnlaceYoutube());
+            player.cueVideo(pasarEnlaceYoutube());
         }
     }
 

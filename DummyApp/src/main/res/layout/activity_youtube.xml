@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
-    tools:context="es.ulpgc.eite.clean.mvp.sample.youtube.youtubeMal">
+    tools:context="es.ulpgc.eite.clean.mvp.sample.youtube.YoutubeFinal">
 
 
 <android.support.design.widget.AppBarLayout

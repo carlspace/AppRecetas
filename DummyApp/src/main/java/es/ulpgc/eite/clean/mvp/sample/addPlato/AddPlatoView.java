@@ -33,6 +33,7 @@ public class AddPlatoView
         private EditText recetaIntroducida;
         private EditText ingredientesIntroducidos;
         private ImageView imagenSeleccionada;
+        private EditText enlaceYoutubeIntroducido;
         private Button btnDone;
         private static MyObservable observable;
         private static final int SELECT_PICTURE = 1;
@@ -53,6 +54,8 @@ public class AddPlatoView
             ingredientesIntroducidos = (EditText) findViewById(R.id.ingredientesIntroducidos);
             ingredientesIntroducidos.setMovementMethod(new ScrollingMovementMethod());
             imagenSeleccionada=(ImageView)  findViewById(R.id.imagenSeleccionadaPlato);
+            enlaceYoutubeIntroducido = (EditText) findViewById(R.id.enlaceYoutubeIntroducido);
+            enlaceYoutubeIntroducido.setMovementMethod(new ScrollingMovementMethod());
 
             btnDone=(Button) findViewById(R.id.btnDonePlato);
             btnDone.setOnClickListener(new View.OnClickListener() {

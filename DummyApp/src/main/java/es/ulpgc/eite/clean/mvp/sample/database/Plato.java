@@ -86,4 +86,6 @@ public class Plato extends RealmObject {
     public void setIngredientes(String ingredientes) {
         this.ingredientes = ingredientes;
     }
+
+
 }

@@ -40,7 +40,7 @@ public interface Platos {
   interface ViewToPresenter extends Presenter<PresenterToView> {
     void onItemClickSelected(int pos);
     void inicializarVista();
-
+    void deletePlatoByPosition(int position);
 
     void onButtonAddPlato();
   }
@@ -49,7 +49,7 @@ public interface Platos {
    * Required VIEW methods available to PRESENTER
    */
   interface PresenterToView extends ContextView {
-    void getSwipeItem(boolean isRight, int position);
+    //void getSwipeItem(boolean isRight, int position);
 
     void finishScreen();
 
@@ -72,7 +72,7 @@ public interface Platos {
     String[] getPlatos(int idTipoDeComida);
 
     String getTipoComida(int idTipoDeComida);
-    void deleteListItemAt(int id);
+    void deleteListItemAt(int pos);
 
     void showUndoSnackbar();
 
@@ -83,6 +83,8 @@ public interface Platos {
    * Required PRESENTER methods available to MODEL
    */
   interface ModelToPresenter {
+
+
 
   }
 }

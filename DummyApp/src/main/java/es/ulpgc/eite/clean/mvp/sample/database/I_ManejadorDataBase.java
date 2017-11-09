@@ -22,8 +22,12 @@ public interface  I_ManejadorDataBase {
     String getEnlaceYoutube (int idPlato);
 
 
+    void deletePlatoById(int idPlato);
+    void deletePlatoByPos(int position);
+
     void addTipoComida(String nombre);
     void addPlato(String nombre, String descripcion, int idTipoComida, String ingredientes, String imagen, String enlaceYoutube, Boolean isInAssets);
+
 
 
 }

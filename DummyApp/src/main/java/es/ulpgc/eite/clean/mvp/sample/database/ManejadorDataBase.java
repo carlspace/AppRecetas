@@ -1,7 +1,9 @@
 package es.ulpgc.eite.clean.mvp.sample.database;
 
 import io.realm.Realm;
+import io.realm.RealmQuery;
 import io.realm.RealmResults;
+
 
 /**
  * Created by Carlos Espacios on 29/06/2017.
@@ -130,6 +132,35 @@ public class ManejadorDataBase implements I_ManejadorDataBase {
         plato.setIsInAssetsPlato(isInAssets);
         realm.commitTransaction();
     }
+
+    //deletes!!!!!
+    @Override
+    public void deletePlatoById(int idPlato) {
+
+        realm.beginTransaction();
+        Plato result = realm.where(Plato.class).equalTo("id", idPlato).findFirst();
+        result.deleteFromRealm();
+        realm.commitTransaction();
+
+
+    }
+
+    @Override
+    public void deletePlatoByPos(int position) {
+        realm.beginTransaction();
+        RealmQuery<Plato> query = realm.where(Plato.class);
+        RealmResults<Plato> results = query.findAll();
+        results.remove(position);
+        realm.commitTransaction();
+
+    }
+
+
+
+
+
+
+
 
 
     //Datos que se inicializaran con la appp

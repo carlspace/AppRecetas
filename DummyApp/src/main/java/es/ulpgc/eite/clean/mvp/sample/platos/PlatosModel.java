@@ -3,7 +3,8 @@ package es.ulpgc.eite.clean.mvp.sample.platos;
 import es.ulpgc.eite.clean.mvp.GenericModel;
 import es.ulpgc.eite.clean.mvp.sample.database.I_ManejadorDataBase;
 import es.ulpgc.eite.clean.mvp.sample.database.ManejadorDataBase;
-
+import es.ulpgc.eite.clean.mvp.sample.database.Plato;
+import io.realm.RealmList;
 
 
 public class PlatosModel extends GenericModel<Platos.ModelToPresenter>
@@ -49,7 +50,7 @@ public class PlatosModel extends GenericModel<Platos.ModelToPresenter>
 
   @Override
   public String[] getPlatos(int idTipoDeComida) {
-      int [] vectorPlatos = miManejador.getListaIdPlatos(idTipoDeComida);
+      RealmList<Plato> vectorPlatos = miManejador.getListaIdPlatos(idTipoDeComida);
       return miManejador.getNombresByArrayIdPlatos(vectorPlatos);
   }
 
@@ -59,8 +60,8 @@ public class PlatosModel extends GenericModel<Platos.ModelToPresenter>
   }
 
   @Override
-  public void deleteListItemAt(int id) {
-
+  public void deleteListItemAt(int pos) {
+        miManejador.deletePlatoByPos(pos);
   }
 
   @Override

@@ -29,7 +29,7 @@ public class MockitoTest {
     public void testMockModeloInicial()  {
 
         Inicial.PresenterToModel modeloInicial = mock(Inicial.PresenterToModel.class);
-        InicialView vistaInicial =mock(InicialView.class) ;
+        InicialView vistaInicial = mock(InicialView.class) ;
 
 
 // desde la base de datos llegarían estos Strings por medio de inicialModel, pero los estamos simulando

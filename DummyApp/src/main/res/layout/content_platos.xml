@@ -27,7 +27,7 @@
             app:backgroundTint="@android:color/background_light"
             app:srcCompat="@android:drawable/ic_input_add" />
 
-            <ListView
+            <android.support.v7.widget.RecyclerView
                 android:id="@+id/listaPlatos"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
